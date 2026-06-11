@@ -549,6 +549,33 @@ a.related-card:hover { border-color: var(--border-hover); background: var(--bg-c
 .results-placeholder-icon { font-size: 1.5rem; color: var(--text-dim); }
 .case-results-placeholder p { font-size: 0.85rem; color: var(--text-dim); font-style: italic; }
 
+/* ─── Services index page ─── */
+.services-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+a.service-index-card {
+  display: flex; flex-direction: column;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 2rem;
+  transition: border-color 0.3s, background 0.3s;
+  color: inherit; text-decoration: none;
+}
+a.service-index-card:hover { border-color: var(--border-hover); background: var(--bg-card-hover); }
+
+.sic-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
+.sic-title { font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.7rem; }
+.sic-desc { font-size: 0.88rem; line-height: 1.75; flex: 1; }
+.sic-cta {
+  display: inline-block; margin-top: 1.4rem;
+  font-family: 'DM Mono', monospace; font-size: 0.72rem;
+  letter-spacing: 0.06em; color: var(--green-accent);
+  opacity: 0; transition: opacity 0.2s;
+}
+a.service-index-card:hover .sic-cta { opacity: 1; }
+
 /* ─── 404 ─── */
 .not-found {
   min-height: 80vh; display: flex; align-items: center;
