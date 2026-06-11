@@ -36,7 +36,7 @@ export default function ServiceDetailPage({ service }) {
         <div className="container">
           <Breadcrumbs crumbs={[
             { label: 'Home', href: '/' },
-            { label: 'Services', href: '/#services' },
+            { label: 'Services', href: '/services' },
             { label: service.title },
           ]} />
         </div>

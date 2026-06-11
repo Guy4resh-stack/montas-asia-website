@@ -124,7 +124,7 @@ export default function HomePage() {
               <CityCanvas />
               <div className="hero-badge">
                 <div className="hero-badge-label">Markets served</div>
-                <div className="hero-badge-value">TH · SG · MY · ID · PH</div>
+                <div className="hero-badge-value">TH · SG · MY · ID · PH · VN · KH</div>
               </div>
             </div>
           </div>
