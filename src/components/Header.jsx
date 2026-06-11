@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const MAIN_WEBSITE_URL = '#'; // ← replace with real URL
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,9 +45,9 @@ export default function Header() {
               <a href={isHome ? '#process' : '/#process'}>Process</a>
               <a href={isHome ? '#cta' : '/#cta'}>Contact</a>
             </nav>
-            <a href={MAIN_WEBSITE_URL} className="btn-primary" target="_blank" rel="noopener noreferrer">
-              Visit main website ↗
-            </a>
+            <Link to="/services" className="btn-primary">
+              Our services →
+            </Link>
             <button
               className="hamburger"
               onClick={toggleMobile}
