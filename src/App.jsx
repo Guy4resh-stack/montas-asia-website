@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import BackToTopButton from './components/BackToTopButton.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ServicesPage from './pages/ServicesPage.jsx';
 import ServiceDetailPage from './pages/ServiceDetailPage.jsx';
@@ -62,6 +63,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <BackToTopButton />
     </BrowserRouter>
   );
 }
