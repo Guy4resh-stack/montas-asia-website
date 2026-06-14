@@ -5,9 +5,13 @@ import BackToTopButton from './components/BackToTopButton.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ServicesPage from './pages/ServicesPage.jsx';
 import ServiceDetailPage from './pages/ServiceDetailPage.jsx';
+import CasesPage from './pages/CasesPage.jsx';
 import CaseDetailPage from './pages/CaseDetailPage.jsx';
-import { services, getServiceById } from './data/services.js';
-import { cases, getCaseById } from './data/cases.js';
+import AboutPage from './pages/AboutPage.jsx';
+import ProcessPage from './pages/ProcessPage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
+import { getServiceById } from './data/services.js';
+import { getCaseById } from './data/cases.js';
 
 function ServiceRoute({ id }) {
   const service = getServiceById(id);
@@ -41,8 +45,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
-
-          {/* Service routes */}
           <Route path="/services/landing-pages-websites" element={<ServiceRoute id="landing-pages-websites" />} />
           <Route path="/services/seo-local-search" element={<ServiceRoute id="seo-local-search" />} />
           <Route path="/services/paid-advertising-lead-gen" element={<ServiceRoute id="paid-advertising-lead-gen" />} />
@@ -50,15 +52,16 @@ export default function App() {
           <Route path="/services/analytics-reporting" element={<ServiceRoute id="analytics-reporting" />} />
           <Route path="/services/market-research" element={<ServiceRoute id="market-research" />} />
           <Route path="/services/ai-assisted-production" element={<ServiceRoute id="ai-assisted-production" />} />
-
-          {/* Case routes */}
+          <Route path="/cases" element={<CasesPage />} />
           <Route path="/cases/real-estate-bangkok" element={<CaseRoute id="real-estate-bangkok" />} />
           <Route path="/cases/wellness-clinic-phuket" element={<CaseRoute id="wellness-clinic-phuket" />} />
           <Route path="/cases/tourism-hospitality" element={<CaseRoute id="tourism-hospitality" />} />
           <Route path="/cases/b2b-services-asia" element={<CaseRoute id="b2b-services-asia" />} />
           <Route path="/cases/education-asia" element={<CaseRoute id="education-asia" />} />
           <Route path="/cases/legal-and-visa-services" element={<CaseRoute id="legal-and-visa-services" />} />
-
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/process" element={<ProcessPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

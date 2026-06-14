@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 
-const MAIN_WEBSITE_URL = '#'; // ← replace with real URL
-
 export default function Footer() {
   return (
     <footer>
@@ -10,26 +8,26 @@ export default function Footer() {
           <div>
             <div className="footer-logo">Mont<span>as</span></div>
             <p className="footer-tagline">Digital marketing studio for businesses building presence in Southeast Asia.</p>
-            <a href={MAIN_WEBSITE_URL} className="footer-main-link" target="_blank" rel="noopener noreferrer">
-              Main website ↗
-            </a>
+            <Link to="/contact" className="footer-main-link">
+              Start a project →
+            </Link>
           </div>
           <div className="footer-col">
             <h4>Navigation</h4>
             <ul>
-              <li><a href="/#services">Services</a></li>
-              <li><a href="/#cases">Cases</a></li>
-              <li><a href="/#about">About</a></li>
-              <li><a href="/#process">Process</a></li>
-              <li><a href="/#why-asia">Why Asia</a></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/cases">Work</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/process">Process</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
             <ul>
               <li><a href="mailto:hello@montas.co">hello@montas.co</a></li>
-              <li><span>LINE: [add ID]</span></li>
-              <li><span>WhatsApp: [add number]</span></li>
+              <li><span>LINE — available on request</span></li>
+              <li><span>WhatsApp — available on request</span></li>
               <li><span>Bangkok, Thailand</span></li>
             </ul>
           </div>

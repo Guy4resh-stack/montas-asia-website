@@ -19,7 +19,6 @@ function useFadeUp() {
 
 export default function ServiceDetailPage({ service }) {
   useFadeUp();
-
   useEffect(() => { window.scrollTo(0, 0); }, [service.id]);
 
   const related = getServicesByIds(service.relatedIds);
@@ -31,7 +30,6 @@ export default function ServiceDetailPage({ service }) {
         description={service.shortDesc}
       />
 
-      {/* Breadcrumbs */}
       <div className="detail-breadcrumb-bar">
         <div className="container">
           <Breadcrumbs crumbs={[
@@ -42,19 +40,17 @@ export default function ServiceDetailPage({ service }) {
         </div>
       </div>
 
-      {/* Hero */}
       <section className="detail-hero">
         <div className="container">
           <div className="detail-hero-inner fade-up">
             <div className="detail-tag">{service.tag}</div>
             <h1>{service.title}</h1>
             <p className="detail-positioning">{service.positioning}</p>
-            <a href="/#cta" className="hero-cta-primary">Discuss this service</a>
+            <Link to="/contact" className="hero-cta-primary">Discuss this service</Link>
           </div>
         </div>
       </section>
 
-      {/* Problem */}
       <section className="detail-section">
         <div className="container">
           <div className="detail-two-col fade-up">
@@ -71,7 +67,6 @@ export default function ServiceDetailPage({ service }) {
 
       <div className="divider" />
 
-      {/* What we do */}
       <section className="detail-section">
         <div className="container">
           <div className="section-label fade-up">What Montas does</div>
@@ -89,7 +84,6 @@ export default function ServiceDetailPage({ service }) {
 
       <div className="divider" />
 
-      {/* Best for + Deliverables */}
       <section className="detail-section">
         <div className="container">
           <div className="detail-split-grid">
@@ -113,7 +107,6 @@ export default function ServiceDetailPage({ service }) {
 
       <div className="divider" />
 
-      {/* Growth connection */}
       <section className="detail-section">
         <div className="container">
           <div className="detail-two-col fade-up">
@@ -130,24 +123,22 @@ export default function ServiceDetailPage({ service }) {
 
       <div className="divider" />
 
-      {/* Related services */}
       <section className="detail-section">
         <div className="container">
           <RelatedLinks items={related} />
         </div>
       </section>
 
-      {/* Final CTA */}
       <section className="detail-cta-section">
         <div className="container">
           <div className="cta-glow" />
           <div className="cta-inner fade-up">
             <div className="section-label" style={{ justifyContent: 'center', display: 'flex' }}>Ready to start</div>
             <h2>Discuss this service with us</h2>
-            <p>Tell us about your business and market. We'll come back with a clear recommendation and realistic scope.</p>
+            <p>Tell us about your business and market. We will come back with a clear recommendation and realistic scope.</p>
             <div className="cta-buttons">
-              <a href="mailto:hello@montas.co" className="hero-cta-primary">Start a project</a>
-              <Link to="/#services" className="hero-cta-secondary">All services</Link>
+              <Link to="/contact" className="hero-cta-primary">Start a project</Link>
+              <Link to="/services" className="hero-cta-secondary">All services</Link>
             </div>
           </div>
         </div>

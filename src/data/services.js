@@ -11,7 +11,7 @@ export const services = [
     whatWeDo: [
       { label: 'Offer clarity mapping', desc: 'We define your single strongest offer and structure the page around it — before any design begins.' },
       { label: 'Mobile-first build', desc: 'Every page is designed at 375px first. Desktop is an expansion, not the default.' },
-      { label: 'Speed optimisation', desc: 'Core Web Vitals compliant. Fast on Thai mobile networks, not just broadband.' },
+      { label: 'Speed optimisation', desc: 'Built with Core Web Vitals and mobile performance in mind. Fast on Thai mobile networks, not just broadband.' },
       { label: 'Localised trust signals', desc: 'Reviews, certifications, LINE/WhatsApp CTAs, local phone formats and social proof placed where buyers expect them.' },
       { label: 'Conversion flow', desc: 'Clear hierarchy from headline to inquiry: every section has a job and a next step.' },
       { label: 'Analytics-ready', desc: 'GA4, Meta Pixel and Tag Manager installed at launch so you track from day one.' },
@@ -51,7 +51,7 @@ export const services = [
     title: 'Paid advertising & lead generation',
     shortDesc: 'Google Ads, Meta and LINE campaigns with proper tracking, attribution and spend efficiency. Every baht accounted for.',
     positioning: 'Paid advertising in Southeast Asia works differently from Western markets. Platform mix, audience behaviour and creative formats require local knowledge — not just a Google Ads account and a budget.',
-    problem: `Running Google Ads or Meta campaigns in Thailand without understanding local search intent, audience segments, and platform-specific behavior is how businesses burn through budget without results. Common failure modes: campaigns targeting the wrong geographic radius, ad copy that works in English but doesn't resonate locally, landing pages that don't load fast enough to hold the click, and no attribution tracking — so you can't tell what's working. LINE, which is the dominant messaging platform in Thailand, is entirely absent from most foreign-run campaigns despite being a primary conversion point for local buyers.`,
+    problem: `Running Google Ads or Meta campaigns in Thailand without understanding local search intent, audience segments, and platform-specific behaviour is how businesses burn through budget without results. Common failure modes: campaigns targeting the wrong geographic radius, ad copy that works in English but doesn't resonate locally, landing pages that don't load fast enough to hold the click, and no attribution tracking — so you can't tell what's working. LINE, which is the dominant messaging platform in Thailand, is entirely absent from most foreign-run campaigns despite being a primary conversion point for local buyers.`,
     whatWeDo: [
       { label: 'Campaign strategy', desc: 'Platform selection, audience definition, funnel mapping and budget allocation before any spend.' },
       { label: 'Google Ads setup and management', desc: 'Search, display and retargeting campaigns with local keyword targeting and negative keyword lists.' },
@@ -105,7 +105,7 @@ export const services = [
       { label: 'Monthly reporting', desc: 'Clear plain-language summary of what happened, what it means and what to do next.' },
     ],
     bestFor: ['Any business running paid advertising and wanting to know what\'s working', 'Businesses with multiple traffic sources who need clarity on attribution', 'Companies preparing for investor or management reporting on marketing ROI', 'Businesses rebuilding their digital presence and wanting a clean data foundation'],
-    deliverables: ['GA4 and GTM implementation', 'Conversion tracking for all key actions', 'Custom dashboard (Looker Studio or GA4)', 'Data layer documentation', 'Monthly reporting template', 'One quarter of monthly reports included'],
+    deliverables: ['GA4 and GTM implementation', 'Conversion tracking for all key actions', 'Custom dashboard (Looker Studio or GA4)', 'Data layer documentation', 'Monthly reporting template'],
     growthConnection: 'Analytics is what turns marketing spend from a cost into an investment. Once you can see which channels generate leads and at what cost, you can make confident decisions: double the budget on what works, cut what doesn\'t, and identify the specific pages or steps where buyers drop off. Without this, you\'re optimising blindly.',
     relatedIds: ['paid-advertising-lead-gen', 'landing-pages-websites', 'seo-local-search'],
   },

@@ -113,8 +113,8 @@ export default function HomePage() {
                 We help businesses entering Southeast Asia build conversion-ready websites, run paid campaigns, and turn unclear marketing plans into measurable systems that work.
               </p>
               <div className="hero-ctas">
-                <a href="#cta" className="hero-cta-primary">Start a project</a>
-                <a href="#services" className="hero-cta-secondary">View services</a>
+                <Link to="/contact" className="hero-cta-primary">Start a project</Link>
+                <Link to="/services" className="hero-cta-secondary">View services</Link>
               </div>
               <div className="hero-credibility">
                 Landing pages · SEO · Paid media · Analytics · Market entry support
@@ -149,7 +149,7 @@ export default function HomePage() {
             </div>
             <div className="fade-up">
               <div className="problem-highlight">
-                <p>Southeast Asia is not a single market. Thailand has different buyer behavior than Singapore or the Philippines. What works in London or New York rarely works unchanged in Bangkok. The fix isn't just translation — it's a ground-up rethink of your digital presence.</p>
+                <p>Southeast Asia is not a single market. Thailand has different buyer behaviour than Singapore or the Philippines. What works in London or New York rarely works unchanged in Bangkok. The fix isn't just translation — it's a ground-up rethink of your digital presence.</p>
               </div>
               <div className="problem-highlight" style={{ marginTop: '1rem', borderLeftColor: 'var(--green-accent)' }}>
                 <p>Montas exists to close the gap between business ambition and local digital reality — fast, clearly, without wasted budget.</p>
@@ -298,7 +298,7 @@ export default function HomePage() {
           <div className="section-head fade-up">
             <div className="section-label">Why now</div>
             <h2>Why Southeast Asia demands a different approach</h2>
-            <p>The region is not underdigitalised — it's differently digitalised. The tools, platforms and behaviors don't match Western defaults.</p>
+            <p>Southeast Asia is not behind digitally — it simply follows different digital behaviours, platforms and trust signals. The tools and buyer journeys don't map onto Western defaults.</p>
           </div>
           <div className="why-grid">
             {[
@@ -328,13 +328,11 @@ export default function HomePage() {
             <h2>Ready to build something that works?</h2>
             <p>Tell us about your business, your market and where you're stuck. We'll respond with a clear proposal — no sales call required to get started.</p>
             <div className="cta-buttons">
-              <a href="mailto:hello@montas.co" className="hero-cta-primary">Discuss a project</a>
-              <a href="#services" className="hero-cta-secondary">See what we offer</a>
+              <Link to="/contact" className="hero-cta-primary">Discuss a project</Link>
+              <Link to="/services" className="hero-cta-secondary">See what we offer</Link>
             </div>
             <div className="cta-contact">
               Email: <a href="mailto:hello@montas.co">hello@montas.co</a>
-              &nbsp;·&nbsp;LINE: <span>[add LINE ID]</span>
-              &nbsp;·&nbsp;WhatsApp: <span>[add number]</span>
             </div>
           </div>
         </div>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -24,13 +23,8 @@ export default function Header() {
     document.body.style.overflow = next ? 'hidden' : '';
   };
 
-  const isHome = location.pathname === '/';
-
-  // On homepage, use hash links; on other pages, use route links back to home sections
-  const navLink = (hash, label) =>
-    isHome
-      ? <a href={hash} onClick={() => setMobileOpen(false)}>{label}</a>
-      : <Link to={`/${hash}`}>{label}</Link>;
+  const path = location.pathname;
+  const isActive = (href) => path === href || path.startsWith(href + '/');
 
   return (
     <>
@@ -39,14 +33,14 @@ export default function Header() {
           <div className="header-inner">
             <Link to="/" className="logo">Mont<span>as</span></Link>
             <nav>
-              <a href={isHome ? '#services' : '/#services'}>Services</a>
-              <a href={isHome ? '#cases' : '/#cases'}>Cases</a>
-              <a href={isHome ? '#about' : '/#about'}>About</a>
-              <a href={isHome ? '#process' : '/#process'}>Process</a>
-              <a href={isHome ? '#cta' : '/#cta'}>Contact</a>
+              <Link to="/services" className={isActive('/services') ? 'nav-active' : ''}>Services</Link>
+              <Link to="/cases" className={isActive('/cases') ? 'nav-active' : ''}>Cases</Link>
+              <Link to="/about" className={isActive('/about') ? 'nav-active' : ''}>About</Link>
+              <Link to="/process" className={isActive('/process') ? 'nav-active' : ''}>Process</Link>
+              <Link to="/contact" className={isActive('/contact') ? 'nav-active' : ''}>Contact</Link>
             </nav>
-            <Link to="/services" className="btn-primary">
-              Our services →
+            <Link to="/contact" className="btn-primary">
+              Start a project →
             </Link>
             <button
               className="hamburger"
@@ -54,9 +48,9 @@ export default function Header() {
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
             >
-              <span className={mobileOpen ? 'open' : ''} />
-              <span className={mobileOpen ? 'open' : ''} />
-              <span className={mobileOpen ? 'open' : ''} />
+              <span />
+              <span />
+              <span />
             </button>
           </div>
         </div>
@@ -64,11 +58,11 @@ export default function Header() {
 
       <div className={`mobile-nav${mobileOpen ? ' open' : ''}`} aria-hidden={!mobileOpen}>
         <button className="close-nav" onClick={toggleMobile} aria-label="Close menu">✕</button>
-        <a href={isHome ? '#services' : '/#services'}>Services</a>
-        <a href={isHome ? '#cases' : '/#cases'}>Cases</a>
-        <a href={isHome ? '#about' : '/#about'}>About</a>
-        <a href={isHome ? '#process' : '/#process'}>Process</a>
-        <a href={isHome ? '#cta' : '/#cta'}>Contact</a>
+        <Link to="/services">Services</Link>
+        <Link to="/cases">Cases</Link>
+        <Link to="/about">About</Link>
+        <Link to="/process">Process</Link>
+        <Link to="/contact">Contact</Link>
       </div>
     </>
   );
