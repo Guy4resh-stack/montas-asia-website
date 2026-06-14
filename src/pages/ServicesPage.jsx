@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import MarketVisual from '../components/MarketVisual.jsx';
 import { services } from '../data/services.js';
 
 function useFadeUp() {
@@ -38,35 +39,26 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      <section className="detail-hero">
+      <section className="detail-hero services-hero">
         <div className="container">
-          <div className="detail-hero-inner fade-up">
-            <div className="section-label">What we do</div>
-            <h1>Digital marketing services for Asian markets</h1>
-            <p className="detail-positioning">
-              Montas helps businesses entering Southeast Asia build practical growth systems: conversion-ready landing pages, local SEO, paid advertising, content and analytics — all structured to work together rather than as isolated deliverables.
-            </p>
+          <div className="services-hero-grid">
+            <div className="detail-hero-inner fade-up">
+              <div className="section-label">What we do</div>
+              <h1>Digital marketing services for Asian markets</h1>
+              <p className="detail-positioning">
+                Montas helps businesses entering Southeast Asia build practical growth systems: conversion-ready landing pages, local SEO, paid advertising, content and analytics — all structured to work together rather than as isolated deliverables.
+              </p>
+              <div className="hero-ctas">
+                <Link to="/contact" className="hero-cta-primary">Start a project</Link>
+                <Link to="/process" className="hero-cta-secondary">How we work</Link>
+              </div>
+            </div>
+            <div className="services-hero-visual fade-up">
+              <MarketVisual />
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Context strip */}
-      <div className="container">
-        <div className="services-context-strip fade-up">
-          <div className="services-context-item">
-            <span className="services-context-icon">◉</span>
-            <span>Strategy and production by the same team</span>
-          </div>
-          <div className="services-context-item">
-            <span className="services-context-icon">◎</span>
-            <span>Built for mobile-first Southeast Asian markets</span>
-          </div>
-          <div className="services-context-item">
-            <span className="services-context-icon">◈</span>
-            <span>Every service scoped to your actual stage</span>
-          </div>
-        </div>
-      </div>
 
       {/* Services grid */}
       <section className="detail-section">

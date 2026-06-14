@@ -900,3 +900,60 @@ a.case-overview-card:hover .card-learn-more { opacity: 1; }
   .services-context-strip { gap: 1rem; }
   .services-context-item { font-size: 0.68rem; }
 }
+
+/* ─── MarketVisual component ─── */
+.market-visual-wrap {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.market-visual-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Two-column hero for /services and /about ─── */
+.services-hero {
+  padding-bottom: 3rem;
+}
+.services-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  min-height: 440px;
+}
+.services-hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .services-hero-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 2rem;
+  }
+  .services-hero-visual {
+    order: -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .market-visual-wrap {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-hero {
+    padding-bottom: 1.5rem;
+  }
+  .services-hero-grid {
+    gap: 1.5rem;
+  }
+  .market-visual-wrap {
+    max-width: 300px;
+  }
+}

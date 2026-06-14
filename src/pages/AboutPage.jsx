@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import MarketVisual from '../components/MarketVisual.jsx';
 
 function useFadeUp() {
   useEffect(() => {
@@ -37,14 +38,20 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <section className="detail-hero">
+      <section className="detail-hero services-hero">
         <div className="container">
-          <div className="detail-hero-inner fade-up">
-            <div className="section-label">About Montas</div>
-            <h1>A marketing studio built for Asian-market growth</h1>
-            <p className="detail-positioning">
-              Montas combines strategy, creative production, digital marketing and practical execution — focused on what actually moves revenue for businesses in Southeast Asia.
-            </p>
+          <div className="services-hero-grid">
+            <div className="detail-hero-inner fade-up">
+              <div className="section-label">About Montas</div>
+              <h1>A marketing studio built for Asian-market growth</h1>
+              <p className="detail-positioning">
+                Montas combines strategy, creative production, digital marketing and practical execution — focused on what actually moves revenue for businesses in Southeast Asia.
+              </p>
+              <Link to="/contact" className="hero-cta-primary">Start a project</Link>
+            </div>
+            <div className="services-hero-visual fade-up">
+              <MarketVisual compact={true} />
+            </div>
           </div>
         </div>
       </section>
