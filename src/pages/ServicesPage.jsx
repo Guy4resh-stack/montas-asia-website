@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
-import CityCanvas from '../components/CityCanvas.jsx';
 import HeroVisual from '../components/HeroVisual.jsx';
 import { services } from '../data/services.js';
 
