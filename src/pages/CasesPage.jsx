@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import HeroVisual from '../components/HeroVisual.jsx';
 import { cases } from '../data/cases.js';
 
 function useFadeUp() {
@@ -38,14 +39,20 @@ export default function CasesPage() {
         </div>
       </div>
 
-      <section className="detail-hero">
+      <section className="inner-hero">
         <div className="container">
-          <div className="detail-hero-inner fade-up">
-            <div className="section-label">Case study templates</div>
-            <h1>Case study templates</h1>
-            <p className="detail-positioning">
-              Each page below is a structured template prepared for a real project type across Southeast Asian markets. Final data, confirmed results and client details will be published only after explicit client approval.
-            </p>
+          <div className="inner-hero-grid">
+            <div className="fade-up">
+              <div className="section-label">Case study templates</div>
+              <h1>Case study templates</h1>
+              <p className="hero-sub">
+                Each page below is a structured template prepared for a real project type across Southeast Asian markets. Final data, confirmed results and client details will be published only after explicit client approval.
+              </p>
+              <Link to="/contact" className="hero-cta-primary">Start a project</Link>
+            </div>
+            <div className="inner-hero-visual fade-up">
+              <HeroVisual variant="cases" />
+            </div>
           </div>
         </div>
       </section>

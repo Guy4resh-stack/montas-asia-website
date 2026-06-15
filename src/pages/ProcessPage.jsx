@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import HeroVisual from '../components/HeroVisual.jsx';
 
 function useFadeUp() {
   useEffect(() => {
@@ -95,14 +96,20 @@ export default function ProcessPage() {
         </div>
       </div>
 
-      <section className="detail-hero">
+      <section className="inner-hero">
         <div className="container">
-          <div className="detail-hero-inner fade-up">
-            <div className="section-label">How we work</div>
-            <h1>Process</h1>
-            <p className="detail-positioning">
-              Structured from day one. Clear deliverables at each stage. No scope drift, no ambiguous handoffs.
-            </p>
+          <div className="inner-hero-grid">
+            <div className="fade-up">
+              <div className="section-label">How we work</div>
+              <h1>Process</h1>
+              <p className="hero-sub">
+                Structured from day one. Clear deliverables at each stage. No scope drift, no ambiguous handoffs.
+              </p>
+              <Link to="/contact" className="hero-cta-primary">Start a project</Link>
+            </div>
+            <div className="inner-hero-visual fade-up">
+              <HeroVisual variant="process" />
+            </div>
           </div>
         </div>
       </section>

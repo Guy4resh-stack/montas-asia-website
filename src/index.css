@@ -957,3 +957,85 @@ a.case-overview-card:hover .card-learn-more { opacity: 1; }
     max-width: 300px;
   }
 }
+
+/* ─── Inner page hero (Services, About) — matches homepage hero layout ─── */
+.inner-hero {
+  padding: 3rem 0 4rem;
+}
+.inner-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.inner-hero h1 {
+  margin-bottom: 1.2rem;
+}
+.inner-hero .hero-sub {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+.inner-hero-visual {
+  position: relative;
+  height: 380px;
+}
+
+@media (max-width: 900px) {
+  .inner-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .inner-hero-visual {
+    height: 260px;
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner-hero {
+    padding: 2rem 0 2.5rem;
+  }
+  .inner-hero-visual {
+    height: 200px;
+  }
+}
+
+/* ─── HeroVisual SVG component ─── */
+.hv-wrap {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.hv-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* Contact hero — slightly less height since form follows */
+.inner-hero--contact {
+  padding-bottom: 1.5rem;
+}
+
+/* Ensure inner-hero-visual uses full container height */
+.inner-hero-grid .inner-hero-visual {
+  height: auto;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .hv-wrap { max-width: 380px; }
+  .inner-hero-grid .inner-hero-visual {
+    min-height: 220px;
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .hv-wrap { max-width: 300px; }
+  .inner-hero-grid .inner-hero-visual { min-height: 180px; }
+}

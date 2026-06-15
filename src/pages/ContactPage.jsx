@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
+import HeroVisual from '../components/HeroVisual.jsx';
 
 function useFadeUp() {
   useEffect(() => {
@@ -127,14 +128,19 @@ export default function ContactPage() {
       </div>
 
       {/* Hero */}
-      <section className="detail-hero">
+      <section className="inner-hero inner-hero--contact">
         <div className="container">
-          <div className="detail-hero-inner fade-up">
-            <div className="section-label">Get in touch</div>
-            <h1>Start a project</h1>
-            <p className="detail-positioning">
-              Montas helps businesses entering Southeast Asia build conversion-ready landing pages, SEO-ready websites, paid advertising campaigns and analytics systems. Fill in the form and we will come back with a clear proposal.
-            </p>
+          <div className="inner-hero-grid">
+            <div className="fade-up">
+              <div className="section-label">Get in touch</div>
+              <h1>Start a project</h1>
+              <p className="hero-sub">
+                Montas helps businesses entering Southeast Asia build conversion-ready landing pages, SEO-ready websites, paid advertising campaigns and analytics systems. Fill in the form and we will come back with a clear proposal.
+              </p>
+            </div>
+            <div className="inner-hero-visual fade-up">
+              <HeroVisual variant="contact" />
+            </div>
           </div>
         </div>
       </section>
