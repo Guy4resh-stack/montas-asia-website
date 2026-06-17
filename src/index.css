@@ -1039,3 +1039,23 @@ a.case-overview-card:hover .card-learn-more { opacity: 1; }
   .hv-wrap { max-width: 300px; }
   .inner-hero-grid .inner-hero-visual { min-height: 180px; }
 }
+
+/* ─── ServiceHeroVisual ─── */
+.shv-wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.shv-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+@media (max-width: 900px) {
+  .shv-wrap { max-width: 380px; }
+}
+@media (max-width: 600px) {
+  .shv-wrap { max-width: 300px; }
+}
