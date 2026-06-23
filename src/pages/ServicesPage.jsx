@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
-import HeroVisual from '../components/HeroVisual.jsx';
+import ServiceStackVisual from '../components/ServiceStackVisual.jsx';
 import { services } from '../data/services.js';
 
 function useFadeUp() {
@@ -55,7 +55,7 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="inner-hero-visual fade-up">
-              <HeroVisual variant="services" />
+              <ServiceStackVisual />
             </div>
           </div>
         </div>

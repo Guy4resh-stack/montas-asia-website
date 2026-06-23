@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
+import GrowthSystemVisual from '../components/GrowthSystemVisual.jsx';
+import ServiceIcon from '../components/ServiceIcon.jsx';
+import ProblemCarousel from '../components/ProblemCarousel.jsx';
 import { services } from '../data/services.js';
 import { cases } from '../data/cases.js';
 
@@ -33,7 +36,7 @@ function CityCanvas() {
           const dist = Math.sqrt(dx * dx + dy * dy);
           dotsRef.current.push({
             x: i * 22 + 11, y: j * 22 + 11,
-            brightness: Math.max(0.02, 0.35 - (dist / maxD) * 0.3),
+            brightness: Math.max(0.01, 0.16 - (dist / maxD) * 0.13),
             pulse: Math.random() * Math.PI * 2,
             pulseSpeed: 0.008 + Math.random() * 0.012,
             size: 0.8 + Math.random() * 1.2,
@@ -48,7 +51,7 @@ function CityCanvas() {
         d.pulse += d.pulseSpeed;
         const f = d.brightness + Math.sin(d.pulse) * 0.08;
         const a = Math.max(0, Math.min(1, f));
-        ctx.fillStyle = f > 0.28 ? `rgba(127,186,154,${a})` : `rgba(74,154,102,${a * 0.7})`;
+        ctx.fillStyle = f > 0.28 ? `rgba(47,160,214,${a})` : `rgba(20,120,168,${a * 0.55})`;
         ctx.beginPath();
         ctx.arc(d.x, d.y, d.size, 0, Math.PI * 2);
         ctx.fill();
@@ -105,12 +108,11 @@ export default function HomePage() {
         <div className="container">
           <div className="hero-grid">
             <div>
-              <div className="hero-eyebrow">Digital Marketing Studio</div>
               <h1 className="hero-headline">
                 Growth systems for<br /><em>Asian markets</em>
               </h1>
               <p className="hero-sub">
-                We help businesses entering Southeast Asia build conversion-ready websites, run paid campaigns, and turn unclear marketing plans into measurable systems that work.
+                Montas helps businesses entering Southeast Asia build conversion-ready websites, run paid campaigns, set up SEO-ready structures and measure results with systems that work.
               </p>
               <div className="hero-ctas">
                 <Link to="/contact" className="hero-cta-primary">Start a project</Link>
@@ -122,10 +124,7 @@ export default function HomePage() {
             </div>
             <div className="hero-visual">
               <CityCanvas />
-              <div className="hero-badge">
-                <div className="hero-badge-label">Markets served</div>
-                <div className="hero-badge-value">TH · SG · MY · ID · PH · VN · KH</div>
-              </div>
+              <GrowthSystemVisual />
             </div>
           </div>
         </div>
@@ -134,27 +133,13 @@ export default function HomePage() {
       {/* PROBLEM */}
       <section id="problem" className="section">
         <div className="container">
-          <div className="problem-grid">
-            <div className="fade-up">
-              <div className="section-label">The problem</div>
-              <h2>Most market entries start with the wrong digital foundation</h2>
-              <ul className="problem-list">
-                <li>Websites built for home markets that don't speak to local buyers</li>
-                <li>Landing pages that generate clicks but not inquiries</li>
-                <li>Ad budgets spent without proper tracking or attribution</li>
-                <li>No local SEO presence when the competition already owns the search results</li>
-                <li>Content that looks complete but doesn't convert mobile-first audiences</li>
-                <li>No system to iterate: campaigns run, performance is unclear, nothing improves</li>
-              </ul>
-            </div>
-            <div className="fade-up">
-              <div className="problem-highlight">
-                <p>Southeast Asia is not a single market. Thailand has different buyer behaviour than Singapore or the Philippines. What works in London or New York rarely works unchanged in Bangkok. The fix isn't just translation — it's a ground-up rethink of your digital presence.</p>
-              </div>
-              <div className="problem-highlight" style={{ marginTop: '1rem', borderLeftColor: 'var(--green-accent)' }}>
-                <p>Montas exists to close the gap between business ambition and local digital reality — fast, clearly, without wasted budget.</p>
-              </div>
-            </div>
+          <div className="section-head fade-up">
+            <div className="section-label">The problem</div>
+            <h2>Most market entries start with the wrong digital foundation</h2>
+            <p>Businesses entering Southeast Asia often build for the wrong audience. Montas turns each of these problems into a clear digital growth system.</p>
+          </div>
+          <div className="fade-up">
+            <ProblemCarousel />
           </div>
         </div>
       </section>
@@ -172,7 +157,7 @@ export default function HomePage() {
           <div className="services-grid">
             {services.map(s => (
               <Link key={s.id} to={s.slug} className="service-card">
-                <div className="service-icon">{s.icon}</div>
+                <div className="service-icon"><ServiceIcon serviceId={s.id} /></div>
                 <h3>{s.title}</h3>
                 <p>{s.shortDesc}</p>
                 <span className="service-tag">{s.tag}</span>
