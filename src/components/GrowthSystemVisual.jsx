@@ -5,23 +5,23 @@
  */
 
 const SERVICES = [
-  { id: 'landing',   label: 'Landing pages', angle: -150, r: 118 },
-  { id: 'seo',        label: 'SEO',           angle: -95,  r: 118 },
-  { id: 'paid',       label: 'Paid media',    angle: -35,  r: 118 },
-  { id: 'content',    label: 'Content',       angle: 30,   r: 118 },
-  { id: 'analytics',  label: 'Analytics',     angle: 90,   r: 118 },
-  { id: 'research',   label: 'Research',      angle: 145,  r: 118 },
-  { id: 'ai',         label: 'AI production', angle: 200,  r: 118 },
+  { id: 'landing',   label: 'Landing pages', angle: -150,    r: 122 },
+  { id: 'seo',        label: 'SEO',           angle: -98.6,  r: 122 },
+  { id: 'paid',       label: 'Paid media',    angle: -47.1,  r: 122 },
+  { id: 'content',    label: 'Content',       angle: 4.3,    r: 122 },
+  { id: 'analytics',  label: 'Analytics',     angle: 55.7,   r: 122 },
+  { id: 'research',   label: 'Research',      angle: 107.1,  r: 122 },
+  { id: 'ai',         label: 'AI production', angle: 158.6,  r: 122 },
 ];
 
 const MARKETS = [
-  { code: 'TH', name: 'Thailand',    angle: -160, rx: 188, ry: 196 },
-  { code: 'VN', name: 'Vietnam',     angle: -95,  rx: 188, ry: 196 },
-  { code: 'KH', name: 'Cambodia',    angle: -25,  rx: 188, ry: 196 },
-  { code: 'SG', name: 'Singapore',   angle: 50,   rx: 188, ry: 196, major: true },
-  { code: 'MY', name: 'Malaysia',    angle: 115,  rx: 188, ry: 196 },
-  { code: 'ID', name: 'Indonesia',   angle: 165,  rx: 188, ry: 196 },
-  { code: 'PH', name: 'Philippines', angle: 215,  rx: 188, ry: 196 },
+  { code: 'TH', name: 'Thailand',    angle: -124.3, rx: 195, ry: 205 },
+  { code: 'VN', name: 'Vietnam',     angle: -72.9,  rx: 195, ry: 205 },
+  { code: 'KH', name: 'Cambodia',    angle: -21.4,  rx: 195, ry: 205 },
+  { code: 'SG', name: 'Singapore',   angle: 30,     rx: 195, ry: 205, major: true },
+  { code: 'MY', name: 'Malaysia',    angle: 81.4,   rx: 195, ry: 205 },
+  { code: 'ID', name: 'Indonesia',   angle: 132.9,  rx: 195, ry: 205 },
+  { code: 'PH', name: 'Philippines', angle: 184.3,  rx: 195, ry: 205 },
 ];
 
 const toXY = (cx, cy, angleDeg, rx, ry) => {
@@ -30,8 +30,8 @@ const toXY = (cx, cy, angleDeg, rx, ry) => {
 };
 
 export default function GrowthSystemVisual() {
-  const W = 520, H = 560;
-  const cx = W / 2, cy = H / 2;
+  const W = 540, H = 560;
+  const cx = W / 2 - 5, cy = H / 2;
 
   return (
     <svg
@@ -124,7 +124,7 @@ export default function GrowthSystemVisual() {
       {/* ── Service module chips (inner ring) ── */}
       {SERVICES.map((s) => {
         const pos = toXY(cx, cy, s.angle, s.r, s.r);
-        const boxW = s.label.length * 5.6 + 18;
+        const boxW = Math.max(s.label.length * 5.6 + 18, 52);
         return (
           <g key={`svc-${s.id}`} transform={`translate(${pos.x - boxW / 2}, ${pos.y - 11})`}>
             <rect width={boxW} height="22" rx="11"
