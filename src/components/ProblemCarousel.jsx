@@ -50,7 +50,6 @@ export default function ProblemCarousel() {
       aria-label="Common market-entry problems and Montas solutions"
       onKeyDown={handleKeyDown}
     >
-      {/* Progress path */}
       <div className="pc-progress" role="tablist" aria-label="Slide progress">
         <div className="pc-progress-line">
           <div
@@ -74,7 +73,6 @@ export default function ProblemCarousel() {
         </div>
       </div>
 
-      {/* Slide track */}
       <div className="pc-viewport">
         <div
           ref={trackRef}
@@ -108,7 +106,6 @@ export default function ProblemCarousel() {
         </div>
       </div>
 
-      {/* Arrow controls */}
       <div className="pc-controls">
         <button
           className="pc-arrow"

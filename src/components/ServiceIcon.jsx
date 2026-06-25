@@ -1,7 +1,6 @@
 /**
  * ServiceIcon — consistent stroke-based SVG icons, one per service.
- * 22×22 viewBox, single accent stroke colour, no fills except small dots.
- * Sized to sit inside the existing 42×42 .service-icon container.
+ * 22×22 viewBox, single accent stroke colour, sized for the 42×42 .service-icon container.
  */
 
 const STROKE = 'var(--green-accent)';
@@ -18,7 +17,6 @@ function IconBase({ children, label }) {
   );
 }
 
-/* 1 — Landing pages & websites: browser window + CTA + direction arrow */
 function LandingPagesIcon() {
   return (
     <IconBase label="Landing pages and websites">
@@ -32,7 +30,6 @@ function LandingPagesIcon() {
   );
 }
 
-/* 2 — SEO & local search: magnifying glass + map pin */
 function SeoIcon() {
   return (
     <IconBase label="SEO and local search">
@@ -45,7 +42,6 @@ function SeoIcon() {
   );
 }
 
-/* 3 — Paid advertising & lead generation: arrows converging into a node */
 function PaidAdsIcon() {
   return (
     <IconBase label="Paid advertising and lead generation">
@@ -59,7 +55,6 @@ function PaidAdsIcon() {
   );
 }
 
-/* 4 — SMM & content systems: mini calendar / content grid */
 function SmmIcon() {
   return (
     <IconBase label="SMM and content systems">
@@ -74,7 +69,6 @@ function SmmIcon() {
   );
 }
 
-/* 5 — Analytics & reporting: line chart in dashboard panel */
 function AnalyticsIcon() {
   return (
     <IconBase label="Analytics and reporting">
@@ -88,7 +82,6 @@ function AnalyticsIcon() {
   );
 }
 
-/* 6 — Market research & competitor analysis: positioning / radar grid */
 function MarketResearchIcon() {
   return (
     <IconBase label="Market research and competitor analysis">
@@ -103,7 +96,6 @@ function MarketResearchIcon() {
   );
 }
 
-/* 7 — AI-assisted marketing production: workflow nodes with human review point */
 function AiProductionIcon() {
   return (
     <IconBase label="AI-assisted marketing production">
@@ -112,7 +104,6 @@ function AiProductionIcon() {
       <circle cx="18.2" cy="11" r="1.8" stroke={STROKE} strokeWidth="1.2" />
       <line x1="5.4" y1="11" x2="8.6" y2="11" stroke={STROKE} strokeWidth="1.1" />
       <line x1="14" y1="9.6" x2="16.4" y2="10.5" stroke={STROKE} strokeWidth="1.1" />
-      {/* human review check mark, offset above */}
       <path d="M9.6 16.4 L10.6 17.4 L13 14.6" stroke={STROKE} strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
       <line x1="11.3" y1="12" x2="11.3" y2="14" stroke={STROKE} strokeWidth="1" opacity="0.5" />
     </IconBase>

@@ -1,82 +1,23 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import GrowthSystemVisual from '../components/GrowthSystemVisual.jsx';
 import ServiceIcon from '../components/ServiceIcon.jsx';
 import ProblemCarousel from '../components/ProblemCarousel.jsx';
+import CaseStudiesCarousel from '../components/CaseStudiesCarousel.jsx';
 import { services } from '../data/services.js';
 import { cases } from '../data/cases.js';
 
-function CityCanvas() {
-  const canvasRef = useRef(null);
-  const dotsRef = useRef([]);
-  const frameRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-
-    function resize() {
-      canvas.width = canvas.parentElement.offsetWidth;
-      canvas.height = canvas.parentElement.offsetHeight;
-      initDots();
-    }
-
-    function initDots() {
-      dotsRef.current = [];
-      const cols = Math.floor(canvas.width / 22);
-      const rows = Math.floor(canvas.height / 22);
-      const cx = canvas.width / 2, cy = canvas.height / 2;
-      const maxD = Math.sqrt(cx * cx + cy * cy);
-      for (let i = 0; i < cols; i++) {
-        for (let j = 0; j < rows; j++) {
-          const dx = (i / cols - 0.5) * canvas.width;
-          const dy = (j / rows - 0.5) * canvas.height;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          dotsRef.current.push({
-            x: i * 22 + 11, y: j * 22 + 11,
-            brightness: Math.max(0.01, 0.16 - (dist / maxD) * 0.13),
-            pulse: Math.random() * Math.PI * 2,
-            pulseSpeed: 0.008 + Math.random() * 0.012,
-            size: 0.8 + Math.random() * 1.2,
-          });
-        }
-      }
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      dotsRef.current.forEach(d => {
-        d.pulse += d.pulseSpeed;
-        const f = d.brightness + Math.sin(d.pulse) * 0.08;
-        const a = Math.max(0, Math.min(1, f));
-        ctx.fillStyle = f > 0.28 ? `rgba(47,160,214,${a})` : `rgba(20,120,168,${a * 0.55})`;
-        ctx.beginPath();
-        ctx.arc(d.x, d.y, d.size, 0, Math.PI * 2);
-        ctx.fill();
-      });
-      frameRef.current = requestAnimationFrame(draw);
-    }
-
-    resize();
-    draw();
-    window.addEventListener('resize', resize);
-    return () => {
-      window.removeEventListener('resize', resize);
-      cancelAnimationFrame(frameRef.current);
-    };
-  }, []);
-
-  return <canvas ref={canvasRef} style={{ width: '100%', height: '100%', display: 'block' }} />;
-}
-
 function useFadeUp() {
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
-      { threshold: 0.12 }
-    );
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.classList.add('visible');
+          observer.unobserve(el.target);
+        }
+      });
+    }, { threshold: 0.12 });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, []);
@@ -84,17 +25,6 @@ function useFadeUp() {
 
 export default function HomePage() {
   useFadeUp();
-
-  // Drag-to-scroll cases
-  const scrollRef = useRef(null);
-  const drag = useRef({ down: false, startX: 0, scrollLeft: 0 });
-  const onMouseDown = e => { drag.current = { down: true, startX: e.pageX - scrollRef.current.offsetLeft, scrollLeft: scrollRef.current.scrollLeft }; };
-  const onMouseUp = () => { drag.current.down = false; };
-  const onMouseMove = e => {
-    if (!drag.current.down) return;
-    e.preventDefault();
-    scrollRef.current.scrollLeft = drag.current.scrollLeft - (e.pageX - scrollRef.current.offsetLeft - drag.current.startX) * 1.5;
-  };
 
   return (
     <>
@@ -123,7 +53,6 @@ export default function HomePage() {
               </div>
             </div>
             <div className="hero-visual">
-              <CityCanvas />
               <GrowthSystemVisual />
             </div>
           </div>
@@ -177,42 +106,10 @@ export default function HomePage() {
             <div className="section-head">
               <div className="section-label">Case studies</div>
               <h2>Work</h2>
-              <p>Real projects in progress. Case data will be added as client approvals are confirmed.</p>
+              <p>A look at how Montas approaches real project types across Southeast Asia. Cases below are concept and sample work prepared to demonstrate the approach — clearly labelled, with no invented results.</p>
             </div>
           </div>
-        </div>
-        <div className="cases-outer">
-          <div
-            className="cases-scroll-wrapper"
-            ref={scrollRef}
-            onMouseDown={onMouseDown}
-            onMouseUp={onMouseUp}
-            onMouseLeave={onMouseUp}
-            onMouseMove={onMouseMove}
-          >
-            <div className="cases-track">
-              {cases.map(c => (
-                <Link key={c.id} to={c.slug} className="case-card fade-up">
-                  <div className="case-industry">{c.industry}</div>
-                  <h3>{c.title}</h3>
-                  <div className="case-body">
-                    <div>
-                      <div className="case-row-label">Problem</div>
-                      <div className="case-row-val">{c.problem}</div>
-                    </div>
-                    <div>
-                      <div className="case-row-label">What Montas did</div>
-                      <div className="case-row-val">{c.whatWeDid}</div>
-                    </div>
-                  </div>
-                  <div className="case-result">
-                    ⬡ Result — <span className="case-placeholder">to be added after client approval</span>
-                  </div>
-                  <span className="card-learn-more" style={{ marginTop: '0.8rem' }}>View case template →</span>
-                </Link>
-              ))}
-            </div>
-          </div>
+          <CaseStudiesCarousel cases={cases} />
         </div>
       </section>
 

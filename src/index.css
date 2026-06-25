@@ -1359,3 +1359,208 @@ a.case-overview-card:hover .card-learn-more { opacity: 1; }
     display: none;
   }
 }
+
+/* ─── Case Studies Carousel (homepage Work section) ─── */
+.wc-carousel {
+  margin-top: 3rem;
+  outline: none;
+}
+
+.wc-slide {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  min-height: 420px;
+}
+
+.wc-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wc-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+.wc-number {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--border-hover);
+  line-height: 1;
+}
+.wc-type-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-accent);
+  background: var(--glow-green);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+}
+
+.wc-title {
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  line-height: 1.25;
+  margin-bottom: 0.9rem;
+  text-wrap: balance;
+  color: var(--text-primary);
+}
+
+.wc-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+  max-width: 480px;
+  text-wrap: pretty;
+}
+
+.wc-tsr {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.wc-tsr-row { display: flex; flex-direction: column; gap: 0.3rem; }
+.wc-tsr-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.wc-tsr-row--result .wc-tsr-label { color: var(--green-accent); }
+.wc-tsr-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.wc-cta {
+  align-self: flex-start;
+}
+
+.wc-visual-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Controls */
+.wc-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.wc-arrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+.wc-arrow:hover {
+  border-color: var(--border-hover);
+  background: var(--glow-green);
+  color: var(--green-accent);
+}
+.wc-arrow:focus-visible {
+  outline: 2px solid var(--green-accent);
+  outline-offset: 2px;
+}
+
+.wc-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+.wc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s, width 0.2s;
+}
+.wc-dot--active {
+  background: var(--green-accent);
+  width: 22px;
+  border-radius: 4px;
+}
+.wc-dot:focus-visible {
+  outline: 2px solid var(--green-accent);
+  outline-offset: 2px;
+}
+
+.wc-counter {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+  min-width: 56px;
+  text-align: center;
+}
+.wc-counter strong { color: var(--text-primary); font-weight: 600; }
+.wc-counter-sep { margin: 0 0.2rem; opacity: 0.5; }
+
+@media (max-width: 900px) {
+  .wc-slide {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: auto;
+  }
+  .wc-visual-col { order: -1; }
+  .wc-title { font-size: 1.4rem; }
+}
+
+@media (max-width: 600px) {
+  .wc-carousel { margin-top: 2rem; }
+  .wc-meta-row { flex-wrap: wrap; gap: 0.6rem; }
+  .wc-description { max-width: 100%; }
+  .wc-controls { gap: 1rem; margin-top: 2rem; }
+  .wc-arrow { width: 48px; height: 48px; }
+}
+
+/* ─── Case Visual Mockup (replaceable illustrative slot) ─── */
+.cvm-wrap {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.cvm-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(20,120,168,0.08));
+}
+.cvm-replaceable-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .cvm-wrap { max-width: 320px; margin: 0 auto; }
+}
