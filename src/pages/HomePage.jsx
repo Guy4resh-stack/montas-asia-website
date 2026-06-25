@@ -5,6 +5,7 @@ import GrowthSystemVisual from '../components/GrowthSystemVisual.jsx';
 import ServiceIcon from '../components/ServiceIcon.jsx';
 import ProblemCarousel from '../components/ProblemCarousel.jsx';
 import CaseStudiesCarousel from '../components/CaseStudiesCarousel.jsx';
+import ProcessFlow from '../components/ProcessFlow.jsx';
 import { services } from '../data/services.js';
 import { cases } from '../data/cases.js';
 
@@ -121,24 +122,9 @@ export default function HomePage() {
           <div className="section-head fade-up">
             <div className="section-label">How we work</div>
             <h2>Process</h2>
-            <p>Structured from day one. Clear deliverables at each stage. No scope drift.</p>
+            <p>A connected, sequential workflow. Each stage leads directly into the next — no scope drift, no disconnected handoffs.</p>
           </div>
-          <div className="process-grid">
-            {[
-              { n: '01', title: 'Brief & business analysis', desc: 'We understand your market, offer, audience and goals before touching anything creative.' },
-              { n: '02', title: 'Offer & page structure', desc: 'Wireframe the messaging flow: what you say, in what order, with what proof, to which audience.' },
-              { n: '03', title: 'Design & development', desc: 'Fast, clean build. No unnecessary complexity. Every element earns its place.' },
-              { n: '04', title: 'Launch & analytics setup', desc: 'GA4, Tag Manager, CRM, pixel tracking — everything live before traffic starts.' },
-              { n: '05', title: 'SEO & campaign optimisation', desc: 'Paid campaigns and organic structure tuned based on actual data, not assumptions.' },
-              { n: '06', title: 'Iteration & growth', desc: 'Monthly reviews, A/B tests, new content and campaign iterations. The system keeps improving.' },
-            ].map(step => (
-              <div key={step.n} className="process-step fade-up">
-                <div className="process-num">{step.n}</div>
-                <h3>{step.title}</h3>
-                <p>{step.desc}</p>
-              </div>
-            ))}
-          </div>
+          <ProcessFlow />
         </div>
       </section>
 
