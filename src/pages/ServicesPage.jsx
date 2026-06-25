@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
-import CityCanvas from '../components/CityCanvas.jsx';
-import HeroVisual from '../components/HeroVisual.jsx';
+import MarketingGoalsVisual from '../components/MarketingGoalsVisual.jsx';
+import ServiceIcon from '../components/ServiceIcon.jsx';
 import { services } from '../data/services.js';
 
 function useFadeUp() {
@@ -56,7 +56,7 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="inner-hero-visual fade-up">
-              <HeroVisual variant="services" />
+              <MarketingGoalsVisual />
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function ServicesPage() {
           <div className="services-grid">
             {services.map((s) => (
               <Link key={s.id} to={s.slug} className="service-card fade-up">
-                <div className="service-icon">{s.icon}</div>
+                <div className="service-icon"><ServiceIcon serviceId={s.id} /></div>
                 <h3>{s.title}</h3>
                 <p>{s.shortDesc}</p>
                 <span className="service-tag">{s.tag}</span>

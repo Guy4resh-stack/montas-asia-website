@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
 import RelatedLinks from '../components/RelatedLinks.jsx';
+import ServiceHeroVisual from '../components/ServiceHeroVisual.jsx';
 import { getServicesByIds } from '../data/services.js';
 
 function useFadeUp() {
@@ -40,13 +41,18 @@ export default function ServiceDetailPage({ service }) {
         </div>
       </div>
 
-      <section className="detail-hero">
+      <section className="detail-hero detail-hero--with-visual">
         <div className="container">
-          <div className="detail-hero-inner fade-up">
-            <div className="detail-tag">{service.tag}</div>
-            <h1>{service.title}</h1>
-            <p className="detail-positioning">{service.positioning}</p>
-            <Link to="/contact" className="hero-cta-primary">Discuss this service</Link>
+          <div className="detail-hero-grid">
+            <div className="detail-hero-inner fade-up">
+              <div className="detail-tag">{service.tag}</div>
+              <h1>{service.title}</h1>
+              <p className="detail-positioning">{service.positioning}</p>
+              <Link to="/contact" className="hero-cta-primary">Discuss this service</Link>
+            </div>
+            <div className="detail-hero-visual fade-up">
+              <ServiceHeroVisual serviceId={service.id} />
+            </div>
           </div>
         </div>
       </section>

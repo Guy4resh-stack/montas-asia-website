@@ -1681,3 +1681,112 @@ a.case-overview-card:hover .card-learn-more { opacity: 1; }
   .pf-timeline-item { grid-template-columns: 44px 1fr; gap: 0.9rem; }
   .pf-timeline-num { width: 34px; height: 34px; font-size: 0.75rem; }
 }
+
+/* ─── Service detail hero: two-column variant (scoped, does not affect CaseDetailPage) ─── */
+.detail-hero--with-visual .detail-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.detail-hero--with-visual .detail-hero-inner {
+  max-width: 100%;
+}
+.detail-hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .detail-hero--with-visual .detail-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .detail-hero-visual {
+    order: -1;
+  }
+}
+
+/* ─── ServiceHeroVisual (individual service detail pages) ─── */
+.shv-wrap {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.shv-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.shv-shimmer {
+  animation: shv-shimmer-drift 13s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes shv-shimmer-drift {
+  0%, 100% { opacity: 0.7; transform: translate(0, 0) scale(1); }
+  50%      { opacity: 1;   transform: translate(2px, -2px) scale(1.01); }
+}
+.shv-pulse-dot {
+  opacity: 0.85;
+  filter: drop-shadow(0 0 3px rgba(47,160,214,0.6));
+}
+.shv-soft-pulse {
+  animation: shv-soft-pulse 2.6s ease-in-out infinite;
+}
+@keyframes shv-soft-pulse {
+  0%, 100% { opacity: 0.7; }
+  50%      { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shv-shimmer,
+  .shv-soft-pulse {
+    animation: none !important;
+  }
+  .shv-pulse-layer {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .shv-wrap { max-width: 380px; }
+}
+@media (max-width: 600px) {
+  .shv-wrap { max-width: 300px; }
+}
+
+/* ─── MarketingGoalsVisual (/services hero) ─── */
+.mgv-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.mgv-shimmer-layer {
+  animation: shv-shimmer-drift 13s ease-in-out infinite;
+  transform-origin: center;
+}
+.mgv-core-border {
+  animation: mgv-core-pulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes mgv-core-pulse {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}
+.mgv-pulse-dot {
+  opacity: 0.85;
+  filter: drop-shadow(0 0 3px rgba(47,160,214,0.7));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mgv-shimmer-layer,
+  .mgv-core-border {
+    animation: none !important;
+  }
+  .mgv-pulse-layer {
+    display: none;
+  }
+}
