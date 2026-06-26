@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
-import HeroVisual from '../components/HeroVisual.jsx';
+import OperatingModelVisual from '../components/OperatingModelVisual.jsx';
+import TeamImageGrid from '../components/TeamImageGrid.jsx';
+import AboutValues from '../components/AboutValues.jsx';
 
 function useFadeUp() {
   useEffect(() => {
@@ -50,24 +52,32 @@ export default function AboutPage() {
               <Link to="/contact" className="hero-cta-primary">Start a project</Link>
             </div>
             <div className="inner-hero-visual fade-up">
-              <HeroVisual variant="about" />
+              <OperatingModelVisual />
             </div>
           </div>
         </div>
       </section>
 
-      {/* What we are */}
+      {/* Who we are — merged About Us / What We Are */}
       <section className="detail-section">
         <div className="container">
-          <div className="detail-two-col fade-up">
-            <div>
-              <div className="section-label">What we are</div>
-              <h2>A studio, not a full-service agency</h2>
+          <div className="section-label fade-up">Who we are</div>
+          <h2 className="fade-up" style={{ marginBottom: '2rem', maxWidth: '720px' }}>
+            A studio built on clarity, execution and local market logic
+          </h2>
+
+          <div className="about-merged-grid">
+            <div className="fade-up">
+              <TeamImageGrid />
             </div>
-            <div className="detail-prose">
-              <p>Montas is a marketing studio. That distinction matters. We do not try to cover every discipline for every type of client. We focus on a specific problem: helping businesses build a functional digital presence in Southeast Asian markets that generates enquiries, supports growth and can be measured.</p>
-              <p style={{ marginTop: '1.2rem' }}>The work is practical. Every project starts with understanding the business model, the local competitive landscape and the specific conversion problem. Strategy, production and execution are handled by the same team — there are no layers of account management between the client and the people doing the work.</p>
+            <div className="detail-prose fade-up">
+              <p>Montas is a practical marketing studio for companies that need clear digital systems, not just isolated creative assets. The studio combines strategy, page structure, content, paid media, SEO, analytics and production to help businesses enter or grow in Southeast Asian markets.</p>
+              <p style={{ marginTop: '1.2rem' }}>We do not try to cover every discipline for every type of client. Strategy, production and execution are handled by the same team — there are no layers of account management between the client and the people doing the work.</p>
             </div>
+          </div>
+
+          <div className="fade-up" style={{ marginTop: '3rem' }}>
+            <AboutValues />
           </div>
         </div>
       </section>
