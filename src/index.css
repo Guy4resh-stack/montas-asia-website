@@ -1999,3 +1999,46 @@ nav a.nav-active {
   color: var(--text-secondary);
   text-wrap: pretty;
 }
+
+/* ─── ProcessPageVisual (/process hero) ─── */
+.ppv-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ppv-shimmer {
+  animation: shv-shimmer-drift 13s ease-in-out infinite;
+  transform-origin: center;
+}
+.ppv-pulse-dot {
+  opacity: 0.85;
+  filter: drop-shadow(0 0 3px rgba(47,160,214,0.7));
+}
+.ppv-active-ring {
+  animation: mgv-core-pulse 2.6s ease-in-out infinite;
+  transform-origin: center;
+}
+.ppv-active-glow {
+  animation: ppv-glow-pulse 2.6s ease-in-out infinite;
+  transform-origin: center;
+}
+.ppv-callout {
+  animation: mgv-core-pulse 3.2s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes ppv-glow-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%      { opacity: 0.8;  transform: scale(1.12); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ppv-shimmer,
+  .ppv-active-ring,
+  .ppv-active-glow,
+  .ppv-callout {
+    animation: none !important;
+  }
+  .ppv-pulse-layer {
+    display: none;
+  }
+}

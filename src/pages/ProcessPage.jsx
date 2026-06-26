@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
-import HeroVisual from '../components/HeroVisual.jsx';
+import ProcessPageVisual from '../components/ProcessPageVisual.jsx';
 
 function useFadeUp() {
   useEffect(() => {
@@ -108,7 +108,7 @@ export default function ProcessPage() {
               <Link to="/contact" className="hero-cta-primary">Start a project</Link>
             </div>
             <div className="inner-hero-visual fade-up">
-              <HeroVisual variant="process" />
+              <ProcessPageVisual />
             </div>
           </div>
         </div>
