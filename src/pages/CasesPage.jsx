@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
-import HeroVisual from '../components/HeroVisual.jsx';
+import CasesPageHeroVisual from '../components/CasesPageHeroVisual.jsx';
+import CaseVisualMockup from '../components/CaseVisualMockup.jsx';
 import { cases } from '../data/cases.js';
 
 function useFadeUp() {
@@ -44,14 +45,14 @@ export default function CasesPage() {
           <div className="inner-hero-grid">
             <div className="fade-up">
               <div className="section-label">Case study templates</div>
-              <h1>Case study templates</h1>
+              <h1>Concept cases and case study templates</h1>
               <p className="hero-sub">
-                Each page below is a structured template prepared for a real project type across Southeast Asian markets. Final data, confirmed results and client details will be published only after explicit client approval.
+                These are structured case-study templates and concept cases prepared for project types across Southeast Asian markets. Final data, confirmed results and client details will be published only after explicit client approval.
               </p>
               <Link to="/contact" className="hero-cta-primary">Start a project</Link>
             </div>
             <div className="inner-hero-visual fade-up">
-              <HeroVisual variant="cases" />
+              <CasesPageHeroVisual />
             </div>
           </div>
         </div>
@@ -64,32 +65,48 @@ export default function CasesPage() {
         </div>
       </div>
 
-      {/* Cases grid */}
-      <section className="detail-section">
+      {/* Case archive — sequential full-width sections, not a carousel */}
+      <section className="detail-section case-archive">
         <div className="container">
-          <div className="cases-overview-grid">
-            {cases.map(c => (
-              <Link key={c.id} to={c.slug} className="case-overview-card fade-up">
-                <div className="case-overview-header">
-                  <div className="case-industry">{c.industry}</div>
-                  <div className="case-template-badge">Template</div>
+          {cases.map((c, i) => (
+            <article key={c.id} className="case-archive-item fade-up">
+
+              <div className="case-archive-num">{String(i + 1).padStart(2, '0')}</div>
+
+              <div className="case-archive-visual">
+                <CaseVisualMockup type={c.mockupType} />
+              </div>
+
+              <div className="case-archive-body">
+                <div className="case-archive-meta">
+                  <span className="wc-type-badge">{c.caseType}</span>
                 </div>
-                <h2 className="case-overview-title">{c.title}</h2>
-                <div className="case-overview-row">
-                  <div className="case-row-label">Example challenge</div>
-                  <div className="case-row-val">{c.problem}</div>
+
+                <h2 className="case-archive-title">{c.homeTitle}</h2>
+                <p className="case-archive-desc">{c.homeDescription}</p>
+
+                <div className="case-archive-tsr">
+                  <div className="case-archive-tsr-col">
+                    <span className="wc-tsr-label">Task</span>
+                    <p className="wc-tsr-text">{c.taskStatement}</p>
+                  </div>
+                  <div className="case-archive-tsr-col">
+                    <span className="wc-tsr-label">Solution</span>
+                    <p className="wc-tsr-text">{c.solutionStatement}</p>
+                  </div>
+                  <div className="case-archive-tsr-col">
+                    <span className="wc-tsr-label" style={{ color: 'var(--green-accent)' }}>Concept outcome</span>
+                    <p className="wc-tsr-text">{c.conceptOutcome}</p>
+                  </div>
                 </div>
-                <div className="case-overview-row">
-                  <div className="case-row-label">Planned approach</div>
-                  <div className="case-row-val">{c.whatWeDid}</div>
-                </div>
-                <div className="case-result">
-                  ⬡ Results — <span className="case-placeholder">to be confirmed after client approval</span>
-                </div>
-                <span className="card-learn-more">View case template →</span>
-              </Link>
-            ))}
-          </div>
+
+                <Link to={c.slug} className="hero-cta-secondary">
+                  View case template →
+                </Link>
+              </div>
+
+            </article>
+          ))}
         </div>
       </section>
 

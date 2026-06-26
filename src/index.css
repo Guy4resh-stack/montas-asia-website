@@ -665,23 +665,7 @@ nav a.nav-active {
   background: rgba(20, 120, 168, 0.08);
 }
 
-/* ─── Cases overview grid ─── */
-.cases-overview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-}
-a.case-overview-card {
-  display: flex; flex-direction: column;
-  background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: 12px; padding: 2rem;
-  transition: border-color 0.3s, background 0.3s;
-  color: inherit; text-decoration: none;
-}
-a.case-overview-card:hover { border-color: var(--border-hover); background: var(--bg-card-hover); }
-a.case-overview-card:hover .card-learn-more { opacity: 1; }
-.case-overview-title { font-size: 1.1rem; color: var(--text-primary); margin-bottom: 1rem; }
-.case-overview-row { margin-bottom: 0.8rem; }
+/* ─── Cases overview: see .case-archive-* rules below for the full-width sequential layout ─── */
 
 /* ─── Contact page ─── */
 .contact-layout {
@@ -866,25 +850,6 @@ a.case-overview-card:hover .card-learn-more { opacity: 1; }
   color: var(--text-dim);
 }
 .services-context-icon { color: var(--green-accent); }
-
-/* ─── Case overview header + template badge ─── */
-.case-overview-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.2rem;
-}
-.case-template-badge {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border);
-  padding: 0.2rem 0.55rem;
-  border-radius: 3px;
-}
 
 @media (max-width: 600px) {
   .services-context-strip { gap: 1rem; }
@@ -1789,4 +1754,126 @@ a.case-overview-card:hover .card-learn-more { opacity: 1; }
   .mgv-pulse-layer {
     display: none;
   }
+}
+
+/* ─── CasesPageHeroVisual (/cases hero) ─── */
+.cphv-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.cphv-shimmer {
+  animation: shv-shimmer-drift 13s ease-in-out infinite;
+  transform-origin: center;
+}
+.cphv-top-card {
+  animation: mgv-core-pulse 3.2s ease-in-out infinite;
+  transform-origin: center;
+}
+.cphv-status-dot {
+  animation: mgv-core-pulse 2.4s ease-in-out infinite;
+}
+.cphv-pulse-dot {
+  opacity: 0.85;
+  filter: drop-shadow(0 0 3px rgba(47,160,214,0.7));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cphv-shimmer,
+  .cphv-top-card,
+  .cphv-status-dot {
+    animation: none !important;
+  }
+  .cphv-pulse-layer {
+    display: none;
+  }
+}
+
+/* ─── Case archive: full-width sequential case sections on /cases ─── */
+.case-archive {
+  padding-top: 1rem;
+}
+
+.case-archive-item {
+  position: relative;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.case-archive-item:first-of-type {
+  padding-top: 1rem;
+}
+.case-archive-item:last-of-type {
+  border-bottom: none;
+}
+
+.case-archive-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--border-hover);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.4rem;
+}
+
+/* Visual first, large and centred */
+.case-archive-visual {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+}
+/* Large-display override for CaseVisualMockup on this page only —
+   does not affect the homepage carousel's narrower .cvm-wrap sizing */
+.case-archive-visual .cvm-wrap {
+  max-width: 560px;
+}
+
+/* Text below, two-column on desktop: title/description left, task/solution/result right */
+.case-archive-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.case-archive-meta {
+  margin-bottom: 1rem;
+}
+
+.case-archive-title {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+  color: var(--text-primary);
+}
+
+.case-archive-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1.6rem;
+  max-width: 460px;
+  text-wrap: pretty;
+}
+
+.case-archive-tsr {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.case-archive-tsr-col { display: flex; flex-direction: column; gap: 0.35rem; }
+
+@media (max-width: 900px) {
+  .case-archive-body {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+  .case-archive-desc { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .case-archive-item { padding: 2.5rem 0; }
+  .case-archive-visual { margin-bottom: 1.6rem; }
+  .case-archive-visual .cvm-wrap { max-width: 100%; }
+  .case-archive-title { font-size: 1.3rem; }
 }
