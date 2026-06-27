@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
-import HeroVisual from '../components/HeroVisual.jsx';
+import ContactPageVisual from '../components/ContactPageVisual.jsx';
 
 function useFadeUp() {
   useEffect(() => {
@@ -139,7 +139,7 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="inner-hero-visual fade-up">
-              <HeroVisual variant="contact" />
+              <ContactPageVisual />
             </div>
           </div>
         </div>

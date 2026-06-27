@@ -2042,3 +2042,51 @@ nav a.nav-active {
     display: none;
   }
 }
+
+/* ─── ContactPageVisual (/contact hero) ─── */
+.cpv-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.cpv-shimmer {
+  animation: shv-shimmer-drift 13s ease-in-out infinite;
+  transform-origin: center;
+}
+.cpv-form-card {
+  animation: mgv-core-pulse 3.4s ease-in-out infinite;
+  transform-origin: center;
+}
+.cpv-send-glow {
+  animation: cpv-send-pulse 2.4s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes cpv-send-pulse {
+  0%, 100% { opacity: 0.7; }
+  50%      { opacity: 1; }
+}
+.cpv-active-node {
+  animation: mgv-core-pulse 2.6s ease-in-out infinite;
+  transform-origin: center;
+}
+.cpv-callout {
+  animation: mgv-core-pulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+.cpv-pulse-dot {
+  opacity: 0.85;
+  filter: drop-shadow(0 0 3px rgba(47,160,214,0.7));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cpv-shimmer,
+  .cpv-form-card,
+  .cpv-send-glow,
+  .cpv-active-node,
+  .cpv-callout {
+    animation: none !important;
+  }
+  .cpv-pulse-layer {
+    display: none;
+  }
+}
