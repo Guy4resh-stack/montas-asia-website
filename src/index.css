@@ -735,6 +735,21 @@ nav a.nav-active {
   align-self: flex-start;
   margin-top: 0.4rem;
 }
+.form-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+  transform: none;
+}
+
+.form-alert {
+  background: rgba(200, 90, 110, 0.08);
+  border: 1px solid rgba(200, 90, 110, 0.22);
+  border-radius: 8px;
+  color: var(--burgundy-light);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  padding: 0.8rem 0.95rem;
+}
 
 .form-note {
   font-family: 'DM Mono', monospace;
