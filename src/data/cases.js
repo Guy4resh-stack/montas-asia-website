@@ -1,4 +1,5 @@
 import { services } from './services.js';
+import circleLivingPrototype from '../assets/images/Circle_Living_Prototype.jpg';
 
 export const cases = [
   {
@@ -20,6 +21,7 @@ export const cases = [
     solutionStatement: 'Create a conversion-ready landing page structure with a premium visual hierarchy, mobile-first layout, clear CTA, neighbourhood context, enquiry form and analytics-ready setup.',
     conceptOutcome: 'A stronger market-entry landing page concept that can be adapted for lead generation, paid campaigns and local search.',
     mockupType: 'realEstate',
+    image: circleLivingPrototype,
   },
   {
     id: 'wellness-clinic-phuket',

@@ -19,7 +19,7 @@ export default function CaseStudiesCarousel({ cases }) {
 
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowRight') { e.preventDefault(); goTo(active + 1); }
-    if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(active - 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(active - 1); }
   };
 
   const c = cases[active];
@@ -66,7 +66,17 @@ export default function CaseStudiesCarousel({ cases }) {
 
         {/* Visual column */}
         <div className="wc-visual-col">
-          <CaseVisualMockup type={c.mockupType} />
+          {c.image ? (
+            <img
+              className="wc-case-image"
+              src={c.image}
+              alt={c.homeTitle}
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <CaseVisualMockup type={c.mockupType} />
+          )}
         </div>
 
       </div>
