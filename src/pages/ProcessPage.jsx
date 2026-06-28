@@ -119,21 +119,32 @@ export default function ProcessPage() {
         <div className="container">
           <div className="process-detail-list">
             {STEPS.map((step, i) => (
-              <div key={step.n} className="process-detail-item fade-up">
-                <div className="process-detail-num">{step.n}</div>
-                <div className="process-detail-body">
-                  <h2 className="process-detail-title">{step.title}</h2>
-                  <p className="process-detail-desc">{step.desc}</p>
-                  {step.links.length > 0 && (
-                    <div className="process-detail-links">
-                      {step.links.map(l => (
-                        <Link key={l.to} to={l.to} className="process-detail-link">
-                          {l.label} →
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+              <div key={step.n}>
+                <div className="process-detail-item fade-up">
+                  <div className="process-detail-num">{step.n}</div>
+                  <div className="process-detail-body">
+                    <h2 className="process-detail-title">{step.title}</h2>
+                    <p className="process-detail-desc">{step.desc}</p>
+                    {step.links.length > 0 && (
+                      <div className="process-detail-links">
+                        {step.links.map(l => (
+                          <Link key={l.to} to={l.to} className="process-detail-link">
+                            {l.label} →
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
+                {i < STEPS.length - 1 && (
+                  <div className="process-detail-connector" aria-hidden="true">
+                    <svg width="16" height="40" viewBox="0 0 16 40" fill="none">
+                      <path d="M8 2 V30 M2 24 L8 31 L14 24"
+                        stroke="var(--green-accent)" strokeWidth="1.4"
+                        strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                )}
               </div>
             ))}
           </div>
