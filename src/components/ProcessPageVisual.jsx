@@ -69,9 +69,11 @@ function DesktopTimeline() {
         const nodeFill = active
           ? 'rgba(47,160,214,0.14)'
           : done ? 'rgba(20,120,168,0.08)' : '#FFFFFF';
-        const labelY = i % 2 === 0 ? lineY - 32 : lineY + 46;
-        const subY   = i % 2 === 0 ? lineY - 20 : lineY + 58;
-        const numY   = i % 2 === 0 ? lineY - 46 : lineY + 62;
+        const gap = 14;
+        const connectorEdge = i % 2 === 0 ? lineY - 28 : lineY + 28;
+        const subY   = i % 2 === 0 ? connectorEdge - gap : connectorEdge + gap;
+        const labelY = i % 2 === 0 ? subY - gap : subY + gap;
+        const numY   = i % 2 === 0 ? labelY - gap : labelY + gap;
 
         return (
           <g key={i}>
@@ -98,7 +100,7 @@ function DesktopTimeline() {
 
             <text x={cx} y={subY} textAnchor="middle"
               fontFamily="'DM Mono',monospace"
-              fontSize="6.5" fill="#8B98A3" letterSpacing="0.06em">{s.sub}</text>
+              fontSize="6" fill="#8B98A3" letterSpacing="0.05em">{s.sub}</text>
           </g>
         );
       })}
