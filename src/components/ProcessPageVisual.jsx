@@ -1,27 +1,29 @@
 /**
  * ProcessPageVisual — light, blue/cyan restyle of the /process hero graphic.
- * Same pipeline concept as the original dark-green version: 7 numbered
- * nodes on a horizontal line, alternating label position, one node
- * highlighted as the active stage, with a callout box below. Pure SVG +
+ * Desktop/tablet: 7 numbered nodes on a horizontal line, alternating label
+ * position, one node highlighted as the active stage, with a callout box
+ * below. Mobile: a vertical timeline with the same 7 steps in order, since
+ * the horizontal SVG becomes too small to read at narrow widths. Pure SVG +
  * CSS animation, no dependencies.
  */
 
 const STEPS = [
-  { n: '01', label: 'Brief',       sub: 'Market context'   },
-  { n: '02', label: 'Positioning', sub: 'Offer & audience' },
-  { n: '03', label: 'Structure',   sub: 'Page wireframe'   },
-  { n: '04', label: 'Build',       sub: 'Design & dev'     },
-  { n: '05', label: 'Launch',      sub: 'Analytics setup'  },
-  { n: '06', label: 'Optimise',    sub: 'SEO & campaigns'  },
-  { n: '07', label: 'Report',      sub: 'Growth review'    },
+  { n: '01', label: 'Brief',       sub: 'Market context'      },
+  { n: '02', label: 'Positioning', sub: 'Offer & audience'    },
+  { n: '03', label: 'Structure',   sub: 'Page wireframe'      },
+  { n: '04', label: 'Build',       sub: 'Design & dev'        },
+  { n: '05', label: 'Launch',      sub: 'Analytics setup'     },
+  { n: '06', label: 'Optimise',    sub: 'SEO & campaigns'     },
+  { n: '07', label: 'Report',      sub: 'Growth improvements' },
 ];
 
 const ACTIVE_IDX = 4; // "Launch" highlighted, matching the original concept
 
-export default function ProcessPageVisual() {
-  const W = 480, H = 360;
-  const startX = 48, stepW = 56, gap = 12;
+function DesktopTimeline() {
+  const W = 540, H = 360;
+  const margin = 50;
   const lineY = 152;
+  const stepSpacing = (W - margin * 2) / (STEPS.length - 1);
 
   return (
     <svg
@@ -47,22 +49,22 @@ export default function ProcessPageVisual() {
 
       <rect x="0" y="0" width={W} height={H} fill="url(#ppv-dots)" className="ppv-shimmer" />
 
-      <ellipse cx="240" cy={lineY} rx="220" ry="40" fill="rgba(20,120,168,0.08)" filter="url(#ppv-blur)" />
+      <ellipse cx={W / 2} cy={lineY} rx="240" ry="40" fill="rgba(20,120,168,0.08)" filter="url(#ppv-blur)" />
 
-      <line x1={startX} y1={lineY} x2={W - startX} y2={lineY} stroke="url(#ppv-line)" strokeWidth="1.5" />
+      <line x1={margin} y1={lineY} x2={W - margin} y2={lineY} stroke="url(#ppv-line)" strokeWidth="1.5" />
 
       {/* Travelling light pulse along the main line */}
       <g className="ppv-pulse-layer">
         <circle r="2.4" fill="#2FA0D6" className="ppv-pulse-dot">
-          <animateMotion dur="5s" repeatCount="indefinite" path={`M ${startX} ${lineY} L ${W - startX} ${lineY}`} />
+          <animateMotion dur="5s" repeatCount="indefinite" path={`M ${margin} ${lineY} L ${W - margin} ${lineY}`} />
         </circle>
       </g>
 
       {STEPS.map((s, i) => {
-        const cx = startX + i * (stepW + gap) + stepW / 2;
+        const cx = margin + i * stepSpacing;
         const active = i === ACTIVE_IDX;
         const done = i < ACTIVE_IDX;
-        const nodeR = active ? 14 : 9;
+        const nodeR = active ? 13 : 9;
         const nodeCol = active ? '#2FA0D6' : done ? '#1478A8' : '#8B98A3';
         const nodeFill = active
           ? 'rgba(47,160,214,0.14)'
@@ -102,14 +104,47 @@ export default function ProcessPageVisual() {
       })}
 
       {/* Active label callout */}
-      <rect x="168" y="260" width="144" height="38" rx="6"
+      <rect x={W / 2 - 72} y="260" width="144" height="38" rx="6"
         fill="#FFFFFF" stroke="rgba(20,120,168,0.32)" strokeWidth="1" className="ppv-callout" />
-      <text x="240" y="276" textAnchor="middle"
+      <text x={W / 2} y="276" textAnchor="middle"
         fontFamily="'DM Mono',monospace" fontSize="7"
         fill="#8B98A3" letterSpacing="0.1em">CURRENT STAGE</text>
-      <text x="240" y="291" textAnchor="middle"
+      <text x={W / 2} y="291" textAnchor="middle"
         fontFamily="'Syne',sans-serif" fontWeight="600"
         fontSize="10" fill="#1478A8" letterSpacing="0.04em">Launch & Analytics</text>
     </svg>
+  );
+}
+
+function MobileTimeline() {
+  return (
+    <div className="ppv-mobile-timeline" role="list" aria-label="Process pipeline, seven connected stages">
+      {STEPS.map((s, i) => {
+        const active = i === ACTIVE_IDX;
+        return (
+          <div key={s.n} role="listitem" className={`ppv-mobile-item${active ? ' ppv-mobile-item--active' : ''}`}>
+            <div className="ppv-mobile-marker">
+              <span className="ppv-mobile-num">{s.n}</span>
+              {i < STEPS.length - 1 && <span className="ppv-mobile-line" aria-hidden="true" />}
+            </div>
+            <div className="ppv-mobile-body">
+              <div className="ppv-mobile-label">{s.label}</div>
+              <div className="ppv-mobile-sub">{s.sub}</div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function ProcessPageVisual() {
+  return (
+    <>
+      <div className="ppv-desktop-wrap">
+        <DesktopTimeline />
+      </div>
+      <MobileTimeline />
+    </>
   );
 }

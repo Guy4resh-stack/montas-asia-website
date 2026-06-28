@@ -2001,10 +2001,15 @@ nav a.nav-active {
 }
 
 /* ─── ProcessPageVisual (/process hero) ─── */
+.ppv-desktop-wrap {
+  width: 100%;
+  display: block;
+}
 .ppv-svg {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
+  overflow: visible;
 }
 .ppv-shimmer {
   animation: shv-shimmer-drift 13s ease-in-out infinite;
@@ -2031,6 +2036,80 @@ nav a.nav-active {
   50%      { opacity: 0.8;  transform: scale(1.12); }
 }
 
+/* Mobile vertical timeline — hidden by default, shown only on small screens */
+.ppv-mobile-timeline {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .ppv-desktop-wrap {
+    display: none;
+  }
+  .ppv-mobile-timeline {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 0.25rem;
+  }
+  .ppv-mobile-item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 0.9rem;
+  }
+  .ppv-mobile-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ppv-mobile-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid rgba(20,120,168,0.22);
+    color: #8B98A3;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.72rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .ppv-mobile-item--active .ppv-mobile-num {
+    border-color: rgba(20,120,168,0.4);
+    color: #1478A8;
+    background: rgba(47,160,214,0.1);
+    animation: mgv-core-pulse 2.6s ease-in-out infinite;
+  }
+  .ppv-mobile-line {
+    width: 2px;
+    flex: 1;
+    min-height: 1.8rem;
+    background: linear-gradient(to bottom, rgba(20,120,168,0.3), rgba(20,120,168,0.1));
+    margin-top: 0.3rem;
+  }
+  .ppv-mobile-body {
+    padding-bottom: 1.6rem;
+  }
+  .ppv-mobile-label {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: #0E1620;
+    margin-bottom: 0.2rem;
+  }
+  .ppv-mobile-item--active .ppv-mobile-label {
+    color: #1478A8;
+  }
+  .ppv-mobile-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: #8B98A3;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ppv-shimmer,
   .ppv-active-ring,
@@ -2040,6 +2119,9 @@ nav a.nav-active {
   }
   .ppv-pulse-layer {
     display: none;
+  }
+  .ppv-mobile-item--active .ppv-mobile-num {
+    animation: none !important;
   }
 }
 
