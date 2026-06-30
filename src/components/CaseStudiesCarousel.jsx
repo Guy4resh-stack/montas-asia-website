@@ -19,7 +19,7 @@ export default function CaseStudiesCarousel({ cases }) {
 
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowRight') { e.preventDefault(); goTo(active + 1); }
-    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(active - 1); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(active - 1); }
   };
 
   const c = cases[active];
@@ -45,17 +45,17 @@ export default function CaseStudiesCarousel({ cases }) {
           <p className="wc-description">{c.homeDescription}</p>
 
           <div className="wc-tsr">
-            <div className="wc-tsr-row">
-              <span className="wc-tsr-label">Task</span>
-              <p className="wc-tsr-text">{c.taskStatement}</p>
+            <div className="wc-tsr-card">
+              <span className="wc-tsr-card-label">Task</span>
+              <p className="wc-tsr-card-text">{c.homeTask}</p>
             </div>
-            <div className="wc-tsr-row">
-              <span className="wc-tsr-label">Solution</span>
-              <p className="wc-tsr-text">{c.solutionStatement}</p>
+            <div className="wc-tsr-card">
+              <span className="wc-tsr-card-label">Solution</span>
+              <p className="wc-tsr-card-text">{c.homeSolution}</p>
             </div>
-            <div className="wc-tsr-row wc-tsr-row--result">
-              <span className="wc-tsr-label">Concept outcome</span>
-              <p className="wc-tsr-text">{c.conceptOutcome}</p>
+            <div className="wc-tsr-card wc-tsr-card--outcome">
+              <span className="wc-tsr-card-label wc-tsr-card-label--outcome">Outcome</span>
+              <p className="wc-tsr-card-text">{c.homeOutcome}</p>
             </div>
           </div>
 
@@ -66,17 +66,7 @@ export default function CaseStudiesCarousel({ cases }) {
 
         {/* Visual column */}
         <div className="wc-visual-col">
-          {c.image ? (
-            <img
-              className="wc-case-image"
-              src={c.image}
-              alt={c.homeTitle}
-              loading="lazy"
-              decoding="async"
-            />
-          ) : (
-            <CaseVisualMockup type={c.mockupType} />
-          )}
+          <CaseVisualMockup type={c.mockupType} />
         </div>
 
       </div>

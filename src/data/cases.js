@@ -1,5 +1,4 @@
 import { services } from './services.js';
-import circleLivingPrototype from '../assets/images/Circle_Living_Prototype.jpg';
 
 export const cases = [
   {
@@ -20,8 +19,10 @@ export const cases = [
     taskStatement: 'Present a residential property offer clearly for foreign buyers and renters: location, lifestyle, building benefits, trust factors and enquiry path.',
     solutionStatement: 'Create a conversion-ready landing page structure with a premium visual hierarchy, mobile-first layout, clear CTA, neighbourhood context, enquiry form and analytics-ready setup.',
     conceptOutcome: 'A stronger market-entry landing page concept that can be adapted for lead generation, paid campaigns and local search.',
+    homeTask: 'Clarify the property offer for foreign buyers and renters.',
+    homeSolution: 'Build a premium landing page with location, lifestyle, trust blocks and enquiry flow.',
+    homeOutcome: 'A campaign-ready concept for lead generation, paid traffic and local search.',
     mockupType: 'realEstate',
-    image: circleLivingPrototype,
   },
   {
     id: 'wellness-clinic-phuket',
@@ -41,6 +42,9 @@ export const cases = [
     taskStatement: 'Make service pages easier to discover through local and organic search.',
     solutionStatement: 'Build SEO-ready service page structure, local search keywords, Google Business profile logic, FAQ blocks, internal links and enquiry-focused page sections.',
     conceptOutcome: 'A clearer local discovery system prepared for SEO, Google Business visibility and service-specific enquiries.',
+    homeTask: 'Make high-value services easier to find through local and organic search.',
+    homeSolution: 'Structure SEO-ready service pages, local search assets, FAQs and enquiry paths.',
+    homeOutcome: 'A clearer discovery system prepared for service-specific enquiries.',
     mockupType: 'clinic',
   },
   {
@@ -61,6 +65,9 @@ export const cases = [
     taskStatement: 'Turn paid traffic and organic visitors into direct booking enquiries.',
     solutionStatement: 'Create a direct booking landing page structure with room highlights, trust blocks, offer sections, retargeting-ready layout and analytics setup.',
     conceptOutcome: 'A direct booking funnel concept prepared for paid media, remarketing and conversion tracking.',
+    homeTask: 'Turn traffic into direct booking interest.',
+    homeSolution: 'Create a booking-focused landing page with offers, trust blocks and tracking setup.',
+    homeOutcome: 'A direct booking concept prepared for campaigns and remarketing.',
     mockupType: 'resort',
   },
   {
@@ -81,6 +88,9 @@ export const cases = [
     taskStatement: 'Explain a complex offer clearly to a new market and create a trusted enquiry path.',
     solutionStatement: 'Combine competitor analysis, offer localisation, landing page structure, LinkedIn/search messaging and analytics-ready lead capture.',
     conceptOutcome: 'A clearer B2B market-entry system prepared for lead generation and sales conversations.',
+    homeTask: 'Explain a complex offer clearly in a new market.',
+    homeSolution: 'Combine competitor research, offer localisation and lead capture structure.',
+    homeOutcome: 'A clearer market-entry system prepared for sales conversations.',
     mockupType: 'b2b',
   },
   {
@@ -101,6 +111,9 @@ export const cases = [
     taskStatement: 'Turn audience interest into structured enquiries.',
     solutionStatement: 'Create course landing pages, content calendar logic, enquiry form, campaign message structure and reporting framework.',
     conceptOutcome: 'A lead-generation concept prepared for paid campaigns, content and CRM-ready intake.',
+    homeTask: 'Turn audience interest into structured enquiries.',
+    homeSolution: 'Create course pages, content logic, forms and campaign message structure.',
+    homeOutcome: 'A lead-generation concept prepared for paid media and CRM-ready intake.',
     mockupType: 'education',
   },
   {
@@ -121,6 +134,9 @@ export const cases = [
     taskStatement: 'Build trust and make key services easier to find through search.',
     solutionStatement: 'Create service pages, FAQ structure, local search content, trust blocks and simple consultation request flow.',
     conceptOutcome: 'A trust-led service page system prepared for organic search and consultation enquiries.',
+    homeTask: 'Make key services easier to find and trust.',
+    homeSolution: 'Build service pages, FAQ structure, trust blocks and consultation request flow.',
+    homeOutcome: 'A trust-led service system prepared for organic search and enquiries.',
     mockupType: 'legal',
   },
 ];
