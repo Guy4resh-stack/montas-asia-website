@@ -322,15 +322,19 @@ a.case-card h3 { font-size: 1rem; margin-bottom: 0.8rem; color: var(--text-prima
 .pillar p { font-size: 0.83rem; }
 
 /* ─── Why Asia ─── */
-.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3.5rem; }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 3rem; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
 .why-card {
-  padding: 2rem; border: 1px solid var(--border); border-radius: 10px;
-  background: var(--bg-card); transition: border-color 0.25s;
+  padding: 1.6rem 1.4rem; background: var(--bg-card);
+  transition: background 0.25s, border-color 0.25s;
+  display: flex; flex-direction: column; gap: 0.5rem;
 }
-.why-card:hover { border-color: var(--border-hover); }
-.why-icon { font-size: 1.4rem; margin-bottom: 1rem; display: block; }
-.why-card h3 { font-size: 1rem; margin-bottom: 0.6rem; }
-.why-card p { font-size: 0.86rem; }
+.why-card:hover { background: var(--bg-card-hover); }
+.why-card-num {
+  font-family: 'DM Mono', monospace; font-size: 0.65rem;
+  letter-spacing: 0.1em; color: var(--green-accent); margin-bottom: 0.2rem;
+}
+.why-card-title { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--text-primary); text-wrap: balance; }
+.why-card-text { font-size: 0.82rem; line-height: 1.55; color: var(--text-secondary); text-wrap: pretty; }
 
 /* ─── CTA ─── */
 .cta-glow {
@@ -590,7 +594,7 @@ a.service-index-card:hover .sic-cta { opacity: 1; }
   .hero-sub { max-width: 100%; }
   .problem-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .why-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: repeat(2, 1fr); border-radius: 8px; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   nav { display: none; }
   .btn-primary { display: none; }
@@ -607,6 +611,7 @@ a.service-index-card:hover .sic-cta { opacity: 1; }
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
   .hero-grid { gap: 2rem; }
   .hero-visual { height: 360px; }
+  .why-grid { grid-template-columns: 1fr; }
   .divider { margin: 0 1.2rem; }
   .cases-scroll-wrapper { padding: 0.5rem 1.2rem 1.5rem; }
   .detail-hero { padding: 2rem 0 3.5rem; }

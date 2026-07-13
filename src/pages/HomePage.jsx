@@ -139,21 +139,21 @@ export default function HomePage() {
       <section id="why-asia" className="section">
         <div className="container">
           <div className="section-head fade-up">
-            <div className="section-label">Why now</div>
-            <h2>Why Southeast Asia demands a different approach</h2>
-            <p>Southeast Asia is not behind digitally — it simply follows different digital behaviours, platforms and trust signals. The tools and buyer journeys don't map onto Western defaults.</p>
+            <div className="section-label">Why Southeast Asia</div>
+            <h2>Growth depends on local digital behaviour</h2>
+            <p>Southeast Asia is mobile-first, platform-fragmented and trust-sensitive. Growth requires pages, campaigns and content built for how buyers actually search, compare and enquire.</p>
           </div>
           <div className="why-grid">
             {[
-              { icon: '◉', title: 'Mobile-first, always', desc: 'Over 80% of web traffic in Thailand comes from mobile. A slow or poorly structured mobile page doesn\'t just underperform — it doesn\'t compete at all.' },
-              { icon: '◎', title: 'Platforms beyond Google', desc: 'LINE, Facebook, TikTok and Google Maps are the real discovery channels for local businesses. Presence without the right platform mix is invisible presence.' },
-              { icon: '◈', title: 'Trust before contact', desc: 'Thai and regional buyers research extensively before reaching out. Reviews, social proof, clear pricing and detailed service pages are the difference between inquiry and bounce.' },
-              { icon: '▣', title: 'Competitive local markets', desc: 'In categories like real estate, wellness and education, the local SEO competition is already sophisticated. Entering with a weak digital footprint means starting at a structural disadvantage.' },
+              { n: '01', title: 'Mobile-first by default',  text: 'Slow or unclear mobile pages lose enquiries before the offer is understood.' },
+              { n: '02', title: 'Search is local',          text: 'Buyers compare services through Google, maps, reviews and localised search intent.' },
+              { n: '03', title: 'Trust signals matter',     text: 'Clear proof, FAQs, location context and simple contact paths reduce hesitation.' },
+              { n: '04', title: 'Channels are fragmented',  text: 'Paid media, SEO, content and analytics need to work as one system.' },
             ].map(w => (
               <div key={w.title} className="why-card fade-up">
-                <span className="why-icon">{w.icon}</span>
-                <h3>{w.title}</h3>
-                <p>{w.desc}</p>
+                <span className="why-card-num">{w.n}</span>
+                <h3 className="why-card-title">{w.title}</h3>
+                <p className="why-card-text">{w.text}</p>
               </div>
             ))}
           </div>
