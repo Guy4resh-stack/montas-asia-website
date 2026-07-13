@@ -2,6 +2,28 @@ import { services } from './services.js';
 
 export const cases = [
   {
+    id: 'supreme-yachts',
+    title: 'Supreme Yachts — premium visual production',
+    industry: 'Production · Luxury yachting',
+    slug: '/cases/supreme-yachts',
+    externalUrl: 'https://montas.co/cases/supreme-yachts',
+    image: '/cases/supreme-yachts-cover.webp',
+    problem: 'Premium yacht brand needed visual content built for international digital and offline use.',
+    whatWeDid: 'Developed visual concept, produced lifestyle and yacht photography and video, adapted assets for web, social and advertising formats.',
+    relatedServiceIds: ['smm-content-systems', 'landing-pages-websites'],
+    contextPlaceholder: 'Supreme Yachts is an international luxury yacht charter brand operating across multiple markets. The brand required a cohesive visual identity and content system for web, social media and advertising.',
+    challengePlaceholder: 'The content needed to communicate luxury, freedom and travel to an international audience while working across digital and offline formats.',
+    channelsPlaceholder: ['Visual concept development', 'Lifestyle photography', 'Yacht photography and video', 'Social media content adaptation', 'Advertising asset production'],
+    // ── New homepage-specific fields ──────────────────────────────────
+    caseType: 'Real case',
+    homeTitle: 'Supreme Yachts — premium visual production for an international yacht brand',
+    homeDescription: 'A visual content system created to communicate luxury, freedom and travel across the website, social media and advertising campaigns.',
+    homeTask: 'Create premium photo and video assets for web, social media and advertising.',
+    homeSolution: 'Develop the visual concept, produce lifestyle and yacht content, and adapt it for digital and offline formats.',
+    homeOutcome: '1,500+ qualified charter leads through the combined PR, SMM and production programme.',
+    mockupType: null, // real image used instead — see image field above
+  },
+  {
     id: 'real-estate-bangkok',
     slug: '/cases/real-estate-bangkok',
     industry: 'Real Estate · Bangkok',

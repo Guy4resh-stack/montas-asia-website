@@ -8,6 +8,14 @@ import CaseVisualMockup from './CaseVisualMockup.jsx';
  * used by /cases and /cases/:slug) and presents it as one strong slide at a
  * time: case number, type label, title, description, task, solution, result
  * and a large illustrative visual, with arrow + dot navigation.
+ *
+ * Supports two visual modes per case:
+ *   - image field set → renders a real <img> asset (e.g. Supreme Yachts)
+ *   - mockupType field set → renders the CSS/SVG CaseVisualMockup
+ *
+ * Supports two CTA modes:
+ *   - externalUrl field set → opens in a new tab with rel="noopener noreferrer"
+ *   - otherwise → internal <Link> to c.slug
  */
 export default function CaseStudiesCarousel({ cases }) {
   const [active, setActive] = useState(0);
@@ -24,6 +32,9 @@ export default function CaseStudiesCarousel({ cases }) {
 
   const c = cases[active];
 
+  // CTA label: "View real case" for real cases, "Explore concept" for concepts
+  const ctaLabel = c.caseType === 'Real case' ? 'View real case →' : 'Explore concept →';
+
   return (
     <div
       className="wc-carousel"
@@ -38,7 +49,9 @@ export default function CaseStudiesCarousel({ cases }) {
         <div className="wc-text-col">
           <div className="wc-meta-row">
             <span className="wc-number">{String(active + 1).padStart(2, '0')}</span>
-            <span className="wc-type-badge">{c.caseType}</span>
+            <span className={`wc-type-badge${c.caseType === 'Real case' ? ' wc-type-badge--real' : ''}`}>
+              {c.caseType}
+            </span>
           </div>
 
           <h3 className="wc-title">{c.homeTitle}</h3>
@@ -54,19 +67,59 @@ export default function CaseStudiesCarousel({ cases }) {
               <p className="wc-tsr-card-text">{c.homeSolution}</p>
             </div>
             <div className="wc-tsr-card wc-tsr-card--outcome">
-              <span className="wc-tsr-card-label wc-tsr-card-label--outcome">Outcome</span>
-              <p className="wc-tsr-card-text">{c.homeOutcome}</p>
+              <span className="wc-tsr-card-label wc-tsr-card-label--outcome">Result</span>
+              <p className="wc-tsr-card-text">
+                {c.homeOutcome}
+                {c.caseType === 'Real case' && (
+                  <span className="wc-result-note"> (combined programme)</span>
+                )}
+              </p>
             </div>
           </div>
 
-          <Link to={c.slug} className="hero-cta-primary wc-cta">
-            Explore concept →
-          </Link>
+          {/* CTA: external link for real cases, internal Link for concepts */}
+          {c.externalUrl ? (
+            <a
+              href={c.externalUrl}
+              className="hero-cta-primary wc-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {ctaLabel}
+            </a>
+          ) : (
+            <Link to={c.slug} className="hero-cta-primary wc-cta">
+              {ctaLabel}
+            </Link>
+          )}
         </div>
 
-        {/* Visual column */}
+        {/* Visual column: real image or CSS mockup */}
         <div className="wc-visual-col">
-          <CaseVisualMockup type={c.mockupType} />
+          {c.image ? (
+            <div className="wc-real-image-wrap">
+              <img
+                src={c.image}
+                alt={c.imageAlt || c.homeTitle}
+                className="wc-real-image"
+                onError={(e) => {
+                  // If image not yet uploaded, show a clean placeholder slot
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="wc-image-slot" style={{ display: 'none' }} aria-hidden="true">
+                <svg width="32" height="28" viewBox="0 0 32 28" fill="none">
+                  <rect x="1" y="1" width="30" height="26" rx="3" stroke="#1478A8" strokeWidth="1.3" opacity="0.4"/>
+                  <circle cx="9" cy="9" r="3" stroke="#1478A8" strokeWidth="1.2" opacity="0.5"/>
+                  <path d="M3 23 L11 15 L16.5 20 L21.5 14 L29 23" stroke="#1478A8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.4"/>
+                </svg>
+                <span>Image slot — add photo at public/cases/supreme-yachts-cover.webp</span>
+              </div>
+            </div>
+          ) : (
+            <CaseVisualMockup type={c.mockupType} />
+          )}
         </div>
 
       </div>
