@@ -5,7 +5,8 @@ import GrowthSystemVisual from '../components/GrowthSystemVisual.jsx';
 import ServiceIcon from '../components/ServiceIcon.jsx';
 import ProblemCarousel from '../components/ProblemCarousel.jsx';
 import CaseStudiesCarousel from '../components/CaseStudiesCarousel.jsx';
-import ProcessFlow from '../components/ProcessFlow.jsx';
+import HomepageProcessTimeline from '../components/HomepageProcessTimeline.jsx';
+import HomepageAboutSection from '../components/HomepageAboutSection.jsx';
 import { services } from '../data/services.js';
 import { cases } from '../data/cases.js';
 
@@ -119,12 +120,7 @@ export default function HomePage() {
       {/* PROCESS */}
       <section id="process" className="section">
         <div className="container">
-          <div className="section-head fade-up">
-            <div className="section-label">How we work</div>
-            <h2>Process</h2>
-            <p>A connected, sequential workflow. Each stage leads directly into the next — no scope drift, no disconnected handoffs.</p>
-          </div>
-          <ProcessFlow />
+          <HomepageProcessTimeline />
         </div>
       </section>
 
@@ -133,28 +129,7 @@ export default function HomePage() {
       {/* ABOUT */}
       <section id="about" className="section">
         <div className="container">
-          <div className="about-grid">
-            <div className="about-text fade-up">
-              <div className="section-label">About Montas</div>
-              <h2>Strategy, production and execution — under one roof</h2>
-              <p style={{ marginTop: '1.5rem' }}>Montas is a marketing studio, not a full-service agency trying to do everything. We focus on what moves revenue for businesses in Southeast Asian markets: clear digital presence, functional lead generation, and campaigns that improve over time.</p>
-              <p>We combine strategic thinking with hands-on production. That means one team handles the brief, the build and the results — no account managers playing telephone between client and a junior team you never meet.</p>
-              <p>Our work is grounded in the reality of how people search, decide and contact businesses in Thailand and the surrounding region: mobile-first, platform-driven, trust-sensitive. We build for that reality, not a Western default.</p>
-            </div>
-            <div className="about-pillars fade-up">
-              {[
-                { title: 'Strategy first', desc: 'Every project starts with understanding your business model, competitive landscape and customer journey — before any design begins.' },
-                { title: 'Production speed', desc: 'Fast delivery without cutting corners. We use AI tools, proven frameworks and clear scopes to reduce time without reducing quality.' },
-                { title: 'Measurable output', desc: 'Landing pages, campaigns and content are judged by what they produce: leads, conversions, rankings, bookings. Not aesthetics alone.' },
-                { title: 'Regional knowledge', desc: 'We understand Thai and Southeast Asian digital platforms, buyer behaviour, seasonal patterns and how local audiences search and decide.' },
-              ].map(p => (
-                <div key={p.title} className="pillar">
-                  <div className="pillar-title">{p.title}</div>
-                  <p>{p.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          <HomepageAboutSection />
         </div>
       </section>
 
