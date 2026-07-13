@@ -355,6 +355,7 @@ a.case-card h3 { font-size: 1rem; margin-bottom: 0.8rem; color: var(--text-prima
   letter-spacing: 0.08em; color: var(--text-dim);
 }
 .cta-contact a { color: var(--green-accent); border-bottom: 1px solid rgba(20,120,168,0.3); }
+.cta-label { justify-content: center; }
 
 /* ─── Divider ─── */
 .divider {

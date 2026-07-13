@@ -167,12 +167,12 @@ export default function HomePage() {
         <div className="container">
           <div className="cta-glow" />
           <div className="cta-inner fade-up">
-            <div className="section-label" style={{ justifyContent: 'center', display: 'flex' }}>Let's work together</div>
-            <h2>Ready to build something that works?</h2>
-            <p>Tell us about your business, your market and where you're stuck. We'll respond with a clear proposal — no sales call required to get started.</p>
+            <div className="section-label cta-label">Start a project</div>
+            <h2>Ready to work on something real?</h2>
+            <p>Tell us about your business and your market. We will respond with a clear next step — no sales call required.</p>
             <div className="cta-buttons">
               <Link to="/contact" className="hero-cta-primary">Discuss a project</Link>
-              <Link to="/services" className="hero-cta-secondary">See what we offer</Link>
+              <Link to="/process" className="hero-cta-secondary">See how we work</Link>
             </div>
             <div className="cta-contact">
               Email: <a href="mailto:hello@montas.co">hello@montas.co</a>
