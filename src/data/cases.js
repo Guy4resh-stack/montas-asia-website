@@ -29,7 +29,7 @@ export const cases = [
     industry: 'SMM · Fintech',
     slug: '/cases/unisend',
     externalUrl: 'https://montas.io/cases/unisend',
-    image: '/cases/unisend-cover.png',
+    image: '/cases/unisend-cover.jpg',
     imageAlt: 'Unisend.me social media and fintech marketing case',
     isExternal: true,
     problem: 'A new cross-border payment service needed to build trust and convert an early social audience into customers at a controlled acquisition cost.',
