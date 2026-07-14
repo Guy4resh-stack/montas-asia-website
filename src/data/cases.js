@@ -29,7 +29,7 @@ export const cases = [
     industry: 'SMM · Fintech',
     slug: '/cases/unisend',
     externalUrl: 'https://montas.io/cases/unisend',
-    image: '/cases/unisend-cover.webp',
+    image: '/cases/unisend-cover.png',
     imageAlt: 'Unisend.me social media and fintech marketing case',
     isExternal: true,
     problem: 'A new cross-border payment service needed to build trust and convert an early social audience into customers at a controlled acquisition cost.',
@@ -48,8 +48,8 @@ export const cases = [
     homeOutcome: '5,255 organic subscribers in six months and a 25% subscriber-to-client conversion rate.',
     metrics: [
       { value: '$120,000', label: 'avg transfer turnover by month six' },
-      { value: '$2',       label: 'avg Telegram Ads subscriber cost'   },
-      { value: '650–1,000', label: 'new users/month from month two'    },
+      { value: '$2', label: 'avg Telegram Ads subscriber cost' },
+      { value: '650–1,000', label: 'new users/month from month two' },
     ],
     mockupType: null, // real image used — see image field above
   },
