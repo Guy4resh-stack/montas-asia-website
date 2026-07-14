@@ -112,20 +112,7 @@ export default function CaseStudiesCarousel({ cases }) {
                 src={c.image}
                 alt={c.imageAlt || c.homeTitle}
                 className="wc-real-image"
-                onError={(e) => {
-                  // If image not yet uploaded, show a clean placeholder slot
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
               />
-              <div className="wc-image-slot" style={{ display: 'none' }} aria-hidden="true">
-                <svg width="32" height="28" viewBox="0 0 32 28" fill="none">
-                  <rect x="1" y="1" width="30" height="26" rx="3" stroke="#1478A8" strokeWidth="1.3" opacity="0.4"/>
-                  <circle cx="9" cy="9" r="3" stroke="#1478A8" strokeWidth="1.2" opacity="0.5"/>
-                  <path d="M3 23 L11 15 L16.5 20 L21.5 14 L29 23" stroke="#1478A8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity="0.4"/>
-                </svg>
-                <span>Image slot — add photo at public/cases/supreme-yachts-cover.webp</span>
-              </div>
             </div>
           ) : (
             <CaseVisualMockup type={c.mockupType} />

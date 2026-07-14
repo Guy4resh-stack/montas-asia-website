@@ -7,7 +7,7 @@ export const cases = [
     industry: 'Production · Luxury yachting',
     slug: '/cases/supreme-yachts',
     externalUrl: 'https://montas.co/cases/supreme-yachts',
-    image: '/cases/supreme-yachts-cover.webp',
+    image: '/cases/supreme-yachts-cover.jpg',
     problem: 'Premium yacht brand needed visual content built for international digital and offline use.',
     whatWeDid: 'Developed visual concept, produced lifestyle and yacht photography and video, adapted assets for web, social and advertising formats.',
     relatedServiceIds: ['smm-content-systems', 'landing-pages-websites'],
@@ -48,8 +48,8 @@ export const cases = [
     homeOutcome: '5,255 organic subscribers in six months and a 25% subscriber-to-client conversion rate.',
     metrics: [
       { value: '$120,000', label: 'avg transfer turnover by month six' },
-      { value: '$2', label: 'avg Telegram Ads subscriber cost' },
-      { value: '650–1,000', label: 'new users/month from month two' },
+      { value: '$2',       label: 'avg Telegram Ads subscriber cost'   },
+      { value: '650–1,000', label: 'new users/month from month two'    },
     ],
     mockupType: null, // real image used — see image field above
   },
