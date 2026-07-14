@@ -52,6 +52,9 @@ export default function CaseStudiesCarousel({ cases }) {
             <span className={`wc-type-badge${c.caseType === 'Real case' ? ' wc-type-badge--real' : ''}`}>
               {c.caseType}
             </span>
+            {c.category && (
+              <span className="wc-category">{c.category}</span>
+            )}
           </div>
 
           <h3 className="wc-title">{c.homeTitle}</h3>
@@ -68,14 +71,21 @@ export default function CaseStudiesCarousel({ cases }) {
             </div>
             <div className="wc-tsr-card wc-tsr-card--outcome">
               <span className="wc-tsr-card-label wc-tsr-card-label--outcome">Result</span>
-              <p className="wc-tsr-card-text">
-                {c.homeOutcome}
-                {c.caseType === 'Real case' && (
-                  <span className="wc-result-note"> (combined programme)</span>
-                )}
-              </p>
+              <p className="wc-tsr-card-text">{c.homeOutcome}</p>
             </div>
           </div>
+
+          {/* Supporting metric chips — only for cases with confirmed figures */}
+          {c.metrics && c.metrics.length > 0 && (
+            <div className="wc-metrics">
+              {c.metrics.map((m) => (
+                <div key={m.label} className="wc-metric-chip">
+                  <span className="wc-metric-value">{m.value}</span>
+                  <span className="wc-metric-label">{m.label}</span>
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* CTA: external link for real cases, internal Link for concepts */}
           {c.externalUrl ? (
