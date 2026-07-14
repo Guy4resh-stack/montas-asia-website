@@ -54,6 +54,37 @@ export const cases = [
     mockupType: null, // real image used — see image field above
   },
   {
+    id: 'morocco-team',
+    title: 'Morocco Team — SMM growth for bespoke tours in Morocco',
+    industry: 'SMM · Travel',
+    slug: '/cases/morocco-team',
+    externalUrl: 'https://montas.io/cases/morocco-team',
+    image: '/cases/morocco-team-cover.jpg',
+    imageAlt: 'Morocco Team bespoke tours social media case',
+    isExternal: true,
+    problem: 'A bespoke tour operator in Morocco had lost audience reach and needed a structured content system to turn social engagement into enquiries.',
+    whatWeDid: 'Restarted regular posting, built a new Stories content system and developed creative formats to restore reach and generate tour enquiries.',
+    relatedServiceIds: ['smm-content-systems'],
+    contextPlaceholder: 'Morocco Team is a bespoke tour operator offering curated travel experiences in Morocco. The brand needed to rebuild its social media presence and turn engagement into qualified tour enquiries.',
+    challengePlaceholder: 'Reach had dropped significantly. The content was irregular and Stories were underused. The goal was to restore visibility and connect social content to actual tour bookings.',
+    channelsPlaceholder: ['Regular posting system', 'Stories content system', 'Creative format development', 'Instagram management'],
+    // ── Homepage-specific fields ──────────────────────────────────────
+    caseType: 'Real case',
+    category: 'SMM · Travel',
+    homeTitle: 'Morocco Team — SMM growth for bespoke tours in Morocco',
+    homeDescription: 'A structured social media system created to restore audience reach, improve Stories content and turn social engagement into tour enquiries.',
+    homeTask: 'Restore reach, systemise Stories and turn social content into tour enquiries.',
+    homeSolution: 'Restart regular posting, build a new Stories content system and develop creative formats.',
+    homeOutcome: '2× reach, 63 leads in one month and 2 tour sales priced from €2,000.',
+    metrics: [
+      { value: '2×',        label: 'reach increase'                },
+      { value: '63',        label: 'leads in one month'            },
+      { value: '2',         label: 'tour sales closed'             },
+      { value: 'from €2,000', label: 'starting price per tour'     },
+    ],
+    mockupType: null, // real image used — see image field above
+  },
+  {
     id: 'real-estate-bangkok',
     slug: '/cases/real-estate-bangkok',
     industry: 'Real Estate · Bangkok',
