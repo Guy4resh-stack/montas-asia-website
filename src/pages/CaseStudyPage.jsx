@@ -13,7 +13,14 @@ import { getCaseStudy } from '../data/caseStudies.js';
 
 function useReveal() {
   useEffect(() => {
-    const els = document.querySelectorAll('.cs-reveal');
+    const els = Array.from(document.querySelectorAll('.cs-reveal'));
+
+    // Fallback: if IntersectionObserver isn't supported, show everything.
+    if (!('IntersectionObserver' in window)) {
+      els.forEach((el) => el.classList.add('cs-visible'));
+      return;
+    }
+
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -23,10 +30,21 @@ function useReveal() {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.08, rootMargin: '0px 0px -5% 0px' }
     );
     els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+
+    // Safety net: reveal anything still hidden after 1.5s (covers cases
+    // where a section sits inside a hidden/dark parent and the observer
+    // doesn't fire as expected).
+    const timer = setTimeout(() => {
+      els.forEach((el) => el.classList.add('cs-visible'));
+    }, 1500);
+
+    return () => {
+      io.disconnect();
+      clearTimeout(timer);
+    };
   }, []);
 }
 
@@ -152,7 +170,7 @@ export default function CaseStudyPage({ slug }) {
             </div>
             <div className="cs-card-grid cs-card-grid--4">
               {challenge.cards.map((c) => (
-                <div key={c.title} className="cs-card cs-reveal">
+                <div key={c.title} className="cs-card">
                   <h3 className="cs-card-title">{c.title}</h3>
                   <p className="cs-card-text">{c.text}</p>
                 </div>
@@ -170,7 +188,7 @@ export default function CaseStudyPage({ slug }) {
               </div>
               <div className="cs-pillars">
                 {approach.pillars.map((p) => (
-                  <div key={p.n} className="cs-pillar cs-reveal">
+                  <div key={p.n} className="cs-pillar">
                     <span className="cs-pillar-n">{p.n}</span>
                     <span className="cs-pillar-title">{p.title}</span>
                   </div>
@@ -237,7 +255,7 @@ export default function CaseStudyPage({ slug }) {
           </section>
           <div className="cs-gallery">
             {production.gallery.map((g, i) => (
-              <div key={i} className="cs-gallery-item cs-reveal">
+              <div key={i} className="cs-gallery-item">
                 <img src={g.src} alt={g.alt} loading="lazy" className="cs-gallery-img" width="600" height="450" />
               </div>
             ))}
@@ -251,7 +269,7 @@ export default function CaseStudyPage({ slug }) {
             </div>
             <div className="cs-card-grid cs-card-grid--4">
               {results.main.map((r) => (
-                <div key={r.value} className="cs-result-card cs-reveal">
+                <div key={r.value} className="cs-result-card">
                   <span className="cs-result-value">{r.value}</span>
                   <p className="cs-result-text">{r.text}</p>
                 </div>
@@ -279,7 +297,7 @@ export default function CaseStudyPage({ slug }) {
             </div>
             <div className="cs-card-grid cs-card-grid--3">
               {sea.principles.map((p) => (
-                <div key={p.title} className="cs-card cs-reveal">
+                <div key={p.title} className="cs-card">
                   <h3 className="cs-card-title">{p.title}</h3>
                   <p className="cs-card-text">{p.text}</p>
                 </div>
