@@ -123,8 +123,7 @@ export default function CaseStudiesCarousel({ cases }) {
               <img
                 src={c.image}
                 alt={c.imageAlt || c.homeTitle}
-                className="wc-real-image"
-                style={c.imageContain ? { objectFit: 'contain', padding: '1.5rem', background: '#F3F6F8' } : undefined}
+                className={`wc-real-image${c.imageContain ? ' wc-real-image--contain' : ''}`}
               />
             </div>
           ) : (
