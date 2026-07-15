@@ -124,6 +124,7 @@ export default function CaseStudiesCarousel({ cases }) {
                 src={c.image}
                 alt={c.imageAlt || c.homeTitle}
                 className="wc-real-image"
+                style={c.imageContain ? { objectFit: 'contain', padding: '1.5rem', background: '#F3F6F8' } : undefined}
               />
             </div>
           ) : (
