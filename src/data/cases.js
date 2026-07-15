@@ -54,6 +54,38 @@ export const cases = [
     mockupType: null, // real image used — see image field above
   },
   {
+    id: 'mb-trade',
+    title: 'MB TRADE — integrated marketing and sales system for China logistics',
+    industry: 'Integrated marketing · B2B logistics',
+    slug: '/cases/mb-trade',
+    externalUrl: 'https://montas.io/cases/mb-trade-multimodal-container-shipping',
+    image: '/cases/mb-trade-cover.jpg',
+    imageAlt: 'MB TRADE B2B logistics marketing and sales case',
+    isExternal: true,
+    problem: 'A B2B logistics company needed an integrated lead-generation and sales system to improve conversion and raise average deal value.',
+    whatWeDid: 'Combined market research, a conversion-focused website, Bitrix24 CRM integration, paid acquisition, Telegram content and an outbound call centre into one connected system.',
+    relatedServiceIds: ['landing-pages-websites', 'paid-advertising-lead-gen', 'smm-content-systems', 'analytics-reporting'],
+    contextPlaceholder: 'MB TRADE is a B2B logistics company providing multimodal shipping, warehousing and freight forwarding in China. The business needed a full marketing and sales system to generate qualified leads and improve deal economics.',
+    challengePlaceholder: 'Lead quality and conversion rates were low. The average deal value needed to grow significantly and the sales process required CRM structure and outbound support.',
+    channelsPlaceholder: ['Market research', 'Conversion-focused website', 'Bitrix24 CRM', 'Paid acquisition', 'Telegram content', 'Outbound call centre'],
+    // ── Homepage-specific fields ──────────────────────────────────────
+    caseType: 'Real case',
+    category: 'Integrated marketing · B2B logistics',
+    homeTitle: 'MB TRADE — integrated marketing and sales system for China logistics',
+    homeDescription: 'A connected marketing and sales system created for a B2B logistics company providing multimodal shipping, warehousing and freight forwarding in China.',
+    homeTask: 'Build an integrated lead-generation and sales system, increase conversion and raise the average deal value.',
+    homeSolution: 'Combine market research, a conversion-focused website, Bitrix24 CRM, paid acquisition, Telegram content and an outbound call centre.',
+    homeOutcome: '23% cold-call conversion, −30% cost per lead and average deal value increased from ₽300,000 to ₽1,000,000.',
+    metrics: [
+      { value: '23%',    label: 'cold-call conversion rate'          },
+      { value: '−30%',   label: 'cost per lead'                      },
+      { value: '3.3×',   label: 'average deal value (₽300K → ₽1M)'  },
+      { value: '+15%',   label: 'monthly Telegram audience growth'   },
+      { value: '₽100M+', label: 'annual turnover of clients served'  },
+    ],
+    mockupType: null, // real image used — see image field above
+  },
+  {
     id: 'morocco-team',
     title: 'Morocco Team — SMM growth for bespoke tours in Morocco',
     industry: 'SMM · Travel',
