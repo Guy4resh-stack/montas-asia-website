@@ -148,9 +148,40 @@ export const cases = [
     ],
     mockupType: null, // real image used — see image field above
   },
-  // ── SIXTH REAL CASE RESERVED ──────────────────────────────────────
-  // Add the next approved real case here when ready.
-  // Do not add concept or sample cases to this section.
+  {
+    id: 'dafna',
+    title: 'Dafna — organic social growth for a multibrand jewellery retailer',
+    industry: 'SMM · Influence marketing · Franchise growth',
+    slug: '/cases/dafna',
+    externalUrl: 'https://montas.io/cases/dafna-smm',
+    liveUrl: 'https://dafnashop.ru/',
+    image: '/cases/dafna-cover.jpg',
+    imageAlt: 'Dafna jewellery retailer organic social media growth case',
+    isExternal: true,
+    problem: 'A multibrand jewellery retailer needed an organic social growth system to build audience engagement and generate franchise enquiries without paid advertising.',
+    whatWeDid: 'Launched a four-person creative team, refreshed the visual system and combined regular production, influencer partnerships and brand collaborations.',
+    relatedServiceIds: ['smm-content-systems'],
+    contextPlaceholder: 'Dafna is a multibrand jewellery retailer. The brand needed a structured creative and social media system to grow organically, strengthen engagement and generate franchise interest.',
+    challengePlaceholder: 'The brand needed consistent social content, a stronger visual identity and an influencer and collaboration programme — all without a paid advertising budget.',
+    channelsPlaceholder: ['Creative team (4 people)', 'Visual system refresh', 'Regular content production', 'Influencer partnerships', 'Brand collaborations', 'Organic social promotion'],
+    // ── Homepage-specific fields ──────────────────────────────────────
+    caseType: 'Real case',
+    category: 'SMM · Influence marketing · Franchise growth',
+    homeTitle: 'Dafna — organic social growth for a multibrand jewellery retailer',
+    homeDescription: 'A creative and social media system built to grow the audience organically, strengthen brand engagement and generate franchise enquiries without paid advertising.',
+    homeTask: 'Build an organic social growth system and turn audience engagement into franchise enquiries.',
+    homeSolution: 'Launch a four-person creative team, refresh the visual system and combine regular production, influencer partnerships and brand collaborations.',
+    homeOutcome: '5,000+ organic followers, 100+ franchise enquiries and the first franchise opened within one month.',
+    metrics: [
+      { value: '5,000+',   label: 'organic followers (no paid ads)'       },
+      { value: '100+',     label: 'franchise enquiries (no ad budget)'     },
+      { value: '4×',       label: 'Stories reach'                         },
+      { value: '10K–20K',  label: 'views per Reel'                        },
+      { value: '50+',      label: 'organic social mentions'               },
+      { value: '9',        label: 'new partner brands'                    },
+    ],
+    mockupType: null, // real image used — see image field above
+  },
   {
     id: 'real-estate-bangkok',
     slug: '/cases/real-estate-bangkok',
