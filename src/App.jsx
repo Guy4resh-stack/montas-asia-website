@@ -7,6 +7,7 @@ import ServicesPage from './pages/ServicesPage.jsx';
 import ServiceDetailPage from './pages/ServiceDetailPage.jsx';
 import CasesPage from './pages/CasesPage.jsx';
 import CaseDetailPage from './pages/CaseDetailPage.jsx';
+import CaseStudyPage from './pages/CaseStudyPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import ProcessPage from './pages/ProcessPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
@@ -53,6 +54,7 @@ export default function App() {
           <Route path="/services/market-research" element={<ServiceRoute id="market-research" />} />
           <Route path="/services/ai-assisted-production" element={<ServiceRoute id="ai-assisted-production" />} />
           <Route path="/cases" element={<CasesPage />} />
+          <Route path="/cases/supreme-yachts" element={<CaseStudyPage slug="supreme-yachts" />} />
           <Route path="/cases/real-estate-bangkok" element={<CaseRoute id="real-estate-bangkok" />} />
           <Route path="/cases/wellness-clinic-phuket" element={<CaseRoute id="wellness-clinic-phuket" />} />
           <Route path="/cases/tourism-hospitality" element={<CaseRoute id="tourism-hospitality" />} />

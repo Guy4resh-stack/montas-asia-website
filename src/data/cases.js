@@ -6,7 +6,7 @@ export const cases = [
     title: 'Supreme Yachts — premium visual production',
     industry: 'Production · Luxury yachting',
     slug: '/cases/supreme-yachts',
-    externalUrl: 'https://montas.co/cases/supreme-yachts',
+    internalCaseStudy: true, // links to internal /cases/supreme-yachts page
     image: '/cases/supreme-yachts-cover.jpg',
     problem: 'Premium yacht brand needed visual content built for international digital and offline use.',
     whatWeDid: 'Developed visual concept, produced lifestyle and yacht photography and video, adapted assets for web, social and advertising formats.',

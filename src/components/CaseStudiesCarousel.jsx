@@ -32,8 +32,10 @@ export default function CaseStudiesCarousel({ cases }) {
 
   const c = cases[active];
 
-  // CTA label: "View real case" for real cases, "Explore concept" for concepts
-  const ctaLabel = c.caseType === 'Real case' ? 'View real case →' : 'Explore concept →';
+  // CTA label: internal case study, real case (external), or concept
+  const ctaLabel = c.internalCaseStudy
+    ? 'View case study →'
+    : c.caseType === 'Real case' ? 'View real case →' : 'Explore concept →';
 
   return (
     <div
@@ -87,9 +89,13 @@ export default function CaseStudiesCarousel({ cases }) {
             </div>
           )}
 
-          {/* CTA: external link for real cases, internal Link for concepts */}
+          {/* CTA: internal case study, external real case, or internal concept */}
           <div className="wc-cta-row">
-            {c.externalUrl ? (
+            {c.internalCaseStudy ? (
+              <Link to={c.slug} className="hero-cta-primary wc-cta">
+                {ctaLabel}
+              </Link>
+            ) : c.externalUrl ? (
               <a
                 href={c.externalUrl}
                 className="hero-cta-primary wc-cta"
