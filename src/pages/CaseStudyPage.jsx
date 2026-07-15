@@ -187,10 +187,10 @@ export default function CaseStudyPage({ slug }) {
                 <p className="cs-body cs-body--wide cs-body--light">{approach.intro}</p>
               </div>
               <div className="cs-pillars">
-                {approach.pillars.map((p) => (
-                  <div key={p.n} className="cs-pillar">
-                    <span className="cs-pillar-n">{p.n}</span>
-                    <span className="cs-pillar-title">{p.title}</span>
+                {approach.pillars.map((title, i) => (
+                  <div key={title} className="cs-pillar">
+                    <span className="cs-pillar-n">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="cs-pillar-title">{title}</span>
                   </div>
                 ))}
               </div>
