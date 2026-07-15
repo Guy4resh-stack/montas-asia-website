@@ -1387,7 +1387,7 @@ nav a.nav-active {
   overflow: hidden;
   aspect-ratio: 4 / 3;
   position: relative;
-  background: var(--green-deep);
+  background: #FFFFFF;
 }
 .wc-real-image {
   width: 100%;
@@ -1402,7 +1402,7 @@ nav a.nav-active {
 .wc-real-image--contain {
   object-fit: contain !important;
   padding: 1.5rem;
-  background: var(--bg-card-hover);
+  background: #FFFFFF;
 }
 .wc-real-image-wrap:hover .wc-real-image {
   transform: scale(1.03);
