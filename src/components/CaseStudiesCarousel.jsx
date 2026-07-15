@@ -88,20 +88,32 @@ export default function CaseStudiesCarousel({ cases }) {
           )}
 
           {/* CTA: external link for real cases, internal Link for concepts */}
-          {c.externalUrl ? (
-            <a
-              href={c.externalUrl}
-              className="hero-cta-primary wc-cta"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {ctaLabel}
-            </a>
-          ) : (
-            <Link to={c.slug} className="hero-cta-primary wc-cta">
-              {ctaLabel}
-            </Link>
-          )}
+          <div className="wc-cta-row">
+            {c.externalUrl ? (
+              <a
+                href={c.externalUrl}
+                className="hero-cta-primary wc-cta"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {ctaLabel}
+              </a>
+            ) : (
+              <Link to={c.slug} className="hero-cta-primary wc-cta">
+                {ctaLabel}
+              </Link>
+            )}
+            {c.liveUrl && (
+              <a
+                href={c.liveUrl}
+                className="hero-cta-secondary wc-cta-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View live site →
+              </a>
+            )}
+          </div>
         </div>
 
         {/* Visual column: real image or CSS mockup */}

@@ -111,7 +111,7 @@ export default function HomePage() {
               <p>A look at how Montas approaches real project types across Southeast Asia. Cases below are concept and sample work prepared to demonstrate the approach — clearly labelled, with no invented results.</p>
             </div>
           </div>
-          <CaseStudiesCarousel cases={cases} />
+          <CaseStudiesCarousel cases={cases.filter(c => c.caseType === 'Real case')} />
         </div>
       </section>
 

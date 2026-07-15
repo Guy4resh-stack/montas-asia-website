@@ -117,6 +117,41 @@ export const cases = [
     mockupType: null, // real image used — see image field above
   },
   {
+    id: 'rippa',
+    title: 'Rippa — brand relaunch and scalable equipment platform for the UAE',
+    industry: 'Branding · Web development · B2B',
+    slug: '/cases/rippa',
+    externalUrl: 'https://montas.io/cases/rippa',
+    liveUrl: 'https://rippa-uae.com/',
+    image: '/cases/rippa-cover.jpg',
+    imageAlt: 'Rippa UAE industrial equipment website and catalogue',
+    isExternal: true,
+    problem: 'An industrial equipment manufacturer needed a complete brand and digital platform relaunch to enter the UAE market.',
+    whatWeDid: 'Combined audience research, a new brand system, an eight-page Webflow website and a CMS catalogue with 100+ SKUs and custom filters.',
+    relatedServiceIds: ['landing-pages-websites'],
+    contextPlaceholder: 'Rippa is an industrial equipment manufacturer entering the UAE market. The brand required a full relaunch: new visual identity, scalable B2B website and a product catalogue system.',
+    challengePlaceholder: 'The existing brand and digital presence were not suitable for the UAE B2B market. A new brand system, responsive website and scalable CMS catalogue were needed within a short timeline.',
+    channelsPlaceholder: ['Audience research', 'Brand system', 'Webflow website (8 pages)', 'CMS catalogue (100+ SKUs)', 'Custom filters'],
+    // ── Homepage-specific fields ──────────────────────────────────────
+    caseType: 'Real case',
+    category: 'Branding · Web development · B2B',
+    homeTitle: 'Rippa — brand relaunch and scalable equipment platform for the UAE',
+    homeDescription: 'A complete brand and digital platform relaunch for an industrial equipment manufacturer entering the UAE market.',
+    homeTask: 'Relaunch the brand for the UAE and build a scalable B2B equipment catalogue.',
+    homeSolution: 'Combine audience research, a new brand system, an eight-page Webflow website and a CMS with 100+ SKUs and custom filters.',
+    homeOutcome: 'A market-ready digital platform launched in one month with clear UX and scalable catalogue management.',
+    metrics: [
+      { value: '1 month',  label: 'from brief to launch'    },
+      { value: '100+ SKUs', label: 'catalogue products'      },
+      { value: '8 pages',  label: 'responsive Webflow pages' },
+      { value: 'Custom CMS', label: 'with filtering system'  },
+    ],
+    mockupType: null, // real image used — see image field above
+  },
+  // ── SIXTH REAL CASE RESERVED ──────────────────────────────────────
+  // Add the next approved real case here when ready.
+  // Do not add concept or sample cases to this section.
+  {
     id: 'real-estate-bangkok',
     slug: '/cases/real-estate-bangkok',
     industry: 'Real Estate · Bangkok',

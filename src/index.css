@@ -1560,6 +1560,23 @@ nav a.nav-active {
 .wc-cta {
   align-self: flex-start;
 }
+.wc-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+.wc-cta-secondary {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--green-accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(20,120,168,0.3);
+  transition: border-color 0.2s;
+  padding-bottom: 1px;
+}
+.wc-cta-secondary:hover { border-color: var(--green-accent); }
 
 .wc-visual-col {
   display: flex;
