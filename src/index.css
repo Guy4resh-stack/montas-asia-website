@@ -2723,8 +2723,18 @@ nav a.nav-active {
 /* Gallery */
 .cs-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; padding: 1rem 0 4rem; max-width: 1100px; margin: 0 auto; }
 .cs-gallery-item { border-radius: 14px; overflow: hidden; aspect-ratio: 4/3; background: var(--green-deep); }
-.cs-gallery-item--portrait { aspect-ratio: 9/16; background: #FFFFFF; }
-.cs-gallery-item--portrait .cs-gallery-img { object-fit: contain; }
+.cs-gallery-item--portrait {
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-gallery-item--portrait .cs-gallery-img {
+  object-fit: contain;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
 .cs-gallery-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
 .cs-gallery-item:hover .cs-gallery-img { transform: scale(1.04); }
 
