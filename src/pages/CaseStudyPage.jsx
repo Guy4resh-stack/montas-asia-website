@@ -255,8 +255,8 @@ export default function CaseStudyPage({ slug }) {
           </section>
           <div className="cs-gallery">
             {production.gallery.map((g, i) => (
-              <div key={i} className="cs-gallery-item">
-                <img src={g.src} alt={g.alt} loading="lazy" className="cs-gallery-img" width="600" height="450" />
+              <div key={i} className={`cs-gallery-item${g.portrait ? ' cs-gallery-item--portrait' : ''}`}>
+                <img src={g.src} alt={g.alt} loading="lazy" className="cs-gallery-img" />
               </div>
             ))}
           </div>

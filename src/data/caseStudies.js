@@ -155,8 +155,8 @@ export const caseStudies = {
       gallery: [
         { src: '/cases/supreme-yachts/production-01.jpg', alt: 'Supreme Yachts lifestyle production still' },
         { src: '/cases/supreme-yachts/production-02.jpg', alt: 'Supreme Yachts yacht photography' },
-        { src: '/cases/supreme-yachts/social-01.jpg',     alt: 'Supreme Yachts social media content composition' },
-        { src: '/cases/supreme-yachts/pr-01.jpg',         alt: 'Supreme Yachts PR and partnership visual' },
+        { src: '/cases/supreme-yachts/social-01.jpg',     alt: 'Supreme Yachts social media content composition', portrait: true },
+        { src: '/cases/supreme-yachts/pr-01.jpg',         alt: 'Supreme Yachts PR and partnership visual', portrait: true },
         { src: '/cases/supreme-yachts/gallery-01.jpg',    alt: 'Supreme Yachts premium travel imagery' },
         { src: '/cases/supreme-yachts/gallery-02.jpg',    alt: 'Supreme Yachts interior and detail photography' },
       ],
