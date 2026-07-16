@@ -15,6 +15,7 @@
 export const caseStudies = {
   'supreme-yachts': {
     slug: 'supreme-yachts',
+    caseName: 'Supreme Yachts',
     // ── SEO / metadata ──────────────────────────────────────────────
     seo: {
       title: 'Supreme Yachts Marketing Case Study | Montas Asia',
@@ -236,6 +237,200 @@ export const caseStudies = {
     finalCta: {
       heading: 'Planning to grow a premium travel or lifestyle brand in Southeast Asia?',
       body: 'Build a market-entry and demand-generation system around your brand, audience and commercial goals.',
+    },
+  },
+
+  'unisend': {
+    slug: 'unisend',
+    caseName: 'Unisend.me',
+    seo: {
+      title: 'Unisend.me Fintech Marketing Case Study | Montas Asia',
+      description:
+        'How Montas used research, SMM, content and Telegram acquisition to build 5,255 organic subscribers and 25% subscriber-to-client conversion for Unisend.me.',
+      canonicalPath: '/cases/unisend',
+      ogImage: '/cases/unisend/hero.jpg',
+    },
+    hero: {
+      label: 'REAL CASE · FINTECH · CROSS-BORDER PAYMENTS',
+      h1: 'Unisend.me — building trust and demand for a new cross-border payment service',
+      intro:
+        'Montas combined audience research, personalised social communication, content production and paid acquisition to help a new international transfer service earn trust and attract its first customers.',
+      serviceTags: [
+        'Audience research', 'Customer journey mapping', 'SMM strategy',
+        'Content strategy', 'Visual identity', 'Video production',
+        'Telegram Ads', 'B2B landing page',
+      ],
+      image: '/cases/unisend-cover.jpg',
+      imageContain: true,
+      imageAlt: 'Unisend.me cross-border transfer service marketing case',
+      secondaryCta: { label: 'Visit live service ↗', url: 'https://unisend.me/' },
+    },
+    heroProof: [
+      { value: '5,255', label: 'organic subscribers in six months' },
+      { value: '25%', label: 'subscriber-to-client conversion' },
+      { value: '$120K', label: 'transfer turnover reached by month six' },
+      { value: '$2', label: 'average Telegram Ads subscriber cost' },
+    ],
+    client: {
+      label: 'THE CLIENT',
+      heading: 'A cross-border transfer service entering a trust-sensitive market',
+      body: [
+        'Unisend.me was introduced as a service for card-to-card transfers between Russia, Turkey, Kazakhstan, Georgia and Armenia. The historical project also included a business direction for accepting payments in Turkey.',
+        'For a new financial service, technical availability alone was not enough. Customers needed to understand the product, recognise the people behind it and feel confident using it for real transactions.',
+      ],
+      overview: [
+        { term: 'Industry', value: 'Fintech and cross-border payments' },
+        { term: 'Historical markets', value: 'Russia, Turkey, Kazakhstan, Georgia and Armenia' },
+        { term: 'Audiences', value: 'Individuals and businesses' },
+        { term: 'Core channels', value: 'Telegram and VK' },
+        { term: 'Engagement', value: 'Research, SMM, content and acquisition' },
+        { term: 'Core objective', value: 'Trust and early customer growth' },
+      ],
+    },
+    challenge: {
+      label: 'THE CHALLENGE',
+      heading: 'Trust had to be built before growth could begin',
+      intro:
+        'A new financial product asks users to take a meaningful risk: transfer real money through a service they may not yet recognise. Conventional anonymous advertising could attract attention, but it could not provide the level of trust required to convert that attention into active customers.',
+      cards: [
+        { title: 'Earn initial trust', text: 'Explain the service clearly and create a visible, responsive brand presence for a new audience.' },
+        { title: 'Acquire the first customers', text: 'Turn early social attention into real product usage rather than passive subscriber growth.' },
+        { title: 'Create a distinctive identity', text: 'Build a recognisable visual language and tone of voice in a category that often feels impersonal.' },
+        { title: 'Control acquisition costs', text: 'Develop a growth system that could attract users without relying on unsustainable spending. The original project set a target of acquiring a customer for no more than $5.' },
+      ],
+    },
+    approach: {
+      label: 'THE APPROACH',
+      heading: 'Personal communication instead of anonymous financial advertising',
+      intro:
+        'The strategy treated communication as part of the product experience. Instead of relying only on promotional messages, Montas built a visible and approachable brand presence capable of explaining the service, answering practical questions and staying in continuous contact with users.',
+      pillars: [
+        'Audience and journey research',
+        'Brand personality and visual system',
+        'Social content and community communication',
+        'Acquisition and product landing pages',
+      ],
+    },
+    brand: {
+      heading: 'Making a financial service feel recognisable and human',
+      body: [
+        'Montas developed a dedicated visual style for the social channels and introduced a branded mascot. This gave the service a recognisable character and helped make complex or unfamiliar financial topics easier to communicate.',
+        'The tone of voice was designed around openness, clarity and regular contact rather than distant institutional language.',
+      ],
+      deliverables: [
+        'Social media visual identity', 'Branded mascot', 'Content templates',
+        'Consistent colour and graphic treatment', 'Channel-specific visual formats', 'Defined tone of voice',
+      ],
+    },
+    smm: {
+      label: 'TELEGRAM',
+      heading: 'Six months of consistent communication and audience growth',
+      body: [
+        'Telegram became the central channel for continuous communication. Montas managed the channel according to the agreed strategy for six months, combining brand content, practical explanations and regular audience contact.',
+        'The result was not only subscriber growth. The channel became part of the route from product awareness to customer conversion.',
+      ],
+      proof: [
+        { value: '5,255', label: 'organic subscribers in six months' },
+        { value: '25%', label: 'subscriber-to-client conversion' },
+        { value: '650–1,000', label: 'new users per month from month two' },
+        { value: '$2', label: 'average Telegram Ads subscriber cost' },
+      ],
+    },
+    pr: {
+      label: 'CONTENT PRODUCTION',
+      heading: 'Explaining the product through useful and locally produced content',
+      body: [
+        'Montas developed video concepts and organised production in Turkey and Russia. The content connected practical transfer scenarios with a more personal view of the service and the people behind it.',
+        'This gave the Telegram and VK channels a repeatable content base rather than relying on isolated announcements or generic promotional posts.',
+      ],
+      proof: [
+        { value: 'Telegram + VK', label: 'content strategy' },
+        { value: 'Turkey + Russia', label: 'video production' },
+        { value: 'Mascot', label: 'branded content character' },
+        { value: 'B2B', label: 'landing page for Turkey payments' },
+      ],
+    },
+    production: {
+      label: 'PAID ACQUISITION',
+      heading: 'Testing paid growth without losing cost discipline',
+      body: [
+        'Alongside organic channel development, Montas launched Telegram Ads to test scalable subscriber acquisition. The reported average cost was $2 per acquired subscriber — a subscriber cost, not a customer acquisition cost.',
+        'The project also included a dedicated B2B landing page focused on payment acceptance in Turkey, giving the service a separate commercial proposition rather than forcing individual and business audiences through the same journey.',
+      ],
+      scope: [
+        'Customer Journey Mapping and Jobs to Be Done research',
+        'SMM strategy for Telegram and VK',
+        'Video concepts and scripts',
+        'Production organised in Turkey and Russia',
+        'Telegram Ads campaign',
+        'B2B acquiring landing page for the Turkey direction',
+      ],
+      gallery: [
+        { src: '/cases/unisend/mascot-blue.jpg', alt: 'Unisend.me branded mascot — cross-border transfer character', contain: true },
+        { src: '/cases/unisend/mascot-purple.jpg', alt: 'Unisend.me branded mascot — alternate expression', contain: true },
+      ],
+    },
+    results: {
+      label: 'THE RESULTS',
+      heading: 'From an unfamiliar service to a repeatable customer-growth channel',
+      main: [
+        { value: '5,255 organic subscribers', text: 'Audience built during six months of consistent Telegram communication.' },
+        { value: '25% subscriber-to-client conversion', text: 'Reported conversion from the social audience into product customers.' },
+        { value: '$120K transfer turnover', text: 'Reported transfer turnover reached by the sixth month of work.' },
+        { value: '$2 Telegram Ads subscriber cost', text: 'Average cost of acquiring a subscriber through the paid Telegram campaign.' },
+      ],
+      supporting: [
+        '650–1,000 new users per month from month two',
+        '6 months of Telegram management',
+        'Video production in Turkey and Russia',
+        'B2B landing page for the Turkey payments direction',
+      ],
+    },
+    impact: {
+      heading: 'Trust became part of the acquisition system',
+      body: [
+        'The project demonstrates that growth in financial services is not created by media buying alone. Research, clear explanations, recognisable visual communication and continuous audience contact reduced the distance between an unfamiliar product and its first active customers.',
+        'By connecting organic community growth, content production, paid acquisition and a separate B2B proposition, Unisend.me gained a more complete route from first awareness to product use.',
+      ],
+    },
+    sea: {
+      label: 'TRANSFERABLE TO SEA',
+      heading: 'What this project demonstrates for fintech growth in Southeast Asia',
+      intro:
+        'Cross-border financial products often operate in markets where users move between currencies, countries, banks and payment habits. Product understanding and trust therefore become part of the acquisition challenge.',
+      principles: [
+        { title: 'Explain before promoting', text: 'Make the product journey understandable before asking users to complete a financial action.' },
+        { title: 'Humanise the service', text: 'Use visible communication, consistent support and recognisable brand assets to reduce distance.' },
+        { title: 'Connect community and conversion', text: 'Treat social channels as part of the customer journey rather than only as distribution.' },
+      ],
+    },
+    testimonial: {
+      quote: 'Our challenge was to earn audience trust in a completely new financial service while attracting the first customers quickly. Montas proposed an unconventional social media strategy that delivered a stable flow of users and helped strengthen the brand’s market position.',
+      attribution: 'Unisend.me team',
+    },
+    services: [
+      { label: 'Customer research', to: null },
+      { label: 'Customer Journey Mapping', to: null },
+      { label: 'Jobs to Be Done', to: null },
+      { label: 'SMM strategy', to: '/services/smm-content-systems' },
+      { label: 'Content strategy', to: '/services/smm-content-systems' },
+      { label: 'Telegram management', to: null },
+      { label: 'VK communication', to: null },
+      { label: 'Visual identity', to: null },
+      { label: 'Mascot development', to: null },
+      { label: 'Video production', to: null },
+      { label: 'Telegram Ads', to: '/services/paid-advertising-lead-gen' },
+      { label: 'Landing-page development', to: '/services/landing-pages-websites' },
+    ],
+    sources: [
+      { label: 'Original Montas case', url: 'https://montas.io/cases/unisend' },
+      { label: 'Visit Unisend.me', url: 'https://unisend.me/' },
+      { label: 'Current transfer flow', url: 'https://unisend.me/order/new' },
+      { label: 'Current business direction', url: 'https://unisend.me/acquiring' },
+    ],
+    finalCta: {
+      heading: 'Launching or scaling a fintech product in Southeast Asia?',
+      body: 'Build a growth system that connects research, product communication, content and measurable acquisition.',
     },
   },
 };

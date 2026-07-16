@@ -65,7 +65,7 @@ export default function CaseStudyPage({ slug }) {
   }
 
   const {
-    seo, hero, heroProof, client, challenge, approach, brand,
+    seo, caseName, hero, heroProof, client, challenge, approach, brand,
     smm, pr, production, results, impact, sea, testimonial,
     services, sources, finalCta,
   } = data;
@@ -95,7 +95,7 @@ export default function CaseStudyPage({ slug }) {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://montas-asia.vercel.app/' },
           { '@type': 'ListItem', position: 2, name: 'Cases', item: 'https://montas-asia.vercel.app/cases' },
-          { '@type': 'ListItem', position: 3, name: 'Supreme Yachts', item: canonical },
+          { '@type': 'ListItem', position: 3, name: caseName, item: canonical },
         ],
       }) }} />
 
@@ -107,7 +107,7 @@ export default function CaseStudyPage({ slug }) {
             <Breadcrumbs crumbs={[
               { label: 'Home', href: '/' },
               { label: 'Cases', href: '/cases' },
-              { label: 'Supreme Yachts', href: '/cases/supreme-yachts' },
+              { label: caseName, href: `/cases/${slug}` },
             ]} />
           </div>
 
@@ -122,11 +122,15 @@ export default function CaseStudyPage({ slug }) {
               </div>
               <div className="cs-hero-cta">
                 <Link to="/contact" className="hero-cta-primary">Discuss a similar project</Link>
-                <a href="#sources" onClick={scrollToSources} className="hero-cta-secondary">View original case materials ↗</a>
+                {hero.secondaryCta ? (
+                  <a href={hero.secondaryCta.url} target="_blank" rel="noopener noreferrer" className="hero-cta-secondary">{hero.secondaryCta.label}</a>
+                ) : (
+                  <a href="#sources" onClick={scrollToSources} className="hero-cta-secondary">View original case materials ↗</a>
+                )}
               </div>
             </div>
             <div className="cs-hero-visual cs-reveal">
-              <img src={hero.image} alt={hero.imageAlt} className="cs-hero-img" width="800" height="600" />
+              <img src={hero.image} alt={hero.imageAlt} className={`cs-hero-img${hero.imageContain ? ' cs-hero-img--contain' : ''}`} width="800" height="600" />
             </div>
           </section>
 
@@ -253,9 +257,9 @@ export default function CaseStudyPage({ slug }) {
               </ul>
             </div>
           </section>
-          <div className="cs-gallery">
+          <div className={`cs-gallery${production.gallery.length <= 2 ? ' cs-gallery--few' : ''}`}>
             {production.gallery.map((g, i) => (
-              <div key={i} className={`cs-gallery-item${g.portrait ? ' cs-gallery-item--portrait' : ''}`}>
+              <div key={i} className={`cs-gallery-item${g.portrait ? ' cs-gallery-item--portrait' : ''}${g.contain ? ' cs-gallery-item--contain' : ''}`}>
                 <img src={g.src} alt={g.alt} loading="lazy" className="cs-gallery-img" />
               </div>
             ))}
@@ -332,7 +336,7 @@ export default function CaseStudyPage({ slug }) {
           {/* Original source materials */}
           <section id="sources" ref={sourcesRef} className="cs-section container">
             <div className="cs-reveal cs-sources">
-              <h2 className="cs-sources-heading">Original Montas case materials</h2>
+              <h2 className="cs-sources-heading">{data.sourcesHeading || 'Original case materials'}</h2>
               <div className="cs-sources-links">
                 {sources.map((s) => (
                   <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" className="cs-source-link">
