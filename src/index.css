@@ -2801,3 +2801,52 @@ nav a.nav-active {
   .cs-hero-cta, .cs-final-buttons { flex-direction: column; align-items: stretch; }
   .cs-hero-cta .hero-cta-primary, .cs-hero-cta .hero-cta-secondary { text-align: center; }
 }
+
+/* ─── CaseStudyPage: distributed inline images (MB TRADE) ─── */
+.cs-inline-image {
+  max-width: 1200px;
+  margin: 1rem auto 3rem;
+  padding: 0 2rem;
+  border-radius: 0;
+  overflow: hidden;
+}
+.cs-inline-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 15 / 8;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+  background: var(--green-deep);
+  transition: transform 0.6s ease;
+}
+.cs-inline-image:hover .cs-inline-img { transform: scale(1.015); }
+.cs-inline-image--offset { max-width: 1080px; }
+.cs-inline-image--offset .cs-inline-img { aspect-ratio: 2 / 1; }
+
+.cs-context-note {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 1.2rem;
+  max-width: 68ch;
+}
+
+.cs-card-grid--5 { grid-template-columns: repeat(5, 1fr); }
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-inline-img { transition: none; }
+  .cs-inline-image:hover .cs-inline-img { transform: none; }
+}
+
+@media (max-width: 900px) {
+  .cs-card-grid--5 { grid-template-columns: repeat(2, 1fr); }
+  .cs-inline-image { padding: 0 1.5rem; }
+}
+@media (max-width: 600px) {
+  .cs-card-grid--5 { grid-template-columns: 1fr; }
+  .cs-inline-image { padding: 0 1.2rem; margin-bottom: 2rem; }
+  .cs-inline-img { aspect-ratio: 4 / 3; }
+  .cs-inline-image--offset .cs-inline-img { aspect-ratio: 4 / 3; }
+}

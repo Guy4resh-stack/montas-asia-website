@@ -58,10 +58,10 @@ export const cases = [
     title: 'MB TRADE — integrated marketing and sales system for China logistics',
     industry: 'Integrated marketing · B2B logistics',
     slug: '/cases/mb-trade',
-    externalUrl: 'https://montas.io/cases/mb-trade-multimodal-container-shipping',
+    internalCaseStudy: true, // links to internal /cases/mb-trade page
+    liveUrl: 'https://mbtrade.pro/',
     image: '/cases/mb-trade-cover.jpg',
     imageAlt: 'MB TRADE B2B logistics marketing and sales case',
-    isExternal: true,
     problem: 'A B2B logistics company needed an integrated lead-generation and sales system to improve conversion and raise average deal value.',
     whatWeDid: 'Combined market research, a conversion-focused website, Bitrix24 CRM integration, paid acquisition, Telegram content and an outbound call centre into one connected system.',
     relatedServiceIds: ['landing-pages-websites', 'paid-advertising-lead-gen', 'smm-content-systems', 'analytics-reporting'],

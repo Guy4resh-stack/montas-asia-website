@@ -65,9 +65,9 @@ export default function CaseStudyPage({ slug }) {
   }
 
   const {
-    seo, caseName, hero, heroProof, client, challenge, approach, brand,
+    seo, caseName, hero, heroProof, client, businessContext, challenge, approach, brand,
     smm, pr, production, results, impact, sea, testimonial,
-    services, sources, finalCta,
+    services, sources, finalCta, images,
   } = data;
 
   const scrollToSources = (e) => {
@@ -165,6 +165,26 @@ export default function CaseStudyPage({ slug }) {
             </div>
           </section>
 
+          {/* Business context today (optional) */}
+          {businessContext && (
+            <section className="cs-section container">
+              <div className="cs-reveal">
+                <div className="cs-label">{businessContext.label}</div>
+                <h2 className="cs-h2">{businessContext.heading}</h2>
+                <p className="cs-body cs-body--wide">{businessContext.intro}</p>
+              </div>
+              <div className="cs-proof-strip cs-proof-strip--inline cs-reveal">
+                {businessContext.claims.map((c) => (
+                  <div key={c.label} className="cs-proof">
+                    <span className="cs-proof-value">{c.value}</span>
+                    <span className="cs-proof-label">{c.label}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="cs-context-note cs-reveal">{businessContext.note}</p>
+            </section>
+          )}
+
           {/* Challenge */}
           <section className="cs-section container">
             <div className="cs-reveal">
@@ -172,7 +192,7 @@ export default function CaseStudyPage({ slug }) {
               <h2 className="cs-h2">{challenge.heading}</h2>
               <p className="cs-body cs-body--wide">{challenge.intro}</p>
             </div>
-            <div className="cs-card-grid cs-card-grid--4">
+            <div className={`cs-card-grid cs-card-grid--${challenge.cards.length === 5 ? '5' : '4'}`}>
               {challenge.cards.map((c) => (
                 <div key={c.title} className="cs-card">
                   <h3 className="cs-card-title">{c.title}</h3>
@@ -181,6 +201,13 @@ export default function CaseStudyPage({ slug }) {
               ))}
             </div>
           </section>
+
+          {/* Distributed image 2/4 — operations */}
+          {images?.operations && (
+            <figure className="cs-inline-image cs-inline-image--offset cs-reveal">
+              <img src={images.operations.src} alt={images.operations.alt} loading="lazy" className="cs-inline-img" width="1200" height="640" />
+            </figure>
+          )}
 
           {/* Approach — dark panel */}
           <section className="cs-dark">
@@ -211,6 +238,13 @@ export default function CaseStudyPage({ slug }) {
               </ul>
             </div>
           </section>
+
+          {/* Distributed image 3/4 — digital system */}
+          {images?.digitalSystem && (
+            <figure className="cs-inline-image cs-reveal">
+              <img src={images.digitalSystem.src} alt={images.digitalSystem.alt} loading="lazy" className="cs-inline-img" width="1200" height="640" />
+            </figure>
+          )}
 
           {/* SMM */}
           <section className="cs-section container">
@@ -257,6 +291,7 @@ export default function CaseStudyPage({ slug }) {
               </ul>
             </div>
           </section>
+          {production.gallery && production.gallery.length > 0 && (
           <div className={`cs-gallery${production.gallery.length <= 2 ? ' cs-gallery--few' : ''}`}>
             {production.gallery.map((g, i) => (
               <div key={i} className={`cs-gallery-item${g.portrait ? ' cs-gallery-item--portrait' : ''}${g.contain ? ' cs-gallery-item--contain' : ''}`}>
@@ -264,6 +299,7 @@ export default function CaseStudyPage({ slug }) {
               </div>
             ))}
           </div>
+          )}
 
           {/* Results */}
           <section className="cs-section container">
@@ -283,6 +319,13 @@ export default function CaseStudyPage({ slug }) {
               {results.supporting.map((s) => <span key={s} className="cs-support-chip">{s}</span>)}
             </div>
           </section>
+
+          {/* Distributed image 4/4 — results/team */}
+          {images?.results && (
+            <figure className="cs-inline-image cs-inline-image--offset cs-reveal">
+              <img src={images.results.src} alt={images.results.alt} loading="lazy" className="cs-inline-img" width="1200" height="640" />
+            </figure>
+          )}
 
           {/* Impact narrative — dark */}
           <section className="cs-dark">

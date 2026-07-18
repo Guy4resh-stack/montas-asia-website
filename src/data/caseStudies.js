@@ -433,6 +433,223 @@ export const caseStudies = {
       body: 'Build a growth system that connects research, product communication, content and measurable acquisition.',
     },
   },
+
+  'mb-trade': {
+    slug: 'mb-trade',
+    caseName: 'MB TRADE',
+    seo: {
+      title: 'MB TRADE B2B Logistics Marketing Case Study | Montas Asia',
+      description:
+        'How Montas connected a B2B logistics website, Bitrix24 CRM, paid acquisition and call-centre sales to achieve 23% cold-call conversion and 3.3× average deal value.',
+      canonicalPath: '/cases/mb-trade',
+      ogImage: '/cases/mb-trade/hero.jpg',
+    },
+    // Four distributed primary image positions (not a gallery)
+    images: {
+      hero:          { src: '/cases/mb-trade/hero.jpg',           alt: 'MB TRADE China logistics and container shipping operation' },
+      operations:    { src: '/cases/mb-trade/operations.jpg',     alt: 'Cargo preparation and logistics operations for MB TRADE in China' },
+      digitalSystem: { src: '/cases/mb-trade/digital-system.jpg', alt: 'MB TRADE website and integrated B2B lead-generation system' },
+      results:       { src: '/cases/mb-trade/results.jpg',        alt: 'MB TRADE logistics team coordinating a B2B shipment from China' },
+    },
+    hero: {
+      label: 'REAL CASE · B2B LOGISTICS · CHINA',
+      h1: 'MB TRADE — connecting marketing, sales and operations for a China logistics company',
+      intro:
+        'Montas built an integrated growth system for a B2B logistics company, connecting customer research, a conversion-focused website, Bitrix24 CRM, paid acquisition, Telegram and call-centre sales.',
+      serviceTags: [
+        'Customer research', 'Marketing strategy', 'UX/UI design', 'Website development',
+        'CRM integration', 'SMM', 'Paid acquisition', 'Call-centre sales', 'Conversion optimisation',
+      ],
+      image: '/cases/mb-trade/hero.jpg',
+      imageAlt: 'MB TRADE China logistics and container shipping operation',
+      secondaryCta: { label: 'Visit live website ↗', url: 'https://mbtrade.pro/' },
+    },
+    heroProof: [
+      { value: '23%', label: 'cold-call conversion' },
+      { value: '−30%', label: 'cost per lead' },
+      { value: '₽300K → ₽1M', label: 'average deal value' },
+      { value: '+15%', label: 'monthly Telegram audience growth' },
+    ],
+    client: {
+      label: 'THE CLIENT',
+      heading: 'A B2B partner for sourcing, importing and delivering goods from China',
+      body: [
+        'MB TRADE provides logistics and foreign-trade support for businesses working with China. Its service model covers the route from supplier sourcing and product checks to payments, customs clearance, international delivery and final warehouse fulfilment.',
+        'The company works across a complex customer journey involving procurement teams, suppliers, logistics partners, customs processes and sales departments. This made the project broader than a conventional website or advertising engagement.',
+      ],
+      overview: [
+        { term: 'Industry', value: 'B2B logistics and foreign trade' },
+        { term: 'Core market', value: 'China–Russia trade' },
+        { term: 'Customer type', value: 'Business clients' },
+        { term: 'Business model', value: 'Logistics and foreign-trade outsourcing' },
+        { term: 'Historical engagement', value: 'Integrated marketing and sales' },
+        { term: 'Core objective', value: 'More qualified leads and higher-value deals' },
+      ],
+    },
+    // Current business context (MB TRADE website claims — not Montas results)
+    businessContext: {
+      label: 'THE BUSINESS TODAY',
+      heading: 'A full-cycle service across sourcing, payments, customs and delivery',
+      intro: 'The current MB TRADE website presents services spanning supplier sourcing, product checks, sample delivery, individual and consolidated cargo, container shipping, international supplier payments, product labelling in China, customs clearance, delivery to client or marketplace warehouses, and Moscow fulfilment operations.',
+      claims: [
+        { value: '1,300+', label: 'verified suppliers stated on the current website' },
+        { value: '300+', label: 'containers stated as delivered in 2025' },
+        { value: '4 locations', label: 'Moscow, Saint Petersburg, Yiwu and Guangzhou' },
+      ],
+      note: 'These are current MB TRADE website claims, not Montas marketing results. The company and its service offering may have evolved since the original Montas engagement.',
+    },
+    challenge: {
+      label: 'THE CHALLENGE',
+      heading: 'A complex logistics service needed one connected commercial system',
+      intro:
+        'MB TRADE did not need a standalone advertising campaign. The company needed marketing, sales and internal processes to operate as one system — from the first audience touchpoint to a qualified conversation and a high-value logistics contract.',
+      cards: [
+        { title: 'Clarify the offer', text: 'Translate a complex set of logistics and foreign-trade services into a clear B2B proposition.' },
+        { title: 'Build a premium digital presence', text: 'Create a website capable of communicating expertise, scale and operational reliability.' },
+        { title: 'Connect marketing and sales', text: 'Ensure leads could move from advertising and content into CRM and structured follow-up.' },
+        { title: 'Generate qualified conversations', text: 'Build outbound and inbound processes capable of reaching relevant business decision-makers.' },
+        { title: 'Increase commercial value', text: 'Improve conversion while attracting larger clients and increasing average deal value.' },
+      ],
+    },
+    approach: {
+      label: 'THE APPROACH',
+      heading: 'From first contact to commercial conversation',
+      intro:
+        'Instead of treating each channel independently, the programme connected seven stages into one commercial system: research, positioning, website, acquisition, CRM, call centre and sales.',
+      pillars: [
+        'Research — CJM and JTBD foundation',
+        'Positioning and marketing strategy',
+        'Premium B2B website',
+        'Acquisition — Yandex Direct and Telegram',
+        'Bitrix24 CRM integration',
+        'Call-centre operations',
+        'Sales and higher deal value',
+      ],
+    },
+    brand: {
+      heading: 'A premium B2B website designed to make complexity understandable',
+      body: [
+        'Montas designed the UX/UI and implemented the website on Tilda. The digital experience organised a complex service offer into a clearer commercial journey and gave prospects structured paths towards consultation and enquiry.',
+        'The project also included SEO and conversion optimisation intended to improve discoverability and the effectiveness of the website as a lead-generation asset. Business processes were then integrated into Bitrix24, creating a shared operational layer between advertising, website enquiries, incoming requests, outbound calls and the sales team.',
+      ],
+      deliverables: [
+        'UX/UI design', 'Premium visual direction', 'Website implementation on Tilda',
+        'Enquiry pathways', 'SEO work', 'Conversion optimisation',
+        'Bitrix24 business-process integration', 'Connection with sales processes',
+      ],
+    },
+    smm: {
+      label: 'CALL CENTRE',
+      heading: 'Creating qualified B2B conversations at scale',
+      body: [
+        'Montas organised call-centre processes for both cold outreach and incoming leads. This gave MB TRADE a structured way to approach potential customers, qualify their needs and move relevant opportunities into the commercial pipeline.',
+        'The programme attracted clients with annual turnover above ₽100 million — a figure that refers to the turnover of the attracted client companies, not revenue generated by the project.',
+      ],
+      proof: [
+        { value: '23%', label: 'cold-call conversion' },
+        { value: '₽100M+', label: 'annual turnover of attracted clients' },
+        { value: 'Outbound', label: 'and inbound call qualification' },
+        { value: 'Bitrix24', label: 'connected to every lead' },
+      ],
+    },
+    pr: {
+      label: 'ACQUISITION',
+      heading: 'Combining paid demand generation with expert content',
+      body: [
+        'Montas launched campaigns in Yandex Direct and Telegram while developing the company’s social communication. Paid acquisition generated enquiries, while Telegram supported continuous expert contact with an audience interested in sourcing, logistics and trade with China.',
+        'The cost-per-lead reduction is attributed to the broader acquisition and optimisation programme rather than a single ad channel. Monthly traffic and lead growth was reported qualitatively.',
+      ],
+      proof: [
+        { value: '−30%', label: 'cost per lead' },
+        { value: '+15%', label: 'monthly Telegram audience growth' },
+        { value: 'Yandex Direct', label: 'paid search demand' },
+        { value: 'Telegram', label: 'expert content channel' },
+      ],
+    },
+    production: {
+      label: 'COMMERCIAL IMPACT',
+      heading: 'Moving from smaller transactions towards higher-value B2B contracts',
+      body: [
+        'The reported average deal value increased from ₽300,000 to ₽1,000,000 — approximately 3.3× the original average — as the integrated marketing and sales system began attracting and converting larger business opportunities.',
+        'Marketing, research, website, CRM and call-centre operations worked as one connected commercial system rather than isolated services.',
+      ],
+      scope: [
+        'Customer Journey Mapping and Jobs to Be Done',
+        'Integrated marketing and SMM strategy',
+        'Tilda website with SEO and conversion optimisation',
+        'Bitrix24 CRM integration',
+        'Yandex Direct and Telegram acquisition',
+        'Outbound and inbound call-centre operations',
+      ],
+      gallery: [],
+    },
+    results: {
+      label: 'THE RESULTS',
+      heading: 'A connected system that improved acquisition, conversion and deal value',
+      main: [
+        { value: '23% cold-call conversion', text: 'Reported conversion from the outbound call-centre programme.' },
+        { value: '−30% cost per lead', text: 'Reduction reported across the acquisition and optimisation programme.' },
+        { value: '₽300K → ₽1M average deal value', text: 'Average deal value increased approximately 3.3×.' },
+        { value: '+15% monthly Telegram growth', text: 'Reported monthly audience growth in the Telegram channel.' },
+      ],
+      supporting: [
+        'Clients with ₽100M+ annual turnover attracted',
+        'Monthly traffic and lead growth reported',
+        'Premium website launched',
+        'Bitrix24 business processes integrated',
+        'Call-centre operation established',
+        'Yandex Direct and Telegram campaigns launched',
+      ],
+    },
+    impact: {
+      heading: 'Marketing became part of the operating system',
+      body: [
+        'The strongest result was not one channel or one campaign. MB TRADE gained a connected commercial system in which research shaped the offer, the website created demand, CRM organised opportunities and the call centre moved qualified prospects towards a sale.',
+        'This connection helped the company attract larger business clients, reduce lead costs and increase the commercial value of each opportunity.',
+      ],
+    },
+    sea: {
+      label: 'TRANSFERABLE TO SEA',
+      heading: 'What this project demonstrates for cross-border B2B growth in Southeast Asia',
+      intro:
+        'Companies operating across China and Southeast Asia often manage long sales cycles, multiple decision-makers and complex service delivery. Marketing therefore needs to connect directly with sales and operational processes.',
+      principles: [
+        { title: 'Explain complex services clearly', text: 'Turn technical logistics processes into an understandable commercial proposition.' },
+        { title: 'Connect every lead', text: 'Ensure website, advertising, CRM and sales teams share one journey.' },
+        { title: 'Optimise for commercial quality', text: 'Measure not only lead volume, but conversion and deal value.' },
+      ],
+    },
+    testimonial: {
+      quote: 'Working with the Montas team allowed us to automate and connect our sales and marketing processes. The result exceeded our expectations.',
+      attribution: 'MB TRADE team',
+    },
+    services: [
+      { label: 'Customer research', to: null },
+      { label: 'Customer Journey Mapping', to: null },
+      { label: 'Jobs to Be Done', to: null },
+      { label: 'Marketing strategy', to: null },
+      { label: 'SMM strategy', to: '/services/smm-content-systems' },
+      { label: 'UX/UI design', to: '/services/landing-pages-websites' },
+      { label: 'Tilda development', to: '/services/landing-pages-websites' },
+      { label: 'SEO', to: '/services/seo-local-search' },
+      { label: 'Conversion optimisation', to: null },
+      { label: 'Bitrix24 integration', to: null },
+      { label: 'Yandex Direct', to: '/services/paid-advertising-lead-gen' },
+      { label: 'Telegram acquisition', to: '/services/paid-advertising-lead-gen' },
+      { label: 'Call-centre operations', to: null },
+      { label: 'Lead generation', to: '/services/paid-advertising-lead-gen' },
+      { label: 'Sales-process development', to: null },
+    ],
+    sourcesHeading: 'Project and company sources',
+    sources: [
+      { label: 'Original Montas case', url: 'https://montas.io/cases/mb-trade-multimodal-container-shipping' },
+      { label: 'Visit MB TRADE', url: 'https://mbtrade.pro/' },
+    ],
+    finalCta: {
+      heading: 'Need to connect B2B marketing, CRM and sales across Asian markets?',
+      body: 'Build a growth system around your customer journey, commercial process and operational reality.',
+    },
+  },
 };
 
 export const getCaseStudy = (slug) => caseStudies[slug] || null;
