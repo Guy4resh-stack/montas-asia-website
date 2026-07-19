@@ -2934,3 +2934,27 @@ nav a.nav-active {
   .cs-flow--4,
   .cs-flow--5 { grid-template-columns: 1fr; }
 }
+
+/* Proof strip: 4-column variant + prevent long text values overflowing */
+.cs-proof-strip--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+/* Grid children must be allowed to shrink, otherwise long words overflow the row */
+.cs-proof-strip > .cs-proof { min-width: 0; }
+.cs-proof-value {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+  text-wrap: balance;
+}
+/* Text-based proof values (not short numbers) need a smaller, calmer size */
+.cs-proof-strip--inline .cs-proof-value {
+  font-size: clamp(1.05rem, 1.6vw, 1.5rem);
+  line-height: 1.15;
+}
+
+@media (max-width: 1100px) {
+  .cs-proof-strip--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .cs-proof-strip--4 { grid-template-columns: 1fr; }
+}

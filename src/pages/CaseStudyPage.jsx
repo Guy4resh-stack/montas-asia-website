@@ -275,7 +275,7 @@ export default function CaseStudyPage({ slug }) {
               <h2 className="cs-h2">{smm.heading}</h2>
               {smm.body.map((p, i) => <p key={i} className="cs-body cs-body--wide">{p}</p>)}
             </div>
-            <div className="cs-proof-strip cs-proof-strip--inline cs-reveal">
+            <div className={`cs-proof-strip cs-proof-strip--inline cs-proof-strip--${smm.proof.length} cs-reveal`}>
               {smm.proof.map((p) => (
                 <div key={p.label} className="cs-proof">
                   <span className="cs-proof-value">{p.value}</span>
@@ -295,7 +295,7 @@ export default function CaseStudyPage({ slug }) {
               <h2 className="cs-h2">{pr.heading}</h2>
               {pr.body.map((p, i) => <p key={i} className="cs-body cs-body--wide">{p}</p>)}
             </div>
-            <div className="cs-proof-strip cs-proof-strip--inline cs-reveal">
+            <div className={`cs-proof-strip cs-proof-strip--inline cs-proof-strip--${pr.proof.length} cs-reveal`}>
               {pr.proof.map((p) => (
                 <div key={p.label} className="cs-proof">
                   <span className="cs-proof-value">{p.value}</span>
