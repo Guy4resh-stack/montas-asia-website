@@ -332,6 +332,15 @@ export default function CaseStudyPage({ slug }) {
           </>
           )}
 
+          {/* Distributed image — digital platform (after platform section) */}
+          {images?.digitalPlatform && (
+            <figure className="cs-inline-image cs-reveal">
+              <img src={images.digitalPlatform.src} alt={images.digitalPlatform.alt} loading="lazy"
+                className={`cs-inline-img${images.digitalPlatform.cropBottom ? ' cs-inline-img--crop-bottom' : ''}`}
+                width="1200" height="640" />
+            </figure>
+          )}
+
           {/* Results */}
           <section className="cs-section container">
             <div className="cs-reveal">

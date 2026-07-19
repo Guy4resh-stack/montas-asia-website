@@ -791,6 +791,221 @@ export const caseStudies = {
       body: 'Build a clear content system around your audience, offer and booking journey.',
     },
   },
+
+  'rippa': {
+    slug: 'rippa',
+    caseName: 'Rippa',
+    seo: {
+      title: 'Rippa UAE Brand Relaunch & B2B Website Case Study | Montas Asia',
+      description:
+        'How Montas researched, rebranded and launched an eight-page Webflow platform with a 100+ SKU CMS catalogue for Rippa UAE in one month.',
+      canonicalPath: '/cases/rippa',
+      ogImage: '/cases/rippa/hero.jpg',
+    },
+    images: {
+      operations:      { src: '/cases/rippa/uae-market.jpg',       alt: 'Rippa construction equipment positioned for professional buyers in the UAE' },
+      digitalPlatform: { src: '/cases/rippa/digital-platform.jpg', alt: 'Rippa UAE Webflow website and scalable industrial-equipment catalogue' },
+    },
+    hero: {
+      label: 'REAL CASE · INDUSTRIAL B2B · UAE MARKET ENTRY',
+      h1: 'Rippa — relaunching an industrial equipment brand for the UAE market',
+      intro:
+        'Montas combined audience research, brand strategy, UX design and Webflow development to create a scalable B2B platform for an international construction-equipment manufacturer entering the UAE.',
+      serviceTags: [
+        'Audience research', 'Competitor analysis', 'Brand strategy', 'Brand identity',
+        'UX/UI design', 'Design system', 'Webflow development', 'CMS architecture', 'B2B catalogue design',
+      ],
+      image: '/cases/rippa/hero.jpg',
+      imageAlt: 'Rippa industrial equipment brand launched for the UAE market',
+      secondaryCta: { label: 'Visit live website ↗', url: 'https://rippa-uae.com/' },
+    },
+    heroProof: [
+      { value: '1 month', label: 'from research to launch' },
+      { value: '8 pages', label: 'fully responsive Webflow platform' },
+      { value: '100+ SKUs', label: 'managed through a scalable CMS catalogue' },
+      { value: 'Custom filters', label: 'categories, tags and filter parameters' },
+    ],
+    client: {
+      label: 'THE CLIENT',
+      heading: 'An international manufacturer entering a highly competitive regional market',
+      body: [
+        'Rippa manufactures construction machinery and industrial equipment for professional buyers. Its product range includes compact and large excavators, skid-steer loaders, wheel loaders, backhoe loaders, forklifts, telescopic handlers and equipment attachments.',
+        'The project focused on adapting the brand and its digital platform for the UAE — a market where professional buyers expect a clear catalogue, credible local presence and fast access to product and service information.',
+      ],
+      overview: [
+        { term: 'Industry', value: 'Construction and industrial equipment' },
+        { term: 'Audience', value: 'B2B buyers, operators and dealers' },
+        { term: 'Target market', value: 'United Arab Emirates' },
+        { term: 'Platform', value: 'Webflow' },
+        { term: 'Engagement', value: 'Research, branding, UX/UI and development' },
+        { term: 'Core objective', value: 'Market-ready digital relaunch' },
+      ],
+    },
+    businessContext: {
+      label: 'THE BUSINESS TODAY',
+      heading: 'A global equipment manufacturer with a local UAE proposition',
+      intro: 'The current Rippa UAE website presents an exclusive UAE distribution proposition, equipment available from stock in Dubai, a warehouse and showroom in Jebel Ali, delivery across the UAE and GCC, spare-parts availability and local technical support. Current product categories include mini and large excavators, skid-steer loaders, wheel loaders, backhoe loaders, forklifts, telescopic handlers and equipment attachments.',
+      claims: [
+        { value: '100+ countries', label: 'stated on the current Rippa website' },
+        { value: 'Jebel Ali', label: 'warehouse and showroom presence' },
+        { value: 'B2B model', label: 'equipment sales and dealer relationships' },
+      ],
+      note: 'These are current Rippa website claims, not results produced by Montas. Rippa’s commercial offer and live website may have evolved since the original Montas engagement.',
+    },
+    challenge: {
+      label: 'THE CHALLENGE',
+      heading: 'A global manufacturer needed to look and operate like a local UAE brand',
+      intro:
+        'Entering a new market required more than translating an existing website. Rippa needed a brand and digital platform capable of communicating industrial scale, professional credibility and a locally relevant customer journey.',
+      cards: [
+        { title: 'Adapt the brand', text: 'Create a visual and verbal system suitable for the UAE B2B market.' },
+        { title: 'Understand professional buyers', text: 'Study how target customers evaluate equipment, specifications, availability and support.' },
+        { title: 'Structure a complex catalogue', text: 'Make more than 100 products easy to navigate and compare.' },
+        { title: 'Support scalable management', text: 'Give the internal team a CMS that could be updated without rebuilding the site.' },
+        { title: 'Launch quickly', text: 'Complete research, design and development within a one-month delivery period.' },
+      ],
+    },
+    approach: {
+      label: 'THE APPROACH',
+      heading: 'Research → brand system → scalable digital platform',
+      intro:
+        'The programme moved through four connected stages, each informing the next rather than running as an isolated deliverable.',
+      pillars: [
+        'Understand the market — research the audience, category and digital expectations of professional buyers in the UAE',
+        'Rebuild the brand — create a unified visual and verbal language supporting a premium B2B position',
+        'Build for scale — an eight-page Webflow platform with a CMS catalogue of 100+ SKUs',
+        'Create a direct enquiry route — connect catalogue exploration with a dedicated personal manager',
+      ],
+    },
+    smm: {
+      label: 'RESEARCH',
+      heading: 'Design decisions grounded in real B2B buying behaviour',
+      body: [
+        'Montas began with qualitative and quantitative interviews with the target audience, supported by competitor and UX analysis of the industrial-equipment segment.',
+        'The research helped determine how professional users searched the catalogue, evaluated specifications, moved between categories and contacted a sales representative.',
+      ],
+      proof: [
+        { value: 'Audience interviews', label: 'qualitative and quantitative research with professional buyers' },
+        { value: 'Competitor analysis', label: 'category conventions and usability gaps' },
+        { value: 'UX analysis', label: 'catalogue structure, navigation and enquiry routes' },
+      ],
+    },
+    brand: {
+      heading: 'A consistent identity for an industrial brand in a premium market',
+      body: [
+        'Montas developed a brandbook defining the visual and verbal standards of Rippa’s UAE communication. The system aligned the company’s industrial scale with a more structured and premium digital presentation.',
+        'A dedicated design system and UI Kit then translated those principles into reusable website elements, catalogue components and interaction patterns.',
+      ],
+      deliverables: [
+        'Brandbook', 'Visual communication standards', 'Verbal communication standards',
+        'Colour and typography rules', 'UI Kit', 'Reusable interface components',
+        'Design system', 'Consistent digital presentation',
+      ],
+    },
+    pr: {
+      label: 'B2B UX',
+      heading: 'Making a large equipment catalogue easier to navigate',
+      body: [
+        'Industrial buyers rarely browse a catalogue casually. They search by equipment type, specifications, operational requirements and commercial availability.',
+        'The platform therefore used multi-level navigation, categories, tags and custom filters to help users move through a catalogue of more than 100 SKUs without losing context.',
+      ],
+      proof: [
+        { value: 'Category hierarchy', label: 'machinery types separated into clear product groups' },
+        { value: 'Flexible filtering', label: 'categories, tags and filter parameters' },
+        { value: 'Specification-led', label: 'technical information easier to scan and compare' },
+        { value: 'Direct consultation', label: 'dedicated manager visible throughout the journey' },
+      ],
+    },
+    production: {
+      label: 'DIGITAL PLATFORM',
+      heading: 'An eight-page website built around a scalable product catalogue',
+      body: [
+        'Montas designed and developed eight responsive pages in Webflow. The platform combined brand storytelling, product discovery and enquiry pathways within one consistent system.',
+        'The catalogue was built in CMS with more than 100 SKUs, structured through categories, tags and custom filters. This allowed the Rippa team to manage and expand the product range without rebuilding page layouts manually.',
+      ],
+      scope: [
+        'Eight responsive pages', 'Webflow implementation', '100+ SKU CMS catalogue',
+        'Product categories', 'Product tags', 'Custom filters',
+        'Multi-level navigation', 'Responsive desktop, tablet and mobile behaviour', 'Self-managed catalogue content',
+      ],
+      gallery: [],
+    },
+    contentFlow: {
+      heading: 'From research to market-ready platform in one month',
+      stages: [
+        { title: 'Research', text: 'Audience interviews, competitor analysis and UX assessment.' },
+        { title: 'Brand system', text: 'Brandbook, verbal standards, design system and UI Kit.' },
+        { title: 'Product design', text: 'Information architecture, B2B scenarios and responsive interface design.' },
+        { title: 'Development and launch', text: 'Eight Webflow pages and the 100+ SKU CMS catalogue prepared for release.' },
+      ],
+    },
+    results: {
+      label: 'THE RESULTS',
+      heading: 'A complete digital ecosystem prepared for the UAE market',
+      main: [
+        { value: '1-month launch', text: 'Research, UX, brand development and Webflow implementation completed within the reported project period.' },
+        { value: '8 responsive pages', text: 'A multi-page website built for professional use across desktop, tablet and mobile.' },
+        { value: '100+ SKU catalogue', text: 'A structured CMS supporting categories, tags and custom product filters.' },
+        { value: 'Scalable brand system', text: 'A brandbook, UI Kit and reusable design system prepared for consistent future communication.' },
+      ],
+      supporting: [
+        'Premium UAE-facing brand presentation',
+        'Clearer B2B navigation',
+        'Self-managed product catalogue',
+        'Dedicated consultation route',
+        'Foundation for future catalogue expansion',
+        'Market-ready digital platform',
+      ],
+    },
+    impact: {
+      heading: 'The platform reduced the distance between global scale and local relevance',
+      body: [
+        'Rippa already had an extensive product range and international manufacturing experience. The role of the project was to translate that scale into a digital experience suitable for professional buyers in the UAE.',
+        'The resulting system did more than present individual machines. It created a consistent brand, a navigable catalogue and a scalable foundation that the local team could continue to manage as the offer evolved.',
+      ],
+    },
+    sea: {
+      label: 'TRANSFERABLE TO SEA',
+      heading: 'What this project demonstrates for international B2B brands entering Asian markets',
+      intro:
+        'Industrial brands entering a new regional market need more than a translated corporate website. Professional buyers expect clear product architecture, locally relevant trust signals and access to people who understand the commercial and technical context.',
+      principles: [
+        { title: 'Research the local buying journey', text: 'Understand how professional customers evaluate products, suppliers and after-sales support.' },
+        { title: 'Localise the proposition, not only the language', text: 'Adapt information hierarchy, proof points and enquiry routes to local expectations.' },
+        { title: 'Build catalogues for scale', text: 'Use structured CMS architecture so a large product range can grow without creating navigation chaos.' },
+      ],
+    },
+    testimonial: {
+      quote: 'We needed a website that matched the level of the company and the expectations of the UAE market. The Montas team did more than create a modern platform — they reconsidered the brand and proposed solutions designed for future growth. The result is structured, premium and ready to scale.',
+      attribution: 'Rippa team',
+    },
+    services: [
+      { label: 'Audience research', to: null },
+      { label: 'Qualitative interviews', to: null },
+      { label: 'Quantitative research', to: null },
+      { label: 'Competitor analysis', to: null },
+      { label: 'UX analysis', to: null },
+      { label: 'Brand strategy', to: null },
+      { label: 'Brandbook development', to: null },
+      { label: 'Verbal identity', to: null },
+      { label: 'UI Kit', to: null },
+      { label: 'Design system', to: null },
+      { label: 'UX/UI design', to: '/services/landing-pages-websites' },
+      { label: 'Webflow development', to: '/services/landing-pages-websites' },
+      { label: 'CMS architecture', to: null },
+      { label: 'Catalogue design', to: null },
+      { label: 'Responsive development', to: '/services/landing-pages-websites' },
+    ],
+    sourcesHeading: 'Project and company sources',
+    sources: [
+      { label: 'View original Montas case', url: 'https://montas.io/cases/rippa' },
+      { label: 'Visit Rippa UAE', url: 'https://rippa-uae.com/' },
+    ],
+    finalCta: {
+      heading: 'Entering a new Asian market with a complex B2B product?',
+      body: 'Build a research-led brand and digital platform around your audience, catalogue and commercial journey.',
+    },
+  },
 };
 
 export const getCaseStudy = (slug) => caseStudies[slug] || null;

@@ -120,11 +120,10 @@ export const cases = [
     title: 'Rippa — brand relaunch and scalable equipment platform for the UAE',
     industry: 'Branding · Web development · B2B',
     slug: '/cases/rippa',
-    externalUrl: 'https://montas.io/cases/rippa',
+    internalCaseStudy: true, // links to internal /cases/rippa page
     liveUrl: 'https://rippa-uae.com/',
     image: '/cases/rippa-cover.jpg',
     imageAlt: 'Rippa UAE industrial equipment website and catalogue',
-    isExternal: true,
     problem: 'An industrial equipment manufacturer needed a complete brand and digital platform relaunch to enter the UAE market.',
     whatWeDid: 'Combined audience research, a new brand system, an eight-page Webflow website and a CMS catalogue with 100+ SKUs and custom filters.',
     relatedServiceIds: ['landing-pages-websites'],
