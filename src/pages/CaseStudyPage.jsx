@@ -67,7 +67,7 @@ export default function CaseStudyPage({ slug }) {
   const {
     seo, caseName, hero, heroProof, client, businessContext, challenge, approach, brand,
     smm, pr, production, results, impact, sea, testimonial,
-    services, sources, finalCta, images,
+    services, sources, finalCta, images, contentFlow,
   } = data;
 
   const scrollToSources = (e) => {
@@ -228,7 +228,26 @@ export default function CaseStudyPage({ slug }) {
             </div>
           </section>
 
-          {/* Brand */}
+          {/* Content flow (optional, typography-led) */}
+          {contentFlow && (
+            <section className="cs-section container">
+              <div className="cs-reveal">
+                <h2 className="cs-h2">{contentFlow.heading}</h2>
+              </div>
+              <ol className="cs-flow">
+                {contentFlow.stages.map((s, i) => (
+                  <li key={s.title} className="cs-flow-step cs-reveal">
+                    <span className="cs-flow-n">{String(i + 1).padStart(2, '0')}</span>
+                    <h3 className="cs-flow-title">{s.title}</h3>
+                    <p className="cs-flow-text">{s.text}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+
+          {/* Brand (optional) */}
+          {brand && (
           <section className="cs-section container">
             <div className="cs-reveal">
               <h2 className="cs-h2">{brand.heading}</h2>
@@ -239,6 +258,8 @@ export default function CaseStudyPage({ slug }) {
             </div>
           </section>
 
+          )}
+
           {/* Distributed image 3/4 — digital system */}
           {images?.digitalSystem && (
             <figure className="cs-inline-image cs-reveal">
@@ -246,7 +267,8 @@ export default function CaseStudyPage({ slug }) {
             </figure>
           )}
 
-          {/* SMM */}
+          {/* SMM (optional) */}
+          {smm && (
           <section className="cs-section container">
             <div className="cs-reveal">
               <div className="cs-label">{smm.label}</div>
@@ -263,7 +285,10 @@ export default function CaseStudyPage({ slug }) {
             </div>
           </section>
 
-          {/* PR */}
+          )}
+
+          {/* PR (optional) */}
+          {pr && (
           <section className="cs-section container">
             <div className="cs-reveal">
               <div className="cs-label">{pr.label}</div>
@@ -280,7 +305,11 @@ export default function CaseStudyPage({ slug }) {
             </div>
           </section>
 
-          {/* Production + gallery */}
+          )}
+
+          {/* Production + gallery (optional) */}
+          {production && (
+          <>
           <section className="cs-section container">
             <div className="cs-reveal">
               <div className="cs-label">{production.label}</div>
@@ -299,6 +328,8 @@ export default function CaseStudyPage({ slug }) {
               </div>
             ))}
           </div>
+          )}
+          </>
           )}
 
           {/* Results */}

@@ -2868,3 +2868,54 @@ nav a.nav-active {
   .cs-proof-strip--3,
   .cs-proof-strip--5 { grid-template-columns: 1fr; }
 }
+
+/* ─── CaseStudyPage: typography-led content flow (Morocco Team) ─── */
+.cs-flow {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 2.5rem;
+  padding: 0;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  counter-reset: flow;
+}
+.cs-flow-step {
+  background: var(--bg-card);
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  position: relative;
+  transition: background 0.25s;
+}
+.cs-flow-step:hover { background: var(--bg-card-hover); }
+.cs-flow-n {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  color: var(--green-accent);
+}
+.cs-flow-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--text-primary);
+  text-wrap: balance;
+}
+.cs-flow-text {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  text-wrap: pretty;
+}
+
+@media (max-width: 900px) {
+  .cs-flow { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cs-flow { grid-template-columns: 1fr; }
+}

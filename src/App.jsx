@@ -70,6 +70,7 @@ export default function App() {
           <Route path="/cases/supreme-yachts" element={<CaseStudyPage slug="supreme-yachts" />} />
           <Route path="/cases/unisend" element={<CaseStudyPage slug="unisend" />} />
           <Route path="/cases/mb-trade" element={<CaseStudyPage slug="mb-trade" />} />
+          <Route path="/cases/morocco-team" element={<CaseStudyPage slug="morocco-team" />} />
           <Route path="/cases/real-estate-bangkok" element={<CaseRoute id="real-estate-bangkok" />} />
           <Route path="/cases/wellness-clinic-phuket" element={<CaseRoute id="wellness-clinic-phuket" />} />
           <Route path="/cases/tourism-hospitality" element={<CaseRoute id="tourism-hospitality" />} />

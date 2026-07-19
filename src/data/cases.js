@@ -90,10 +90,9 @@ export const cases = [
     title: 'Morocco Team — SMM growth for bespoke tours in Morocco',
     industry: 'SMM · Travel',
     slug: '/cases/morocco-team',
-    externalUrl: 'https://montas.io/cases/morocco-team',
+    internalCaseStudy: true, // links to internal /cases/morocco-team page
     image: '/cases/morocco-team-cover.jpg',
     imageAlt: 'Morocco Team bespoke tours social media case',
-    isExternal: true,
     problem: 'A bespoke tour operator in Morocco had lost audience reach and needed a structured content system to turn social engagement into enquiries.',
     whatWeDid: 'Restarted regular posting, built a new Stories content system and developed creative formats to restore reach and generate tour enquiries.',
     relatedServiceIds: ['smm-content-systems'],

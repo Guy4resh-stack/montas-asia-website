@@ -650,6 +650,147 @@ export const caseStudies = {
       body: 'Build a growth system around your customer journey, commercial process and operational reality.',
     },
   },
+
+  'morocco-team': {
+    slug: 'morocco-team',
+    caseName: 'Morocco Team',
+    seo: {
+      title: 'Morocco Team Travel SMM Case Study | Montas Asia',
+      description:
+        'How Montas doubled social reach, generated 63 leads in one month and supported two tour sales for a bespoke Morocco travel brand.',
+      canonicalPath: '/cases/morocco-team',
+      ogImage: '/cases/morocco-team/hero.jpg',
+    },
+    hero: {
+      label: 'REAL CASE · SMM · BESPOKE TRAVEL',
+      h1: 'Morocco Team — turning consistent social content into tour enquiries',
+      intro:
+        'Montas restarted regular social communication for a bespoke Morocco tour operator, introduced a structured Stories system and developed creative formats that increased reach and generated measurable demand.',
+      serviceTags: ['SMM', 'Content strategy', 'Stories system', 'Creative concepts', 'Organic lead generation'],
+      image: '/cases/morocco-team/hero.jpg',
+      imageAlt: 'Morocco Team bespoke tour experience in Morocco',
+      secondaryCta: { label: 'View original case ↗', url: 'https://montas.io/cases/morocco-team' },
+    },
+    heroProof: [
+      { value: '2×', label: 'reach' },
+      { value: '63', label: 'leads in one month' },
+      { value: '2', label: 'tour sales' },
+    ],
+    client: {
+      label: 'THE CLIENT',
+      heading: 'Bespoke travel experiences built around Morocco',
+      body: [
+        'Morocco Team offers author-led and bespoke travel experiences in Morocco. In a visually driven travel category, social media plays an important role in showing the atmosphere of the destination and turning interest into direct enquiries.',
+        'The engagement focused specifically on social communication: restoring regular publishing, improving the Stories structure and developing creative content capable of supporting both audience growth and commercial demand.',
+      ],
+      overview: [
+        { term: 'Industry', value: 'Travel and tourism' },
+        { term: 'Product', value: 'Bespoke tours in Morocco' },
+        { term: 'Core channel', value: 'Social media' },
+        { term: 'Engagement', value: 'SMM and content' },
+        { term: 'Main objective', value: 'Reach and lead generation' },
+        { term: 'Reported commercial outcome', value: 'Two tour sales' },
+      ],
+    },
+    challenge: {
+      label: 'THE CHALLENGE',
+      heading: 'Rebuilding momentum in a category driven by attention and trust',
+      intro:
+        'Travel decisions are highly visual, but visibility alone is not enough. Potential guests need regular inspiration, a clear sense of the experience and an easy reason to begin a conversation.',
+      cards: [
+        { title: 'Restore reach', text: 'Restart consistent publishing and improve the account’s ability to reach its audience.' },
+        { title: 'Structure Stories', text: 'Replace disconnected Stories with a repeatable content system.' },
+        { title: 'Generate enquiries', text: 'Turn creative content into measurable interest in the tours.' },
+      ],
+    },
+    approach: {
+      label: 'THE TASK',
+      heading: 'Make social communication consistent, useful and commercially relevant',
+      intro:
+        'The project set three objectives: increase reach, develop a structured Stories rubric and attract leads. Each was approached as part of one continuous communication system rather than a separate deliverable.',
+      pillars: [
+        'Increase reach — restore a regular, relevant publishing rhythm',
+        'Develop a Stories rubric — define repeatable daily themes',
+        'Attract leads — connect content with concrete interest in the tours',
+      ],
+    },
+    contentFlow: {
+      heading: 'How the content system supported demand',
+      stages: [
+        { title: 'Regular posting', text: 'Created consistent audience contact.' },
+        { title: 'Structured Stories', text: 'Made everyday communication more repeatable.' },
+        { title: 'Creative formats', text: 'Provided stronger reasons to stop, watch and respond.' },
+        { title: 'Higher reach', text: 'Expanded the amount of audience attention around the offer.' },
+        { title: 'Enquiries', text: 'Turned content interaction into direct commercial interest.' },
+        { title: 'Tour sales', text: 'Demonstrated that social activity supported real purchase decisions.' },
+      ],
+    },
+    brand: {
+      heading: 'Consistency first, then creative variation',
+      body: [
+        'Regular posting gave the account a continuous presence and created more opportunities to reach potential travellers. A defined Stories rubric then gave daily communication a clearer structure and made the channel easier to sustain.',
+        'With that foundation in place, new creative ideas helped the content move beyond routine updates and support both attention and enquiries.',
+      ],
+      deliverables: [
+        'Regular posting resumed',
+        'New Stories rubric launched',
+        'Creative content ideas developed',
+      ],
+    },
+    results: {
+      label: 'THE RESULTS',
+      heading: 'Content activity translated into measurable commercial interest',
+      main: [
+        { value: '2× reach', text: 'The account’s reported reach doubled after regular publishing and the new Stories system were introduced. A more consistent content rhythm increased the amount of audience attention around the offer.' },
+        { value: '63 leads in one month', text: 'The refreshed content system generated 63 reported leads during one month — a measurable flow of people who moved beyond passive viewing and expressed commercial interest.' },
+        { value: '2 tour sales', text: 'Two tours were sold, with tour prices starting from €2,000. The reported activity was connected to real purchases, not visibility alone.' },
+      ],
+      supporting: [
+        'Tours priced from €2,000',
+        'Regular publishing rhythm restored',
+        'Stories rubric introduced',
+        'Creative formats developed',
+      ],
+    },
+    impact: {
+      heading: 'Why these results matter',
+      body: [
+        'The case is relatively compact, but the commercial logic is clear. Regular content restored visibility, the Stories system gave the account a repeatable communication structure and creative formats helped turn attention into direct enquiries.',
+        'The strongest proof point is not reach alone. The project also generated leads and confirmed tour sales, showing that a focused SMM engagement can support both brand visibility and near-term demand.',
+      ],
+    },
+    sea: {
+      label: 'TRANSFERABLE TO SEA',
+      heading: 'What this project demonstrates for travel brands in Southeast Asia',
+      intro:
+        'Travel brands often compete through highly visual channels, but attractive imagery alone does not create a reliable flow of enquiries. Consistency, repeatable content formats and a clear path to contact are equally important.',
+      principles: [
+        { title: 'Consistency builds visibility', text: 'A stable publishing rhythm creates more opportunities to remain present during a long travel decision.' },
+        { title: 'Stories need a system', text: 'Repeatable formats make day-to-day communication easier to sustain and easier for the audience to understand.' },
+        { title: 'Content should support action', text: 'Reach becomes commercially useful when users have a clear reason and path to enquire.' },
+      ],
+    },
+    testimonial: {
+      quote: 'The collaboration was highly productive. The team quickly helped move the account to a new level: the content became more systematic and considered, while reach increased noticeably. What mattered most was that the ideas were not created only for appearance — they generated real leads and sales. The team remained accessible and continued proposing fresh formats, helping us increase customer interest and strengthen our market position.',
+      attribution: 'Morocco Team',
+    },
+    services: [
+      { label: 'SMM', to: '/services/smm-content-systems' },
+      { label: 'Content strategy', to: '/services/smm-content-systems' },
+      { label: 'Stories planning', to: null },
+      { label: 'Creative concepts', to: null },
+      { label: 'Organic lead generation', to: null },
+      { label: 'Social media management', to: '/services/smm-content-systems' },
+    ],
+    sourcesHeading: 'Original project source',
+    sources: [
+      { label: 'View the original Montas case', url: 'https://montas.io/cases/morocco-team' },
+    ],
+    finalCta: {
+      heading: 'Need to turn travel content into measurable enquiries?',
+      body: 'Build a clear content system around your audience, offer and booking journey.',
+    },
+  },
 };
 
 export const getCaseStudy = (slug) => caseStudies[slug] || null;
