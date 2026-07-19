@@ -2850,3 +2850,21 @@ nav a.nav-active {
   .cs-inline-img { aspect-ratio: 4 / 3; }
   .cs-inline-image--offset .cs-inline-img { aspect-ratio: 4 / 3; }
 }
+
+/* Proof strip with explicit column counts (avoids empty trailing cell) */
+.cs-proof-strip--2 { grid-template-columns: repeat(2, 1fr); }
+.cs-proof-strip--3 { grid-template-columns: repeat(3, 1fr); }
+.cs-proof-strip--5 { grid-template-columns: repeat(5, 1fr); }
+
+/* Crop the bottom of an image (used to keep source watermarks out of frame) */
+.cs-inline-img--crop-bottom { object-position: center 42%; }
+
+@media (max-width: 900px) {
+  .cs-proof-strip--3,
+  .cs-proof-strip--5 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cs-proof-strip--2,
+  .cs-proof-strip--3,
+  .cs-proof-strip--5 { grid-template-columns: 1fr; }
+}

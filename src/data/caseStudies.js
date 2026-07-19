@@ -447,9 +447,9 @@ export const caseStudies = {
     // Four distributed primary image positions (not a gallery)
     images: {
       hero:          { src: '/cases/mb-trade/hero.jpg',           alt: 'MB TRADE China logistics and container shipping operation' },
-      operations:    { src: '/cases/mb-trade/operations.jpg',     alt: 'Cargo preparation and logistics operations for MB TRADE in China' },
+      operations:    { src: '/cases/mb-trade/operations.jpg',     alt: 'Cargo preparation and logistics operations for MB TRADE in China', cropBottom: true },
       digitalSystem: { src: '/cases/mb-trade/digital-system.jpg', alt: 'MB TRADE website and integrated B2B lead-generation system' },
-      results:       { src: '/cases/mb-trade/results.jpg',        alt: 'MB TRADE logistics team coordinating a B2B shipment from China' },
+      results:       { src: '/cases/mb-trade/results.jpg',        alt: 'MB TRADE logistics team coordinating a B2B shipment from China', cropBottom: true },
     },
     hero: {
       label: 'REAL CASE · B2B LOGISTICS · CHINA',

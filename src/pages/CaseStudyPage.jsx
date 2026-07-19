@@ -173,7 +173,7 @@ export default function CaseStudyPage({ slug }) {
                 <h2 className="cs-h2">{businessContext.heading}</h2>
                 <p className="cs-body cs-body--wide">{businessContext.intro}</p>
               </div>
-              <div className="cs-proof-strip cs-proof-strip--inline cs-reveal">
+              <div className={`cs-proof-strip cs-proof-strip--inline cs-proof-strip--${businessContext.claims.length} cs-reveal`}>
                 {businessContext.claims.map((c) => (
                   <div key={c.label} className="cs-proof">
                     <span className="cs-proof-value">{c.value}</span>
@@ -205,7 +205,7 @@ export default function CaseStudyPage({ slug }) {
           {/* Distributed image 2/4 — operations */}
           {images?.operations && (
             <figure className="cs-inline-image cs-inline-image--offset cs-reveal">
-              <img src={images.operations.src} alt={images.operations.alt} loading="lazy" className="cs-inline-img" width="1200" height="640" />
+              <img src={images.operations.src} alt={images.operations.alt} loading="lazy" className={`cs-inline-img${images.operations.cropBottom ? " cs-inline-img--crop-bottom" : ""}`} width="1200" height="640" />
             </figure>
           )}
 
@@ -242,7 +242,7 @@ export default function CaseStudyPage({ slug }) {
           {/* Distributed image 3/4 — digital system */}
           {images?.digitalSystem && (
             <figure className="cs-inline-image cs-reveal">
-              <img src={images.digitalSystem.src} alt={images.digitalSystem.alt} loading="lazy" className="cs-inline-img" width="1200" height="640" />
+              <img src={images.digitalSystem.src} alt={images.digitalSystem.alt} loading="lazy" className={`cs-inline-img${images.digitalSystem.cropBottom ? " cs-inline-img--crop-bottom" : ""}`} width="1200" height="640" />
             </figure>
           )}
 
@@ -323,7 +323,7 @@ export default function CaseStudyPage({ slug }) {
           {/* Distributed image 4/4 — results/team */}
           {images?.results && (
             <figure className="cs-inline-image cs-inline-image--offset cs-reveal">
-              <img src={images.results.src} alt={images.results.alt} loading="lazy" className="cs-inline-img" width="1200" height="640" />
+              <img src={images.results.src} alt={images.results.alt} loading="lazy" className={`cs-inline-img${images.results.cropBottom ? " cs-inline-img--crop-bottom" : ""}`} width="1200" height="640" />
             </figure>
           )}
 
