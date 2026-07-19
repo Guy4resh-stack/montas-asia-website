@@ -234,7 +234,7 @@ export default function CaseStudyPage({ slug }) {
               <div className="cs-reveal">
                 <h2 className="cs-h2">{contentFlow.heading}</h2>
               </div>
-              <ol className="cs-flow">
+              <ol className={`cs-flow cs-flow--${contentFlow.stages.length}`}>
                 {contentFlow.stages.map((s, i) => (
                   <li key={s.title} className="cs-flow-step cs-reveal">
                     <span className="cs-flow-n">{String(i + 1).padStart(2, '0')}</span>

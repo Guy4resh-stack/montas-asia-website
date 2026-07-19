@@ -2919,3 +2919,18 @@ nav a.nav-active {
 @media (max-width: 600px) {
   .cs-flow { grid-template-columns: 1fr; }
 }
+
+/* Content flow: column count matches stage count (avoids empty trailing cells) */
+.cs-flow--2 { grid-template-columns: repeat(2, 1fr); }
+.cs-flow--4 { grid-template-columns: repeat(4, 1fr); }
+.cs-flow--5 { grid-template-columns: repeat(5, 1fr); }
+
+@media (max-width: 900px) {
+  .cs-flow--4,
+  .cs-flow--5 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cs-flow--2,
+  .cs-flow--4,
+  .cs-flow--5 { grid-template-columns: 1fr; }
+}
