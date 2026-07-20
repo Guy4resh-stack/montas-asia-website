@@ -57,6 +57,8 @@ export default function ContactPage() {
   const [form, setForm] = useState(EMPTY);
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     const e = {};
@@ -73,10 +75,14 @@ export default function ContactPage() {
     const { name, value } = e.target;
     setForm(f => ({ ...f, [name]: value }));
     if (errors[name]) setErrors(er => ({ ...er, [name]: undefined }));
+    if (submitError) setSubmitError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    setSubmitError('');
+
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
@@ -86,28 +92,27 @@ export default function ContactPage() {
       return;
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // INTEGRATION POINT
-    // To connect a real backend, replace this block with one of the following:
-    //
-    // Option A — Vercel serverless function:
-    //   await fetch('/api/contact', { method: 'POST', body: JSON.stringify(form) })
-    //
-    // Option B — Email service (Resend, SendGrid, Mailgun):
-    //   await fetch('https://api.resend.com/emails', { method: 'POST', ... })
-    //
-    // Option C — CRM webhook (HubSpot, Pipedrive, etc.):
-    //   await fetch(process.env.VITE_CRM_WEBHOOK, { method: 'POST', body: JSON.stringify(form) })
-    //
-    // Option D — Zapier / Make webhook:
-    //   await fetch(process.env.VITE_ZAPIER_HOOK, { method: 'POST', body: JSON.stringify(form) })
-    //
-    // No personal data is stored in this demo. The form state is held in React
-    // memory only and is cleared on page reload.
-    // ─────────────────────────────────────────────────────────────────────────
+    setIsSubmitting(true);
 
-    setSubmitted(true);
-    setForm(EMPTY);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || data.ok !== true) {
+        throw new Error(data.message || 'The request could not be sent. Please try again.');
+      }
+
+      setSubmitted(true);
+      setForm(EMPTY);
+    } catch (error) {
+      setSubmitError(error.message || 'The request could not be sent. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -162,7 +167,10 @@ export default function ContactPage() {
                   <button
                     className="hero-cta-secondary"
                     style={{ marginTop: '1.5rem' }}
-                    onClick={() => setSubmitted(false)}
+                    onClick={() => {
+                      setSubmitError('');
+                      setSubmitted(false);
+                    }}
                   >
                     Send another request
                   </button>
@@ -243,8 +251,19 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <button type="submit" className="hero-cta-primary form-submit">
-                    Send project request
+                  {submitError && (
+                    <p className="form-alert" role="alert">
+                      {submitError}
+                    </p>
+                  )}
+
+                  <button
+                    type="submit"
+                    className="hero-cta-primary form-submit"
+                    disabled={isSubmitting}
+                    aria-busy={isSubmitting}
+                  >
+                    {isSubmitting ? 'Sending request…' : 'Send project request'}
                   </button>
 
                 </form>
