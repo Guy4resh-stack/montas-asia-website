@@ -151,12 +151,10 @@ export const cases = [
     title: 'Clipstorm — digital platform for short-form video campaigns',
     industry: 'Product strategy · Web development · MarTech',
     slug: '/cases/clipstorm',
-    externalUrl: 'https://montas.io/cases/clipstorm',
-    liveUrl: 'https://www.clipstorm.io/',
+    internalCaseStudy: true, // links to internal /cases/clipstorm page
     image: '/cases/clipstorm-cover.jpg',
     imageAlt: 'Clipstorm short-form video campaign platform case',
     imageContain: true, // logo/SVG image — use contain instead of cover
-    isExternal: true,
     problem: 'A short-form video campaign service needed its product packaged for online launch and scalable sales.',
     whatWeDid: 'Researched the market, defined the product logic and built a sales website, real-time client dashboard with API integrations, and a 3D product showreel.',
     relatedServiceIds: ['landing-pages-websites', 'analytics-reporting'],

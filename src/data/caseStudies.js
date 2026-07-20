@@ -1006,6 +1006,212 @@ export const caseStudies = {
       body: 'Build a research-led brand and digital platform around your audience, catalogue and commercial journey.',
     },
   },
+
+  'clipstorm': {
+    slug: 'clipstorm',
+    caseName: 'Clipstorm',
+    seo: {
+      title: 'Clipstorm MarTech Platform Case Study | Montas Asia',
+      description:
+        'How Montas transformed Clipstorm into a complete MarTech platform in six weeks, followed by a reported 100% increase in sales.',
+      canonicalPath: '/cases/clipstorm',
+      ogImage: '/cases/clipstorm-cover.jpg',
+    },
+    hero: {
+      label: 'REAL CASE · MARTECH · PRODUCT DEVELOPMENT',
+      h1: 'Clipstorm — building a digital platform for short-form video campaigns',
+      intro:
+        'Montas transformed an existing short-form video campaign product into a complete online ecosystem combining product packaging, a sales website, a realtime client dashboard, API connections and a 3D showreel.',
+      serviceTags: [
+        'Market research', 'Competitor analysis', 'Product strategy', 'Technical specification',
+        'UX/UI design', 'Webflow development', 'Client dashboard', 'API integration', 'UX testing', '3D production',
+      ],
+      image: '/cases/clipstorm-cover.jpg',
+      imageAlt: 'Clipstorm short-form video marketing platform logo',
+      imageContain: true,
+      secondaryCta: { label: 'View original case ↗', url: 'https://montas.io/cases/clipstorm' },
+    },
+    heroProof: [
+      { value: '6 weeks', label: 'from project start to full implementation' },
+      { value: '+100%', label: 'reported sales growth after platform launch' },
+      { value: 'Realtime', label: 'campaign statistics in the client dashboard' },
+      { value: 'Full stack', label: 'website, dashboard, API and 3D showreel' },
+    ],
+    client: {
+      label: 'THE PRODUCT',
+      heading: 'A platform for launching campaigns through short-form video',
+      body: [
+        'Clipstorm was conceived as a platform helping companies launch marketing campaigns through formats such as Reels, TikTok, Shorts and other short-form video channels.',
+        'The client already had the underlying product idea, but it lacked the digital packaging and online infrastructure required to present the offer, onboard customers and scale sales.',
+      ],
+      overview: [
+        { term: 'Industry', value: 'MarTech' },
+        { term: 'Product type', value: 'Short-form video campaign platform' },
+        { term: 'Audience', value: 'Companies and marketing teams' },
+        { term: 'Core formats', value: 'Reels, TikTok and Shorts' },
+        { term: 'Engagement', value: 'Product packaging and development' },
+        { term: 'Platform', value: 'Webflow' },
+        { term: 'Core objective', value: 'Online launch and scalable sales' },
+      ],
+    },
+    challenge: {
+      label: 'THE CHALLENGE',
+      heading: 'A working product needed a complete digital form',
+      intro:
+        'The challenge was not to invent Clipstorm from zero. The product already existed as a business concept, but it needed a clear structure, convincing digital presentation and functional client experience before it could scale online.',
+      cards: [
+        { title: 'Package the product', text: 'Turn the existing service into an understandable and commercially convincing digital proposition.' },
+        { title: 'Define the logic', text: 'Translate business requirements into a clear technical specification and user journey.' },
+        { title: 'Build the sales layer', text: 'Create a website that explained the product and supported online sales.' },
+        { title: 'Build the product layer', text: 'Provide registration, campaign information and client-management functionality.' },
+        { title: 'Communicate technological value', text: 'Use visual design and 3D production to demonstrate the platform’s scope and ambition.' },
+      ],
+    },
+    approach: {
+      label: 'THE APPROACH',
+      heading: 'One connected system across presentation, product and client management',
+      intro:
+        'Montas approached the engagement as a product system rather than a standalone landing page: ready product → digital packaging → sales website → client dashboard → scalable platform.',
+      pillars: [
+        'Product research — understand the category, competitors and expected audience journeys',
+        'Technical specification — translate commercial goals into product requirements and user logic',
+        'Sales website — explain the platform through a strong visual system, considered UX and controlled animation',
+        'Client dashboard — registration, realtime statistics, customisation and connected campaign workflows',
+        '3D product presentation — communicate technological scale and product capability',
+      ],
+    },
+    smm: {
+      label: 'RESEARCH',
+      heading: 'Defining the market, audience scenarios and product logic',
+      body: [
+        'Montas began with an in-depth study of competitors and audience interaction scenarios within the video-advertising market.',
+        'The findings were translated into an agreed technical specification defining the product goals, interface logic and required user flows.',
+      ],
+      proof: [
+        { value: 'Market research', label: 'the video-advertising landscape and comparable digital products' },
+        { value: 'Audience scenarios', label: 'how customers would discover, evaluate and use the platform' },
+        { value: 'Specification', label: 'business requirements converted into product goals and logic' },
+      ],
+    },
+    brand: {
+      heading: 'A visual sales experience designed around a new product category',
+      body: [
+        'Montas created the website design with a strong visual system, considered UX patterns and carefully controlled animation.',
+        'The website needed to explain an unfamiliar product quickly while preserving the technological and creative character of short-form video marketing.',
+      ],
+      deliverables: [
+        'Website structure', 'Visual system', 'UX solutions', 'Interface design',
+        'Considered animations', 'Product explanation', 'Sales-focused presentation',
+      ],
+    },
+    pr: {
+      label: 'CLIENT PLATFORM',
+      heading: 'A personal dashboard built around live campaign information',
+      body: [
+        'The dashboard was assembled in Webflow with connected functionality, including registration, a complete user flow, realtime statistics, customisation and API connections.',
+        'It turned the public-facing proposition into a usable client environment for accessing and managing campaign information. Custom settings and API connections created a more flexible environment capable of supporting different campaign scenarios.',
+      ],
+      proof: [
+        { value: 'Registration', label: 'user sign-up and complete user flow' },
+        { value: 'Realtime statistics', label: 'current campaign information in one environment' },
+        { value: 'Customisation', label: 'configurable dashboard settings' },
+        { value: 'API connections', label: 'support for the wider product workflow' },
+      ],
+    },
+    production: {
+      label: '3D PRODUCTION',
+      heading: 'Making an intangible product feel tangible',
+      body: [
+        'Montas created a dedicated 3D showreel to demonstrate the platform’s capabilities and reinforce the technological character of the brand.',
+        'For a digital service without a physical product, the showreel provided a more expressive way to communicate scale, functionality and ambition. Before release, internal UX testing was conducted to review the main user journey, identify unclear interface moments and confirm that key product actions were understandable.',
+      ],
+      scope: [
+        'Dedicated 3D showreel',
+        'Product demonstration',
+        'Reinforcement of the visual identity',
+        'Stronger perception of technological scale',
+        'Internal UX testing before release',
+        'Review of the main user journey',
+      ],
+      gallery: [],
+    },
+    contentFlow: {
+      heading: 'A complete product ecosystem delivered in six weeks',
+      stages: [
+        { title: 'Research', text: 'Competitor and audience-scenario analysis.' },
+        { title: 'Specification', text: 'Definition of business goals, functionality and product logic.' },
+        { title: 'UX/UI design', text: 'Sales website, dashboard experience and visual system.' },
+        { title: 'Development and connections', text: 'Webflow implementation, registration, customisation and API functionality.' },
+        { title: 'Testing and release', text: 'Internal UX review and completion of the full platform.' },
+      ],
+    },
+    results: {
+      label: 'THE RESULTS',
+      heading: 'A complete online platform prepared for scalable sales',
+      main: [
+        { value: '6-week delivery', text: 'The complete project was implemented from start to finish within the reported six-week period.' },
+        { value: '+100% sales', text: 'The official case reports 100% sales growth after the new online platform launched.' },
+        { value: 'Realtime client dashboard', text: 'A personal environment with campaign statistics, customisation and API connections.' },
+        { value: 'Complete product packaging', text: 'Research, specification, website, user flows and 3D presentation combined into one system.' },
+      ],
+      supporting: [
+        'Product prepared for broader promotion',
+        'Sales-focused website',
+        'User registration flow',
+        'Flexible dashboard settings',
+        'Internal UX testing',
+        '3D product showreel',
+        'Foundation for further product growth',
+        'Greater system autonomy',
+      ],
+    },
+    impact: {
+      heading: 'The website was only one part of the outcome',
+      body: [
+        'Clipstorm did not receive a promotional landing page in isolation. The engagement connected product research, technical definition, interface design, client functionality, API connections and visual production.',
+        'This made the new online platform capable of supporting both product presentation and the client experience — creating a stronger foundation for sales and future development.',
+      ],
+    },
+    sea: {
+      label: 'TRANSFERABLE TO SEA',
+      heading: 'What this project demonstrates for digital products entering Asian markets',
+      intro:
+        'New digital products often need more than localisation and advertising. They need a clearly defined proposition, a coherent user journey and a platform capable of turning initial interest into product use.',
+      principles: [
+        { title: 'Package the product before scaling traffic', text: 'Clarify the offer, functionality and customer journey before increasing acquisition.' },
+        { title: 'Connect marketing and product experience', text: 'Ensure the promise made by the website continues inside the client platform.' },
+        { title: 'Make data visible', text: 'Give customers clear access to the information they need to understand ongoing activity.' },
+      ],
+    },
+    testimonial: {
+      quote: 'The team understood the core of the task from the first meeting. We received more than a website — we gained a complete ecosystem for sales and client management. The realtime dashboard and 3D showreel were particularly impressive and gave the product the level associated with major digital brands.',
+      attribution: 'Clipstorm team',
+    },
+    services: [
+      { label: 'Market research', to: null },
+      { label: 'Competitor analysis', to: null },
+      { label: 'Audience-scenario analysis', to: null },
+      { label: 'Product strategy', to: null },
+      { label: 'Technical specification', to: null },
+      { label: 'Information architecture', to: null },
+      { label: 'UX/UI design', to: '/services/landing-pages-websites' },
+      { label: 'Visual system', to: null },
+      { label: 'Webflow development', to: '/services/landing-pages-websites' },
+      { label: 'Client dashboard development', to: null },
+      { label: 'Registration flow', to: null },
+      { label: 'API connections', to: null },
+      { label: 'UX testing', to: null },
+      { label: '3D production', to: null },
+    ],
+    sourcesHeading: 'Original project source',
+    sources: [
+      { label: 'View the original Montas case', url: 'https://montas.io/cases/clipstorm' },
+    ],
+    finalCta: {
+      heading: 'Building a digital product for fast-moving Asian markets?',
+      body: 'Turn your product logic, interface and customer journey into one scalable online system.',
+    },
+  },
 };
 
 export const getCaseStudy = (slug) => caseStudies[slug] || null;
