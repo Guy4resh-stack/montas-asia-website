@@ -60,6 +60,19 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
+  // Lock background scrolling and allow Escape to dismiss the success modal.
+  useEffect(() => {
+    if (!submitted) return undefined;
+    const onKey = (ev) => { if (ev.key === 'Escape') setSubmitted(false); };
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [submitted]);
+
   const validate = () => {
     const e = {};
     if (!form.name.trim()) e.name = 'Please enter your name.';
@@ -157,117 +170,97 @@ export default function ContactPage() {
 
             {/* Form */}
             <div className="contact-form-col">
-              {submitted ? (
-                <div className="form-success fade-up">
-                  <div className="form-success-icon">✓</div>
-                  <h3>Request received</h3>
-                  <p>
-                    This is a demo form prepared for CRM integration. In a production setup, this request would be routed to the CRM or email pipeline automatically.
-                  </p>
-                  <button
-                    className="hero-cta-secondary"
-                    style={{ marginTop: '1.5rem' }}
-                    onClick={() => {
-                      setSubmitError('');
-                      setSubmitted(false);
-                    }}
-                  >
-                    Send another request
-                  </button>
+              <form className="contact-form fade-up" onSubmit={handleSubmit} noValidate>
+
+                <div className="form-row">
+                  <label className="form-label" htmlFor="name">Name <span className="form-required">*</span></label>
+                  <input
+                    className={`form-input${errors.name ? ' form-input--error' : ''}`}
+                    id="name" name="name" type="text"
+                    placeholder="Your full name"
+                    value={form.name} onChange={handleChange}
+                    autoComplete="name"
+                  />
+                  {errors.name && <span className="field-error">{errors.name}</span>}
                 </div>
-              ) : (
-                <form className="contact-form fade-up" onSubmit={handleSubmit} noValidate>
 
-                  <div className="form-row">
-                    <label className="form-label" htmlFor="name">Name <span className="form-required">*</span></label>
-                    <input
-                      className={`form-input${errors.name ? ' form-input--error' : ''}`}
-                      id="name" name="name" type="text"
-                      placeholder="Your full name"
-                      value={form.name} onChange={handleChange}
-                      autoComplete="name"
-                    />
-                    {errors.name && <span className="field-error">{errors.name}</span>}
-                  </div>
+                <div className="form-row">
+                  <label className="form-label" htmlFor="email">Work email <span className="form-required">*</span></label>
+                  <input
+                    className={`form-input${errors.email ? ' form-input--error' : ''}`}
+                    id="email" name="email" type="email"
+                    placeholder="you@company.com"
+                    value={form.email} onChange={handleChange}
+                    autoComplete="email"
+                  />
+                  {errors.email && <span className="field-error">{errors.email}</span>}
+                </div>
 
-                  <div className="form-row">
-                    <label className="form-label" htmlFor="email">Work email <span className="form-required">*</span></label>
-                    <input
-                      className={`form-input${errors.email ? ' form-input--error' : ''}`}
-                      id="email" name="email" type="email"
-                      placeholder="you@company.com"
-                      value={form.email} onChange={handleChange}
-                      autoComplete="email"
-                    />
-                    {errors.email && <span className="field-error">{errors.email}</span>}
-                  </div>
+                <div className="form-row">
+                  <label className="form-label" htmlFor="company">Company / project name <span className="form-required">*</span></label>
+                  <input
+                    className={`form-input${errors.company ? ' form-input--error' : ''}`}
+                    id="company" name="company" type="text"
+                    placeholder="Company or project name"
+                    value={form.company} onChange={handleChange}
+                    autoComplete="organization"
+                  />
+                  {errors.company && <span className="field-error">{errors.company}</span>}
+                </div>
 
-                  <div className="form-row">
-                    <label className="form-label" htmlFor="company">Company / project name <span className="form-required">*</span></label>
-                    <input
-                      className={`form-input${errors.company ? ' form-input--error' : ''}`}
-                      id="company" name="company" type="text"
-                      placeholder="Company or project name"
-                      value={form.company} onChange={handleChange}
-                      autoComplete="organization"
-                    />
-                    {errors.company && <span className="field-error">{errors.company}</span>}
-                  </div>
-
-                  <div className="form-row">
-                    <label className="form-label" htmlFor="market">Market of interest <span className="form-required">*</span></label>
-                    <select
-                      className={`form-input form-select${errors.market ? ' form-input--error' : ''}`}
-                      id="market" name="market"
-                      value={form.market} onChange={handleChange}
-                    >
-                      <option value="">Select a market</option>
-                      {MARKETS.map(m => <option key={m} value={m}>{m}</option>)}
-                    </select>
-                    {errors.market && <span className="field-error">{errors.market}</span>}
-                  </div>
-
-                  <div className="form-row">
-                    <label className="form-label" htmlFor="service">Service of interest <span className="form-required">*</span></label>
-                    <select
-                      className={`form-input form-select${errors.service ? ' form-input--error' : ''}`}
-                      id="service" name="service"
-                      value={form.service} onChange={handleChange}
-                    >
-                      <option value="">Select a service</option>
-                      {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
-                    </select>
-                    {errors.service && <span className="field-error">{errors.service}</span>}
-                  </div>
-
-                  <div className="form-row">
-                    <label className="form-label" htmlFor="description">Short project description</label>
-                    <textarea
-                      className="form-input form-textarea"
-                      id="description" name="description"
-                      placeholder="Tell us about your business, your market and where you need help. A few sentences is enough."
-                      rows={5}
-                      value={form.description} onChange={handleChange}
-                    />
-                  </div>
-
-                  {submitError && (
-                    <p className="form-alert" role="alert">
-                      {submitError}
-                    </p>
-                  )}
-
-                  <button
-                    type="submit"
-                    className="hero-cta-primary form-submit"
-                    disabled={isSubmitting}
-                    aria-busy={isSubmitting}
+                <div className="form-row">
+                  <label className="form-label" htmlFor="market">Market of interest <span className="form-required">*</span></label>
+                  <select
+                    className={`form-input form-select${errors.market ? ' form-input--error' : ''}`}
+                    id="market" name="market"
+                    value={form.market} onChange={handleChange}
                   >
-                    {isSubmitting ? 'Sending request…' : 'Send project request'}
-                  </button>
+                    <option value="">Select a market</option>
+                    {MARKETS.map(m => <option key={m} value={m}>{m}</option>)}
+                  </select>
+                  {errors.market && <span className="field-error">{errors.market}</span>}
+                </div>
 
-                </form>
-              )}
+                <div className="form-row">
+                  <label className="form-label" htmlFor="service">Service of interest <span className="form-required">*</span></label>
+                  <select
+                    className={`form-input form-select${errors.service ? ' form-input--error' : ''}`}
+                    id="service" name="service"
+                    value={form.service} onChange={handleChange}
+                  >
+                    <option value="">Select a service</option>
+                    {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
+                  </select>
+                  {errors.service && <span className="field-error">{errors.service}</span>}
+                </div>
+
+                <div className="form-row">
+                  <label className="form-label" htmlFor="description">Short project description</label>
+                  <textarea
+                    className="form-input form-textarea"
+                    id="description" name="description"
+                    placeholder="Tell us about your business, your market and where you need help. A few sentences is enough."
+                    rows={5}
+                    value={form.description} onChange={handleChange}
+                  />
+                </div>
+
+                {submitError && (
+                  <p className="form-alert" role="alert">
+                    {submitError}
+                  </p>
+                )}
+
+                <button
+                  type="submit"
+                  className="hero-cta-primary form-submit"
+                  disabled={isSubmitting}
+                  aria-busy={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending request…' : 'Send project request'}
+                </button>
+
+              </form>
             </div>
 
             {/* Contact sidebar */}
@@ -316,6 +309,55 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Success modal */}
+      {submitted && (
+        <div
+          className="cf-modal-backdrop"
+          role="presentation"
+          onClick={() => setSubmitted(false)}
+        >
+          <div
+            className="cf-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cf-modal-title"
+            onClick={(ev) => ev.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="cf-modal-close"
+              aria-label="Close"
+              onClick={() => setSubmitted(false)}
+            >
+              &times;
+            </button>
+
+            <div className="cf-modal-icon" aria-hidden="true">&#10003;</div>
+
+            <h2 id="cf-modal-title" className="cf-modal-title">Thank you for your request</h2>
+
+            <p className="cf-modal-text">
+              Your project request has reached the Montas team. We review every enquiry
+              within one business day and will come back to you with a clear scope
+              rather than a sales call.
+            </p>
+
+            <div className="cf-modal-actions">
+              <button
+                type="button"
+                className="hero-cta-primary"
+                onClick={() => setSubmitted(false)}
+              >
+                Close
+              </button>
+              <Link to="/cases" className="hero-cta-secondary">
+                Browse our work
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

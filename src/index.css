@@ -2997,3 +2997,97 @@ nav a.nav-active {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+/* ─── Contact form: success modal ─── */
+.cf-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(14, 22, 32, 0.55);
+  backdrop-filter: blur(3px);
+  animation: cf-fade-in 0.22s ease-out;
+}
+.cf-modal {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 2.6rem 2.2rem 2.2rem;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(14, 22, 32, 0.18);
+  animation: cf-modal-in 0.26s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.cf-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+.cf-modal-close:hover { color: var(--text-primary); background: var(--bg-card-hover); }
+.cf-modal-close:focus-visible { outline: 2px solid var(--green-accent); outline-offset: 2px; }
+
+.cf-modal-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--green-deep);
+  color: var(--green-accent);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.cf-modal-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+  text-wrap: balance;
+}
+.cf-modal-text {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 1.8rem;
+  text-wrap: pretty;
+}
+.cf-modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@keyframes cf-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cf-modal-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf-modal-backdrop,
+  .cf-modal { animation: none; }
+}
+@media (max-width: 600px) {
+  .cf-modal { padding: 2.2rem 1.4rem 1.6rem; }
+  .cf-modal-actions { flex-direction: column; }
+  .cf-modal-actions > * { width: 100%; text-align: center; }
+}
