@@ -247,10 +247,6 @@ export default function ContactPage() {
                     Send project request
                   </button>
 
-                  <p className="form-note">
-                    This demo form is prepared for future CRM or email integration. No data is stored or transmitted.
-                  </p>
-
                 </form>
               )}
             </div>

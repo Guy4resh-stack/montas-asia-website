@@ -46,7 +46,7 @@ export default function ContactPageVisual() {
       <ellipse cx="160" cy="200" rx="130" ry="110" fill="rgba(20,120,168,0.08)" filter="url(#cpv-blur)" />
 
       {/* Form card */}
-      <rect x="30" y="55" width="220" height="240" rx="10"
+      <rect x="30" y="55" width="220" height="262" rx="10"
         fill="#FFFFFF" stroke="rgba(20,120,168,0.34)" strokeWidth="1.2" className="cpv-form-card" />
 
       <rect x="30" y="55" width="220" height="34" rx="10" fill="rgba(20,120,168,0.06)" />
