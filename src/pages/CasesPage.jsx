@@ -6,6 +6,9 @@ import CasesPageHeroVisual from '../components/CasesPageHeroVisual.jsx';
 import CaseVisualMockup from '../components/CaseVisualMockup.jsx';
 import { cases } from '../data/cases.js';
 
+// Only published client work appears on this page.
+const realCases = cases.filter((c) => c.caseType === 'Real case');
+
 function useFadeUp() {
   useEffect(() => {
     const els = document.querySelectorAll('.fade-up');
@@ -44,10 +47,10 @@ export default function CasesPage() {
         <div className="container">
           <div className="inner-hero-grid">
             <div className="fade-up">
-              <div className="section-label">Case study templates</div>
-              <h1>Concept cases and case study templates</h1>
+              <div className="section-label">Selected work</div>
+              <h1>Client cases and results</h1>
               <p className="hero-sub">
-                These are structured case-study templates and concept cases prepared for project types across Southeast Asian markets. Final data, confirmed results and client details will be published only after explicit client approval.
+                Real projects across marketing, branding, web development and product work — with the task, the approach and the reported outcome for each engagement.
               </p>
               <Link to="/contact" className="hero-cta-primary">Start a project</Link>
             </div>
@@ -58,23 +61,27 @@ export default function CasesPage() {
         </div>
       </section>
 
-      {/* Prominent notice */}
-      <div className="container">
-        <div className="case-notice fade-up">
-          <strong style={{ color: 'var(--text-primary)', fontFamily: 'Syne, sans-serif' }}>About these pages:</strong> No metrics, client names or results have been invented. These are structural templates that document the type of work, the challenge and the planned approach for each project category. Real data replaces the placeholders once each client approves publication.
-        </div>
-      </div>
-
       {/* Case archive — sequential full-width sections, not a carousel */}
       <section className="detail-section case-archive">
         <div className="container">
-          {cases.map((c, i) => (
+          {realCases.map((c, i) => (
             <article key={c.id} className="case-archive-item fade-up">
 
               <div className="case-archive-num">{String(i + 1).padStart(2, '0')}</div>
 
               <div className="case-archive-visual">
-                <CaseVisualMockup type={c.mockupType} />
+                {c.image ? (
+                  <img
+                    src={c.image}
+                    alt={c.imageAlt || c.homeTitle}
+                    className={`case-archive-img${c.imageContain ? ' case-archive-img--contain' : ''}`}
+                    loading="lazy"
+                    width="1200"
+                    height="800"
+                  />
+                ) : (
+                  <CaseVisualMockup type={c.mockupType} />
+                )}
               </div>
 
               <div className="case-archive-body">
@@ -88,20 +95,20 @@ export default function CasesPage() {
                 <div className="case-archive-tsr">
                   <div className="case-archive-tsr-col">
                     <span className="wc-tsr-label">Task</span>
-                    <p className="wc-tsr-text">{c.taskStatement}</p>
+                    <p className="wc-tsr-text">{c.homeTask || c.taskStatement}</p>
                   </div>
                   <div className="case-archive-tsr-col">
                     <span className="wc-tsr-label">Solution</span>
-                    <p className="wc-tsr-text">{c.solutionStatement}</p>
+                    <p className="wc-tsr-text">{c.homeSolution || c.solutionStatement}</p>
                   </div>
                   <div className="case-archive-tsr-col">
-                    <span className="wc-tsr-label" style={{ color: 'var(--green-accent)' }}>Concept outcome</span>
-                    <p className="wc-tsr-text">{c.conceptOutcome}</p>
+                    <span className="wc-tsr-label" style={{ color: 'var(--green-accent)' }}>Outcome</span>
+                    <p className="wc-tsr-text">{c.homeOutcome || c.conceptOutcome}</p>
                   </div>
                 </div>
 
                 <Link to={c.slug} className="hero-cta-secondary">
-                  View case template →
+                  View case study →
                 </Link>
               </div>
 

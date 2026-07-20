@@ -77,7 +77,7 @@ export default function CasesPageHeroVisual() {
 
       <text x={W / 2} y={H - 22} textAnchor="middle"
         fontFamily="'DM Mono',monospace" fontSize="7"
-        fill="#8B98A3" letterSpacing="0.08em">CASE DATA ADDED AFTER CLIENT APPROVAL</text>
+        fill="#8B98A3" letterSpacing="0.08em">SELECTED CLIENT WORK</text>
     </svg>
   );
 }
