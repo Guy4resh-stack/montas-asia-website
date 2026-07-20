@@ -261,7 +261,7 @@ export const caseStudies = {
         'Telegram Ads', 'B2B landing page',
       ],
       image: '/cases/unisend-cover.jpg',
-      imageContain: true,
+      imageFill: true,
       imageAlt: 'Unisend.me cross-border transfer service marketing case',
       secondaryCta: { label: 'Visit live service ↗', url: 'https://unisend.me/' },
     },

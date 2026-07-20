@@ -130,7 +130,7 @@ export default function CaseStudyPage({ slug }) {
               </div>
             </div>
             <div className="cs-hero-visual cs-reveal">
-              <img src={hero.image} alt={hero.imageAlt} className={`cs-hero-img${hero.imageContain ? ' cs-hero-img--contain' : ''}`} width="800" height="600" />
+              <img src={hero.image} alt={hero.imageAlt} className={`cs-hero-img${hero.imageContain ? ' cs-hero-img--contain' : ''}${hero.imageFill ? ' cs-hero-img--fill' : ''}`} width="800" height="600" />
             </div>
           </section>
 
