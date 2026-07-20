@@ -2973,13 +2973,19 @@ nav a.nav-active {
   border-radius: 14px;
   background: var(--green-deep);
 }
+/* Logos are square/wide marks: contain would scale them to the full block
+   height and dwarf the photographic covers, so cap their rendered size. */
 .case-archive-img--contain {
   object-fit: contain;
+  object-position: center;
   background: #FFFFFF;
-  padding: 1.75rem;
+  padding: clamp(2rem, 9%, 5.5rem) clamp(2rem, 14%, 9rem);
+}
+@media (max-width: 900px) {
+  .case-archive-img--contain { padding: 2.4rem 3rem; }
 }
 @media (max-width: 600px) {
-  .case-archive-img--contain { padding: 1rem; }
+  .case-archive-img--contain { padding: 1.6rem 1.8rem; }
 }
 
 /* Contact form: submission error + disabled submit state */

@@ -32,6 +32,7 @@ export const cases = [
     liveUrl: 'https://unisend.me/',
     image: '/cases/unisend-cover.jpg',
     imageAlt: 'Unisend.me social media and fintech marketing case',
+    imageContain: true, // logo asset — contain so the wordmark is not cropped
     problem: 'A new cross-border payment service needed to build trust and convert an early social audience into customers at a controlled acquisition cost.',
     whatWeDid: 'Created CJM- and JTBD-based SMM for Telegram and VK, developed a distinct visual identity and mascot, produced video content, launched Telegram Ads and built a B2B landing page.',
     relatedServiceIds: ['smm-content-systems', 'paid-advertising-lead-gen', 'landing-pages-websites'],
