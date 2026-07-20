@@ -1401,7 +1401,7 @@ nav a.nav-active {
 }
 .wc-real-image--contain {
   object-fit: contain !important;
-  padding: 1.5rem;
+  padding: 0.75rem;
   background: #FFFFFF;
 }
 .wc-real-image-wrap:hover .wc-real-image {
@@ -2973,19 +2973,31 @@ nav a.nav-active {
   border-radius: 14px;
   background: var(--green-deep);
 }
-/* Logos are square/wide marks: contain would scale them to the full block
-   height and dwarf the photographic covers, so cap their rendered size. */
+/* Photographic covers set the block height from their own 3:2 ratio.
+   A logo has no such crop, so it keeps a shorter band instead of leaving
+   a tall white area around a small mark. */
 .case-archive-img--contain {
   object-fit: contain;
   object-position: center;
   background: #FFFFFF;
-  padding: clamp(2rem, 9%, 5.5rem) clamp(2rem, 14%, 9rem);
+  aspect-ratio: 5 / 2;
+  height: auto;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 1.6rem 2rem;
 }
 @media (max-width: 900px) {
-  .case-archive-img--contain { padding: 2.4rem 3rem; }
+  .case-archive-img--contain {
+    aspect-ratio: 2 / 1;
+    max-width: 100%;
+    padding: 1.4rem 1.6rem;
+  }
 }
 @media (max-width: 600px) {
-  .case-archive-img--contain { padding: 1.6rem 1.8rem; }
+  .case-archive-img--contain {
+    aspect-ratio: 16 / 10;
+    padding: 1.1rem 1.2rem;
+  }
 }
 
 /* Contact form: submission error + disabled submit state */
