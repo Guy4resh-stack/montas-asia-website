@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+import TeamCarousel from './TeamCarousel.jsx';
 
 /**
- * HomepageAboutSection — compact About Montas preview for the homepage.
- * Text-only intro (no imagery) — it leads straight into WhoWeAreSection's
- * team carousel right below it. Uses isolated .has-* class names —
- * nothing here affects /about page styles.
+ * HomepageAboutSection — About Montas, homepage section.
+ * Text-only intro (no imagery), followed by a "Who we are" subsection
+ * (sub-label + sub-heading + team portrait carousel) inside the same
+ * section — not a separate top-level section. Uses isolated .has-*
+ * class names — nothing here affects /about page styles.
  */
 
 const VALUES = [
@@ -43,7 +45,24 @@ export default function HomepageAboutSection() {
         <Link to="/about" className="has-about-link">Learn more about Montas →</Link>
       </div>
 
-      {/* Compact value cards */}
+      {/* "Who we are" — subsection of About Montas, not a separate section */}
+      <div className="has-subsection">
+        <div className="has-subheader fade-up">
+          <div className="section-label">Who we are</div>
+          <h3>A studio built on clarity, execution and local market logic</h3>
+        </div>
+        <div className="has-main">
+          <div className="has-carousel-col fade-up">
+            <TeamCarousel />
+          </div>
+          <div className="has-copy fade-up">
+            <p>Montas is a practical marketing studio for companies that need clear digital systems, not just isolated creative assets. The studio combines strategy, page structure, content, paid media, SEO, analytics and production to help businesses enter or grow in Southeast Asian markets.</p>
+            <p>We do not try to cover every discipline for every type of client. Strategy, production and execution are handled by the same team — there are no layers of account management between the client and the people doing the work.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Compact value cards — closes out the whole About Montas block */}
       <div className="has-values">
         {VALUES.map((v) => (
           <div key={v.title} className="has-value-card fade-up">
