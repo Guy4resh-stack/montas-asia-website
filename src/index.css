@@ -1399,13 +1399,32 @@ nav a.nav-active {
   top: 0;
   left: 0;
 }
+/* A logo has no photographic crop to fill, so its wrap shrink-wraps to the
+   mark itself: fixed height, width follows the asset's own ratio, no forced
+   4:3 box and no padding/white fill — matches the /cases archive treatment. */
+.wc-real-image-wrap--contain {
+  width: auto;
+  max-width: 100%;
+  aspect-ratio: auto;
+  height: clamp(260px, 30vw, 420px);
+  overflow: visible;
+  background: transparent;
+  margin: 0 auto;
+}
 .wc-real-image--contain {
+  position: static !important;
+  width: auto !important;
+  height: 100% !important;
+  max-width: 100%;
   object-fit: contain !important;
-  padding: 0.75rem;
-  background: #FFFFFF;
+  padding: 0;
+  background: transparent;
 }
 .wc-real-image-wrap:hover .wc-real-image {
   transform: scale(1.03);
+}
+.wc-real-image-wrap--contain:hover .wc-real-image--contain {
+  transform: none;
 }
 /* Fallback slot shown when image file not yet uploaded */
 .wc-image-slot {
@@ -1666,6 +1685,7 @@ nav a.nav-active {
 }
 
 @media (max-width: 600px) {
+  .wc-real-image-wrap--contain { height: 220px; }
   .wc-carousel { margin-top: 2rem; }
   .wc-meta-row { flex-wrap: wrap; gap: 0.6rem; }
   .wc-description { max-width: 100%; }

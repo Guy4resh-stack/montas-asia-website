@@ -125,7 +125,7 @@ export default function CaseStudiesCarousel({ cases }) {
         {/* Visual column: real image or CSS mockup */}
         <div className="wc-visual-col">
           {c.image ? (
-            <div className="wc-real-image-wrap">
+            <div className={`wc-real-image-wrap${c.imageContain ? ' wc-real-image-wrap--contain' : ''}`}>
               <img
                 src={c.image}
                 alt={c.imageAlt || c.homeTitle}
