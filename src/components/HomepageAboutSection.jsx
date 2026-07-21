@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import TeamCarousel from './TeamCarousel.jsx';
 
 /**
- * HomepageAboutSection — "Who We Are" section for the homepage.
- * Uses isolated .has-* class names — nothing here affects /about page styles.
- * The left column is the team portrait carousel (TeamCarousel.jsx / data/team.js).
+ * HomepageAboutSection — compact About Montas preview for the homepage.
+ * Text-only intro (no imagery) — it leads straight into WhoWeAreSection's
+ * team carousel right below it. Uses isolated .has-* class names —
+ * nothing here affects /about page styles.
  */
 
 const VALUES = [
@@ -32,20 +32,15 @@ export default function HomepageAboutSection() {
 
       {/* Heading row */}
       <div className="has-header fade-up">
-        <div className="section-label">Who we are</div>
-        <h2>A studio built on clarity, execution and local market logic</h2>
+        <div className="section-label">About Montas</div>
+        <h2>Strategy, production and execution — under one roof</h2>
       </div>
 
-      {/* Two-column: team carousel left, studio description right */}
-      <div className="has-main">
-        <div className="has-carousel-col fade-up">
-          <TeamCarousel />
-        </div>
-        <div className="has-copy fade-up">
-          <p>Montas helps businesses turn unclear market-entry plans into websites, campaigns and content systems that are clear, measurable and built for Southeast Asian buyer behaviour.</p>
-          <p>Strategy, creative production, SEO, paid media and analytics — handled by the same team, without disconnected handoffs.</p>
-          <Link to="/about" className="has-about-link">Learn more about Montas →</Link>
-        </div>
+      {/* Text-only intro — no imagery, flows straight into Who We Are below */}
+      <div className="has-copy has-copy--intro fade-up">
+        <p>Montas helps businesses turn unclear market-entry plans into websites, campaigns and content systems that are clear, measurable and built for Southeast Asian buyer behaviour.</p>
+        <p>Strategy, creative production, SEO, paid media and analytics — handled by the same team, without disconnected handoffs.</p>
+        <Link to="/about" className="has-about-link">Learn more about Montas →</Link>
       </div>
 
       {/* Compact value cards */}
