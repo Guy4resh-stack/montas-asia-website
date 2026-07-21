@@ -2980,23 +2980,21 @@ nav a.nav-active {
   object-fit: contain;
   object-position: center;
   background: #FFFFFF;
-  aspect-ratio: 5 / 2;
+  aspect-ratio: 2 / 1;
   height: auto;
-  max-width: 620px;
-  margin: 0 auto;
-  padding: 1.6rem 2rem;
+  width: 100%;
+  padding: 1.5rem;
 }
 @media (max-width: 900px) {
   .case-archive-img--contain {
-    aspect-ratio: 2 / 1;
-    max-width: 100%;
-    padding: 1.4rem 1.6rem;
+    aspect-ratio: 16 / 9;
+    padding: 1.2rem;
   }
 }
 @media (max-width: 600px) {
   .case-archive-img--contain {
     aspect-ratio: 16 / 10;
-    padding: 1.1rem 1.2rem;
+    padding: 1rem;
   }
 }
 
