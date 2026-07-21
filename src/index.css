@@ -2976,26 +2976,21 @@ nav a.nav-active {
 /* Photographic covers set the block height from their own 3:2 ratio.
    A logo has no such crop, so it keeps a shorter band instead of leaving
    a tall white area around a small mark. */
+/* A logo has no crop to fill, so the block shrink-wraps to the mark itself:
+   height is fixed, width follows the asset's own ratio, and the parent flex
+   container centres it. No padding or white fill means no empty margins. */
 .case-archive-img--contain {
   object-fit: contain;
   object-position: center;
-  background: #FFFFFF;
-  aspect-ratio: 2 / 1;
-  height: auto;
-  width: 100%;
-  padding: 1.5rem;
-}
-@media (max-width: 900px) {
-  .case-archive-img--contain {
-    aspect-ratio: 16 / 9;
-    padding: 1.2rem;
-  }
+  background: transparent;
+  aspect-ratio: auto;
+  height: clamp(220px, 30vw, 420px);
+  width: auto;
+  max-width: 100%;
+  padding: 0;
 }
 @media (max-width: 600px) {
-  .case-archive-img--contain {
-    aspect-ratio: 16 / 10;
-    padding: 1rem;
-  }
+  .case-archive-img--contain { height: 190px; }
 }
 
 /* Contact form: submission error + disabled submit state */
