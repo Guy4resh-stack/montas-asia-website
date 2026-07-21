@@ -2117,62 +2117,49 @@ nav a.nav-active {
   }
 }
 
-/* ─── About page: merged Who We Are section layout ─── */
-.about-merged-grid {
+/* ─── TeamRow: full-width team member strip (About page "Who we are") ─── */
+.team-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(150px, 1fr);
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 0.6rem;
 }
-
-@media (max-width: 900px) {
-  .about-merged-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
-
-/* ─── TeamImageGrid: labelled image placeholder panels ─── */
-.tig-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-.tig-panel {
+.team-row-card {
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 0.7rem;
-  aspect-ratio: 1.2 / 1;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+}
+.team-row-photo-wrap {
+  aspect-ratio: 4 / 5;
   border-radius: 10px;
-  transition: border-color 0.25s, background 0.25s;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--green-deep);
 }
-.tig-panel:hover {
-  border-color: var(--border-hover);
-  background: var(--bg-card-hover);
+.team-row-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
-.tig-frame {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--glow-green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.team-row-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
 }
-.tig-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: var(--text-dim);
-  text-align: center;
+.team-row-role {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
 }
 
-@media (max-width: 480px) {
-  .tig-panel { aspect-ratio: 1.5 / 1; }
+@media (max-width: 700px) {
+  .team-row { grid-auto-columns: minmax(130px, 44%); }
 }
 
 /* ─── AboutValues: 6 compact value/principle cards ─── */

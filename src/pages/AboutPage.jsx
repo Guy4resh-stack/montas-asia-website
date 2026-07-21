@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
 import OperatingModelVisual from '../components/OperatingModelVisual.jsx';
-import TeamImageGrid from '../components/TeamImageGrid.jsx';
+import TeamRow from '../components/TeamRow.jsx';
 import AboutValues from '../components/AboutValues.jsx';
 
 function useFadeUp() {
@@ -62,18 +62,17 @@ export default function AboutPage() {
       <section className="detail-section">
         <div className="container">
           <div className="section-label fade-up">Who we are</div>
-          <h2 className="fade-up" style={{ marginBottom: '2rem', maxWidth: '720px' }}>
+          <h2 className="fade-up" style={{ marginBottom: '1.5rem', maxWidth: '720px' }}>
             A studio built on clarity, execution and local market logic
           </h2>
 
-          <div className="about-merged-grid">
-            <div className="fade-up">
-              <TeamImageGrid />
-            </div>
-            <div className="detail-prose fade-up">
-              <p>Montas is a practical marketing studio for companies that need clear digital systems, not just isolated creative assets. The studio combines strategy, page structure, content, paid media, SEO, analytics and production to help businesses enter or grow in Southeast Asian markets.</p>
-              <p style={{ marginTop: '1.2rem' }}>We do not try to cover every discipline for every type of client. Strategy, production and execution are handled by the same team — there are no layers of account management between the client and the people doing the work.</p>
-            </div>
+          <div className="detail-prose fade-up" style={{ maxWidth: '760px', marginBottom: '3rem' }}>
+            <p>Montas is a practical marketing studio for companies that need clear digital systems, not just isolated creative assets. The studio combines strategy, page structure, content, paid media, SEO, analytics and production to help businesses enter or grow in Southeast Asian markets.</p>
+            <p style={{ marginTop: '1.2rem' }}>We do not try to cover every discipline for every type of client. Strategy, production and execution are handled by the same team — there are no layers of account management between the client and the people doing the work.</p>
+          </div>
+
+          <div className="fade-up">
+            <TeamRow />
           </div>
 
           <div className="fade-up" style={{ marginTop: '3rem' }}>
